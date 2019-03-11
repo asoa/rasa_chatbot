@@ -1,12 +1,3 @@
 language: "en"
 
-pipeline: "spacy_sklearn"
-
-policies:
-  - name: KerasPolicy
-    epochs: 100
-    max_history: 5
-  - name: FallbackPolicy
-    fallback_action_name: 'action_default_fallback'
-  - name: MemoizationPolicy
-    max_history: 5
+pipeline: "tensorflow_embedding"

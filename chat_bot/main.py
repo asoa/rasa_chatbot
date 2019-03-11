@@ -1,13 +1,12 @@
 #!/usr/bin/env python
 
 from chat_bot import train
+from nlu import NLU
 
 def main():
-    # b = util.build_dir()
-    t = train.Train(do_train_nlu=True)
-    # t = train.Train(do_train_core=False)
-    # t.predict_intent('hello, how are you')
-    # t.train_interactive()
+    n = NLU()
+    n.train_nlu_docker()
+    n.start_nlu_server()  # run to test intent classifier
 
 
 if __name__ == "__main__":

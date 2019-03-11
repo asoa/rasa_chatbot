@@ -13,15 +13,6 @@ services:
     - "./chat_bot/config:/app/config"
     - "./chat_bot/project:/app/project"
     command: start -d ./models -c rest -u current/nlu --endpoints config/endpoints.yml
-#    - start
-#    - -d
-#    - ./models
-#    - -c
-#    - rest
-#    - -u
-#    - current/nlu
-#    - --endpoints
-#    - config/endpoints.yml
 
   action_server:
     image: rasa/rasa_core_sdk:latest
@@ -39,12 +30,6 @@ services:
     volumes:
     - "./chat_bot/models/:/app/projects"
     - "./chat_bot/logs:/app/logs"
-
-  duckling:
-    image: rasa/duckling:latest
-    networks: ['rasa-network']
-    ports:
-    - "8000:8000"
 
 #networks: {rasa-network: {}}
 networks:

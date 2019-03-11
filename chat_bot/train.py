@@ -2,10 +2,8 @@
 
 import os
 
-import examples.concertbot.train_interactive
 from rasa_nlu.training_data import load_data
 from rasa_nlu.model import Trainer
-from rasa_core.train import config
 from rasa_nlu import config
 from rasa_core import config
 from rasa_nlu.model import Interpreter
@@ -18,6 +16,9 @@ from rasa_core.policies.memoization import MemoizationPolicy
 from rasa_core.policies.sklearn_policy import SklearnPolicy
 from rasa_core import utils
 import pprint
+import shutil
+import subprocess
+import sys
 
 
 class Train(object):
@@ -28,21 +29,16 @@ class Train(object):
         self.cwd = os.getcwd()
         utils.configure_colored_logging(loglevel='DEBUG')
 
-        if self.do_train_nlu:
-            self.train_nlu('data/nlu_data.md', 'config/nlu_config.yml', 'models')
-        elif self.do_train_core:
-            self.train_core()
-        elif self.do_train_nlu and self.do_train_core:
-            pass
-        else:
-            self.nlu_model_dir = 'models/default/chat_bot'
+        # if self.do_train_nlu:
+        #     self.train_nlu_docker()
+        # elif self.do_train_core:
+        #     self.train_core()
+        # elif self.do_train_nlu and self.do_train_core:
+        #     pass
+        # else:
+        #     self.nlu_model_dir = 'models/default/chat_bot'
 
-    def train_nlu(self, data_md, config_file, model_dir):
-        """Trains the underlying pipeline using the provided training data"""
-        training_data = load_data(data_md)
-        trainer = Trainer(config.load(config_file))
-        trainer.train(training_data)
-        self.nlu_model_dir = trainer.persist(model_dir, fixed_model_name='chat_bot')
+
 
     def predict_intent(self, text):
         """loads the trained model, parses the text argument and returns the predicted intent
@@ -51,7 +47,7 @@ class Train(object):
         Returns: json result with predicted intent score for all intents
 
         """
-        interpreter = Interpreter.load(self.nlu_model_dir)
+        interpreter = Interpreter.load('models/rasa_nlu/chatbot/chatbot')
         pprint.pprint(interpreter.parse(text))
 
     def train_core(self):
@@ -60,8 +56,8 @@ class Train(object):
         Returns:
 
         """
-        # config_file = 'config/core_config.yml'
-        # config.load(config_file)
+        config_file = 'config/core_config.yml'
+        config.load(config_file)
         training_data_file = 'data/stories.md'  # data to train model with
         trained_model_path = 'models/dialogue'  # location of trained model
         agent = Agent('domain.yml', policies=[MemoizationPolicy(), KerasPolicy(), SklearnPolicy()])  # training pipeline to use (i.e. RNN, embeddings)
@@ -73,7 +69,7 @@ class Train(object):
         agent.persist(trained_model_path)
 
     def train_interactive(self):
-        _interpreter = NaturalLanguageInterpreter.create(self.nlu_model_dir)
+        _interpreter = NaturalLanguageInterpreter.create('models/rasa_nlu/current/chatbot')
         train_agent = train.train_dialogue_model(domain_file='domain.yml',
                                    stories_file='data/nlu_data.md',
                                    output_path='models/dialog',
