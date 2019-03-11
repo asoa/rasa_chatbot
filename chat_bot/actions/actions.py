@@ -1,15 +1,7 @@
-# -*- coding: utf-8 -*-
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
-
-import logging
 import requests
 import json
 from rasa_core_sdk import Action
-
-logger = logging.getLogger(__name__)
+from rasa_core_sdk.events import SlotSet
 
 
 class ActionJoke(Action):

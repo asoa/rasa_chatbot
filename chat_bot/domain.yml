@@ -1,14 +1,14 @@
 intents:
-- greet
-- goodbye
-- thanks
-- deny
-- joke
-- name
+  - greet
+  - goodbye
+  - thanks
+  - deny
+  - joke
+  - name
 
 
 entities:
-- name
+  - name
 
 
 slots:
@@ -16,24 +16,27 @@ slots:
     type: text
 
 
-actions:
-- utter_name
-- utter_thanks
-- utter_greet
-- utter_goodbye
-- action_joke
-
-
 templates:
   utter_name:
   - text: "Hey there! Tell me your name."
+
+  utter_thanks:
+  - text: "My pleasure."
 
   utter_greet:
   - text: "Nice to you meet you {name}. How can I help?"
 
   utter_goodbye:
   - text: "Talk to you later!"
+
+
+actions:
+  - utter_name
+  - utter_thanks
+  - utter_greet
+  - utter_goodbye
+  - action_joke
+
   
-  utter_thanks:
-  - text: "My pleasure."
+
   

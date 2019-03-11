@@ -1,78 +1,86 @@
 #!/usr/bin/env python
 
 import os
-import subprocess
-import shutil
-import sys
-from rasa_nlu import config
+
+import examples.concertbot.train_interactive
 from rasa_nlu.training_data import load_data
 from rasa_nlu.model import Trainer
+from rasa_core.train import config
 from rasa_nlu import config
+from rasa_core import config
 from rasa_nlu.model import Interpreter
+from rasa_core.interpreter import NaturalLanguageInterpreter
+from rasa_core.agent import Agent
+from rasa_core import train
+from rasa_core.training import interactive  # renamed from online
+from rasa_core.policies.keras_policy import KerasPolicy
+from rasa_core.policies.memoization import MemoizationPolicy
+from rasa_core.policies.sklearn_policy import SklearnPolicy
+from rasa_core import utils
+import pprint
 
 
 class Train(object):
     def __init__(self, **kwargs):
         self.kwargs = {k: v for k, v in kwargs.items()}
-        self.do_train = self.kwargs.get('do_train', False)
+        self.do_train_nlu = self.kwargs.get('do_train_nlu', False)
+        self.do_train_core = self.kwargs.get('do_train_core', False)
         self.cwd = os.getcwd()
-        if self.do_train:
-            self.train_nlu()
-            # self.train_nlu_manual('chat_bot/data', 'chat_bot/config/nlu_config.yml', 'chat_bot/models/rasa_nlu')
+        utils.configure_colored_logging(loglevel='DEBUG')
 
-    def train_nlu(self):
-        """execute docker run command to either the spacy or tensorflow pipeline to train rasa_nlu
-         using word embedding or RNN
-        """
-        print('Training spacy model to classify intents and extract identities', file=sys.stderr)
-        try:
-            shutil.rmtree(os.path.join(self.cwd, 'models'))
-            cwd = os.getcwd()
-            cmd = ['docker', 'run', '--rm',
-                   '-v', cwd + ':/app/project',
-                   '-v', cwd + '/models/rasa_nlu:/app/models',
-                   '-v', cwd + '/config:/app/config',
-                   'rasa/rasa_nlu:latest-spacy',
-                   'run', 'python', '-m', 'rasa_nlu.train', '-c', 'config/nlu_config.yml', '-d', 'project/data/',
-                   '-o', 'models',
-                   '--project', 'current',
-                   '--fixed_model_name', 'chatbot'
-                   ]
+        if self.do_train_nlu:
+            self.train_nlu('data/nlu_data.md', 'config/nlu_config.yml', 'models')
+        elif self.do_train_core:
+            self.train_core()
+        elif self.do_train_nlu and self.do_train_core:
+            pass
+        else:
+            self.nlu_model_dir = 'models/default/chat_bot'
 
-            p = subprocess.check_output(cmd)
-        except Exception as e:
-            print(e)
-
-    def train_nlu_manual(self, data_md, config_file, model_dir):
+    def train_nlu(self, data_md, config_file, model_dir):
+        """Trains the underlying pipeline using the provided training data"""
         training_data = load_data(data_md)
         trainer = Trainer(config.load(config_file))
         trainer.train(training_data)
-        model_output = trainer.persist(model_dir, fixed_model_name='chat_bot')
-
+        self.nlu_model_dir = trainer.persist(model_dir, fixed_model_name='chat_bot')
 
     def predict_intent(self, text):
         """loads the trained model, parses the text argument and returns the predicted intent
         from the rasa nlu intent classifier
 
-            ** need to install: python -m spacy download en
-
         Returns: json result with predicted intent score for all intents
 
         """
-        path = '/Users/asoa/PycharmProjects/664/rasa_chat_bot/chat_bot/models/rasa_nlu/current/chatbot'
-        interpreter = Interpreter.load(path)
-        print(interpreter.parse(text))
-
-    def train_nlu_tensorflow(self):
-        pass
+        interpreter = Interpreter.load(self.nlu_model_dir)
+        pprint.pprint(interpreter.parse(text))
 
     def train_core(self):
-        pass
+        """train a rasa core model
+
+        Returns:
+
+        """
+        # config_file = 'config/core_config.yml'
+        # config.load(config_file)
+        training_data_file = 'data/stories.md'  # data to train model with
+        trained_model_path = 'models/dialogue'  # location of trained model
+        agent = Agent('domain.yml', policies=[MemoizationPolicy(), KerasPolicy(), SklearnPolicy()])  # training pipeline to use (i.e. RNN, embeddings)
+        training_data = agent.load_data(training_data_file)
+
+        #  passing policy settings to the train function is not supported anymore
+        #  put in the policy config instead
+        agent.train(training_data)  # TODO: load core_config.yml
+        agent.persist(trained_model_path)
+
+    def train_interactive(self):
+        _interpreter = NaturalLanguageInterpreter.create(self.nlu_model_dir)
+        train_agent = train.train_dialogue_model(domain_file='domain.yml',
+                                   stories_file='data/nlu_data.md',
+                                   output_path='models/dialog',
+                                   policy_config='config/core_config.yml',
+                                   endpoints='config/endpoints.yml',
+                                   interpreter=_interpreter)
+        interactive.run_interactive_learning(train_agent)
 
 
-def main():
-    pass
 
-
-if __name__ == "__main__":
-    main()

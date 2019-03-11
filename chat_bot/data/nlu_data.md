@@ -33,6 +33,7 @@
 - hello everybody
 - hello is anybody there
 - hello robot
+- HELLO HOW ARE YOU
 
 ## intent:thanks
 - Thanks
