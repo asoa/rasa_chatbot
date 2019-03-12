@@ -2,7 +2,13 @@ policies:
   - name: KerasPolicy
     epochs: 100
     max_history: 5
+    random_seed: 1
+#  - name: EmbeddingPolicy
+#    epochs: 100
+#    random_seed: 1
   - name: FallbackPolicy
+    nlu_threshold: 0.4
+    core_threshold: 0.3
     fallback_action_name: 'action_default_fallback'
   - name: MemoizationPolicy
     max_history: 5

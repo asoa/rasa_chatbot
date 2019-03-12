@@ -31,16 +31,6 @@
 * goodbye
  - utter_goodbye 
  
-## Generated Story -5414142191258990519
-* greet
-    - utter_name
-* name
-    - utter_greet
-* thanks
-    - utter_thanks
-* greet
-    - utter_name
-* name{"name": "ben"}
-    - slot{"name": "ben"}
-    - utter_greet
+
+    
 

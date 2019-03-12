@@ -18,16 +18,20 @@ slots:
 
 templates:
   utter_name:
-  - text: "Hey there! Tell me your name."
+    - text: "Hey there! Tell me your name."
 
   utter_thanks:
-  - text: "My pleasure."
+    - text: "My pleasure."
 
   utter_greet:
-  - text: "Nice to you meet you {name}. How can I help?"
+    - text: "Nice to you meet you {name}. How can I help?"
 
   utter_goodbye:
-  - text: "Talk to you later!"
+    - text: "Talk to you later!"
+
+  utter_default:
+    - text: "default triggered, resetting to fallback - 1"
+
 
 
 actions:
@@ -36,6 +40,7 @@ actions:
   - utter_greet
   - utter_goodbye
   - action_joke
+  - utter_default
 
   
 

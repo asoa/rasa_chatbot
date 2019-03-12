@@ -6,23 +6,24 @@ actions:
 - utter_greet
 - utter_goodbye
 - action_joke
+- utter_default
 config:
   store_entities_as_slots: true
 entities:
 - name
 forms: []
 intents:
-- greet:
-    use_entities: true
 - thanks:
-    use_entities: true
-- deny:
     use_entities: true
 - joke:
     use_entities: true
 - goodbye:
     use_entities: true
+- deny:
+    use_entities: true
 - name:
+    use_entities: true
+- greet:
     use_entities: true
 slots:
   name:
@@ -30,6 +31,8 @@ slots:
     initial_value: null
     type: rasa_core.slots.TextSlot
 templates:
+  utter_default:
+  - text: default triggered, resetting to fallback - 1
   utter_goodbye:
   - text: Talk to you later!
   utter_greet:

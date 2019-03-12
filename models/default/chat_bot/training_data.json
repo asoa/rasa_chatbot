@@ -1,5 +1,6 @@
 {
   "rasa_nlu_data": {
+    "entity_synonyms": [],
     "common_examples": [
       {
         "intent": "goodbye",
@@ -210,568 +211,568 @@
         "text": "definitely"
       },
       {
-        "intent": "name",
-        "text": "My name is Juste",
         "entities": [
           {
+            "value": "Juste",
+            "entity": "name",
             "start": 11,
-            "entity": "name",
-            "end": 16,
-            "value": "Juste"
+            "end": 16
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "My name is Juste"
       },
       {
-        "intent": "name",
-        "text": "I am Josh",
         "entities": [
           {
+            "value": "Josh",
+            "entity": "name",
             "start": 5,
-            "entity": "name",
-            "end": 9,
-            "value": "Josh"
+            "end": 9
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "I am Josh"
       },
       {
-        "intent": "name",
-        "text": "I'm Lucy",
         "entities": [
           {
+            "value": "Lucy",
+            "entity": "name",
             "start": 4,
-            "entity": "name",
-            "end": 8,
-            "value": "Lucy"
+            "end": 8
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "I'm Lucy"
       },
       {
-        "intent": "name",
-        "text": "People call me Greg",
         "entities": [
           {
+            "value": "Greg",
+            "entity": "name",
             "start": 15,
-            "entity": "name",
-            "end": 19,
-            "value": "Greg"
+            "end": 19
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "People call me Greg"
       },
       {
-        "intent": "name",
-        "text": "It's David",
         "entities": [
           {
+            "value": "David",
+            "entity": "name",
             "start": 5,
-            "entity": "name",
-            "end": 10,
-            "value": "David"
+            "end": 10
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "It's David"
       },
       {
-        "intent": "name",
-        "text": "Usually people call me Amy",
         "entities": [
           {
+            "value": "Amy",
+            "entity": "name",
             "start": 23,
-            "entity": "name",
-            "end": 26,
-            "value": "Amy"
+            "end": 26
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "Usually people call me Amy"
       },
       {
-        "intent": "name",
-        "text": "My name is John",
         "entities": [
           {
+            "value": "John",
+            "entity": "name",
             "start": 11,
-            "entity": "name",
-            "end": 15,
-            "value": "John"
+            "end": 15
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "My name is John"
       },
       {
-        "intent": "name",
-        "text": "You can call me Sam",
         "entities": [
           {
+            "value": "Sam",
+            "entity": "name",
             "start": 16,
-            "entity": "name",
-            "end": 19,
-            "value": "Sam"
+            "end": 19
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "You can call me Sam"
       },
       {
-        "intent": "name",
-        "text": "Please call me Linda",
         "entities": [
           {
+            "value": "Linda",
+            "entity": "name",
             "start": 15,
-            "entity": "name",
-            "end": 20,
-            "value": "Linda"
+            "end": 20
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "Please call me Linda"
       },
       {
-        "intent": "name",
-        "text": "Name name is Tom",
         "entities": [
           {
+            "value": "Tom",
+            "entity": "name",
             "start": 13,
-            "entity": "name",
-            "end": 16,
-            "value": "Tom"
+            "end": 16
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "Name name is Tom"
       },
       {
-        "intent": "name",
-        "text": "I am Richard",
         "entities": [
           {
+            "value": "Richard",
+            "entity": "name",
             "start": 5,
-            "entity": "name",
-            "end": 12,
-            "value": "Richard"
+            "end": 12
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "I am Richard"
       },
       {
-        "intent": "name",
-        "text": "I'm Tracy",
         "entities": [
           {
+            "value": "Tracy",
+            "entity": "name",
             "start": 4,
-            "entity": "name",
-            "end": 9,
-            "value": "Tracy"
+            "end": 9
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "I'm Tracy"
       },
       {
-        "intent": "name",
-        "text": "Call me Sally",
         "entities": [
           {
+            "value": "Sally",
+            "entity": "name",
             "start": 8,
-            "entity": "name",
-            "end": 13,
-            "value": "Sally"
+            "end": 13
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "Call me Sally"
       },
       {
-        "intent": "name",
-        "text": "I am Philipp",
         "entities": [
           {
+            "value": "Philipp",
+            "entity": "name",
             "start": 5,
-            "entity": "name",
-            "end": 12,
-            "value": "Philipp"
+            "end": 12
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "I am Philipp"
       },
       {
-        "intent": "name",
-        "text": "I am Charlie",
         "entities": [
           {
+            "value": "Charlie",
+            "entity": "name",
             "start": 5,
-            "entity": "name",
-            "end": 12,
-            "value": "Charlie"
+            "end": 12
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "I am Charlie"
       },
       {
-        "intent": "name",
-        "text": "I am Charlie",
         "entities": [
           {
+            "value": "Charlie",
+            "entity": "name",
             "start": 5,
-            "entity": "name",
-            "end": 12,
-            "value": "Charlie"
+            "end": 12
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "I am Charlie"
       },
       {
-        "intent": "name",
-        "text": "I am Ben",
         "entities": [
           {
+            "value": "Ben",
+            "entity": "name",
             "start": 5,
-            "entity": "name",
-            "end": 8,
-            "value": "Ben"
+            "end": 8
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "I am Ben"
       },
       {
-        "intent": "name",
-        "text": "Call me Susan",
         "entities": [
           {
+            "value": "Susan",
+            "entity": "name",
             "start": 8,
-            "entity": "name",
-            "end": 13,
-            "value": "Susan"
+            "end": 13
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "Call me Susan"
       },
       {
-        "intent": "name",
-        "text": "Lucy",
         "entities": [
           {
+            "value": "Lucy",
+            "entity": "name",
             "start": 0,
-            "entity": "name",
-            "end": 4,
-            "value": "Lucy"
+            "end": 4
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "Lucy"
       },
       {
-        "intent": "name",
-        "text": "Peter",
         "entities": [
           {
+            "value": "Peter",
+            "entity": "name",
             "start": 0,
-            "entity": "name",
-            "end": 5,
-            "value": "Peter"
+            "end": 5
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "Peter"
       },
       {
-        "intent": "name",
-        "text": "Mark",
         "entities": [
           {
+            "value": "Mark",
+            "entity": "name",
             "start": 0,
-            "entity": "name",
-            "end": 4,
-            "value": "Mark"
+            "end": 4
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "Mark"
       },
       {
-        "intent": "name",
-        "text": "Joseph",
         "entities": [
           {
+            "value": "Joseph",
+            "entity": "name",
             "start": 0,
-            "entity": "name",
-            "end": 6,
-            "value": "Joseph"
+            "end": 6
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "Joseph"
       },
       {
-        "intent": "name",
-        "text": "Tan",
         "entities": [
           {
+            "value": "Tan",
+            "entity": "name",
             "start": 0,
-            "entity": "name",
-            "end": 3,
-            "value": "Tan"
+            "end": 3
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "Tan"
       },
       {
-        "intent": "name",
-        "text": "Pete",
         "entities": [
           {
+            "value": "Pete",
+            "entity": "name",
             "start": 0,
-            "entity": "name",
-            "end": 4,
-            "value": "Pete"
+            "end": 4
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "Pete"
       },
       {
-        "intent": "name",
-        "text": "Elon",
         "entities": [
           {
+            "value": "Elon",
+            "entity": "name",
             "start": 0,
-            "entity": "name",
-            "end": 4,
-            "value": "Elon"
+            "end": 4
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "Elon"
       },
       {
-        "intent": "name",
-        "text": "Penny",
         "entities": [
           {
+            "value": "Penny",
+            "entity": "name",
             "start": 0,
-            "entity": "name",
-            "end": 5,
-            "value": "Penny"
+            "end": 5
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "Penny"
       },
       {
-        "intent": "name",
-        "text": "name is Andrew",
         "entities": [
           {
+            "value": "Andrew",
+            "entity": "name",
             "start": 8,
-            "entity": "name",
-            "end": 14,
-            "value": "Andrew"
+            "end": 14
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "name is Andrew"
       },
       {
-        "intent": "name",
-        "text": "I Lora",
         "entities": [
           {
+            "value": "Lora",
+            "entity": "name",
             "start": 2,
-            "entity": "name",
-            "end": 6,
-            "value": "Lora"
+            "end": 6
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "I Lora"
       },
       {
-        "intent": "name",
-        "text": "Stan is my name",
         "entities": [
           {
+            "value": "Stan",
+            "entity": "name",
             "start": 0,
-            "entity": "name",
-            "end": 4,
-            "value": "Stan"
+            "end": 4
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "Stan is my name"
       },
       {
-        "intent": "name",
-        "text": "Susan is the name",
         "entities": [
           {
+            "value": "Susan",
+            "entity": "name",
             "start": 0,
-            "entity": "name",
-            "end": 5,
-            "value": "Susan"
+            "end": 5
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "Susan is the name"
       },
       {
-        "intent": "name",
-        "text": "Ross is my first name",
         "entities": [
           {
+            "value": "Ross",
+            "entity": "name",
             "start": 0,
-            "entity": "name",
-            "end": 4,
-            "value": "Ross"
+            "end": 4
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "Ross is my first name"
       },
       {
-        "intent": "name",
-        "text": "Bing is my last name",
         "entities": [
           {
+            "value": "Bing",
+            "entity": "name",
             "start": 0,
-            "entity": "name",
-            "end": 4,
-            "value": "Bing"
+            "end": 4
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "Bing is my last name"
       },
       {
-        "intent": "name",
-        "text": "Few call me as Angelina",
         "entities": [
           {
+            "value": "Angelina",
+            "entity": "name",
             "start": 15,
-            "entity": "name",
-            "end": 23,
-            "value": "Angelina"
+            "end": 23
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "Few call me as Angelina"
       },
       {
-        "intent": "name",
-        "text": "Some call me Julia",
         "entities": [
           {
+            "value": "Julia",
+            "entity": "name",
             "start": 13,
-            "entity": "name",
-            "end": 18,
-            "value": "Julia"
+            "end": 18
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "Some call me Julia"
       },
       {
-        "intent": "name",
-        "text": "Everyone calls me Laura",
         "entities": [
           {
+            "value": "Laura",
+            "entity": "name",
             "start": 18,
-            "entity": "name",
-            "end": 23,
-            "value": "Laura"
+            "end": 23
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "Everyone calls me Laura"
       },
       {
-        "intent": "name",
-        "text": "I am Ganesh",
         "entities": [
           {
+            "value": "Ganesh",
+            "entity": "name",
             "start": 5,
-            "entity": "name",
-            "end": 11,
-            "value": "Ganesh"
+            "end": 11
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "I am Ganesh"
       },
       {
-        "intent": "name",
-        "text": "My name is Mike",
         "entities": [
           {
+            "value": "Mike",
+            "entity": "name",
             "start": 11,
-            "entity": "name",
-            "end": 15,
-            "value": "Mike"
+            "end": 15
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "My name is Mike"
       },
       {
-        "intent": "name",
-        "text": "just call me Monika",
         "entities": [
           {
+            "value": "Monika",
+            "entity": "name",
             "start": 13,
-            "entity": "name",
-            "end": 19,
-            "value": "Monika"
+            "end": 19
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "just call me Monika"
       },
       {
-        "intent": "name",
-        "text": "Few call Dan",
         "entities": [
           {
+            "value": "Dan",
+            "entity": "name",
             "start": 9,
-            "entity": "name",
-            "end": 12,
-            "value": "Dan"
+            "end": 12
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "Few call Dan"
       },
       {
-        "intent": "name",
-        "text": "You can always call me Suraj",
         "entities": [
           {
+            "value": "Suraj",
+            "entity": "name",
             "start": 23,
-            "entity": "name",
-            "end": 28,
-            "value": "Suraj"
+            "end": 28
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "You can always call me Suraj"
       },
       {
-        "intent": "name",
-        "text": "Some will call me Andrew",
         "entities": [
           {
+            "value": "Andrew",
+            "entity": "name",
             "start": 18,
-            "entity": "name",
-            "end": 24,
-            "value": "Andrew"
+            "end": 24
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "Some will call me Andrew"
       },
       {
-        "intent": "name",
-        "text": "My name is Ajay",
         "entities": [
           {
+            "value": "Ajay",
+            "entity": "name",
             "start": 11,
-            "entity": "name",
-            "end": 15,
-            "value": "Ajay"
+            "end": 15
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "My name is Ajay"
       },
       {
-        "intent": "name",
-        "text": "I call Ding",
         "entities": [
           {
+            "value": "Ding",
+            "entity": "name",
             "start": 7,
-            "entity": "name",
-            "end": 11,
-            "value": "Ding"
+            "end": 11
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "I call Ding"
       },
       {
-        "intent": "name",
-        "text": "I'm Partia",
         "entities": [
           {
+            "value": "Partia",
+            "entity": "name",
             "start": 4,
-            "entity": "name",
-            "end": 10,
-            "value": "Partia"
+            "end": 10
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "I'm Partia"
       },
       {
-        "intent": "name",
-        "text": "Please call me Leo",
         "entities": [
           {
+            "value": "Leo",
+            "entity": "name",
             "start": 15,
-            "entity": "name",
-            "end": 18,
-            "value": "Leo"
+            "end": 18
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "Please call me Leo"
       },
       {
-        "intent": "name",
-        "text": "name is Pari",
         "entities": [
           {
+            "value": "Pari",
+            "entity": "name",
             "start": 8,
-            "entity": "name",
-            "end": 12,
-            "value": "Pari"
+            "end": 12
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "name is Pari"
       },
       {
-        "intent": "name",
-        "text": "name Sanjay",
         "entities": [
           {
-            "start": 5,
+            "value": "Sanjay",
             "entity": "name",
-            "end": 11,
-            "value": "Sanjay"
+            "start": 5,
+            "end": 11
           }
-        ]
+        ],
+        "intent": "name",
+        "text": "name Sanjay"
       },
       {
         "intent": "joke",
@@ -814,7 +815,6 @@
         "text": "I need to hear a joke"
       }
     ],
-    "entity_synonyms": [],
     "lookup_tables": [],
     "regex_features": []
   }
