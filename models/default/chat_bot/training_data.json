@@ -1,0 +1,821 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "intent": "goodbye",
+        "text": "Bye"
+      },
+      {
+        "intent": "goodbye",
+        "text": "Goodbye"
+      },
+      {
+        "intent": "goodbye",
+        "text": "See you later"
+      },
+      {
+        "intent": "goodbye",
+        "text": "Bye bot"
+      },
+      {
+        "intent": "goodbye",
+        "text": "Goodbye friend"
+      },
+      {
+        "intent": "goodbye",
+        "text": "bye"
+      },
+      {
+        "intent": "goodbye",
+        "text": "bye for now"
+      },
+      {
+        "intent": "goodbye",
+        "text": "catch you later"
+      },
+      {
+        "intent": "goodbye",
+        "text": "gotta go"
+      },
+      {
+        "intent": "goodbye",
+        "text": "See you"
+      },
+      {
+        "intent": "goodbye",
+        "text": "goodnight"
+      },
+      {
+        "intent": "goodbye",
+        "text": "have a nice day"
+      },
+      {
+        "intent": "goodbye",
+        "text": "i'm off"
+      },
+      {
+        "intent": "goodbye",
+        "text": "see you later alligator"
+      },
+      {
+        "intent": "goodbye",
+        "text": "we'll speak soon"
+      },
+      {
+        "intent": "greet",
+        "text": "Hi"
+      },
+      {
+        "intent": "greet",
+        "text": "Hey"
+      },
+      {
+        "intent": "greet",
+        "text": "Hi bot"
+      },
+      {
+        "intent": "greet",
+        "text": "Hey bot"
+      },
+      {
+        "intent": "greet",
+        "text": "Hello"
+      },
+      {
+        "intent": "greet",
+        "text": "Good morning"
+      },
+      {
+        "intent": "greet",
+        "text": "hi again"
+      },
+      {
+        "intent": "greet",
+        "text": "hi folks"
+      },
+      {
+        "intent": "greet",
+        "text": "hi Mister"
+      },
+      {
+        "intent": "greet",
+        "text": "hi pal!"
+      },
+      {
+        "intent": "greet",
+        "text": "hi there"
+      },
+      {
+        "intent": "greet",
+        "text": "greetings"
+      },
+      {
+        "intent": "greet",
+        "text": "hello everybody"
+      },
+      {
+        "intent": "greet",
+        "text": "hello is anybody there"
+      },
+      {
+        "intent": "greet",
+        "text": "hello robot"
+      },
+      {
+        "intent": "greet",
+        "text": "HELLO HOW ARE YOU"
+      },
+      {
+        "intent": "thanks",
+        "text": "Thanks"
+      },
+      {
+        "intent": "thanks",
+        "text": "Thank you"
+      },
+      {
+        "intent": "thanks",
+        "text": "Thank you so much"
+      },
+      {
+        "intent": "thanks",
+        "text": "Thanks bot"
+      },
+      {
+        "intent": "thanks",
+        "text": "Thanks for that"
+      },
+      {
+        "intent": "thanks",
+        "text": "cheers"
+      },
+      {
+        "intent": "thanks",
+        "text": "cheers bro"
+      },
+      {
+        "intent": "thanks",
+        "text": "ok thanks!"
+      },
+      {
+        "intent": "thanks",
+        "text": "perfect thank you"
+      },
+      {
+        "intent": "thanks",
+        "text": "thanks a bunch for everything"
+      },
+      {
+        "intent": "thanks",
+        "text": "thanks for the help"
+      },
+      {
+        "intent": "thanks",
+        "text": "thanks a lot"
+      },
+      {
+        "intent": "thanks",
+        "text": "amazing, thanks"
+      },
+      {
+        "intent": "thanks",
+        "text": "cool, thanks"
+      },
+      {
+        "intent": "thanks",
+        "text": "cool thank you"
+      },
+      {
+        "intent": "affirm",
+        "text": "yes"
+      },
+      {
+        "intent": "affirm",
+        "text": "yes sure"
+      },
+      {
+        "intent": "affirm",
+        "text": "absolutely"
+      },
+      {
+        "intent": "affirm",
+        "text": "for sure"
+      },
+      {
+        "intent": "affirm",
+        "text": "yes yes yes"
+      },
+      {
+        "intent": "affirm",
+        "text": "definitely"
+      },
+      {
+        "intent": "name",
+        "text": "My name is Juste",
+        "entities": [
+          {
+            "start": 11,
+            "entity": "name",
+            "end": 16,
+            "value": "Juste"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "I am Josh",
+        "entities": [
+          {
+            "start": 5,
+            "entity": "name",
+            "end": 9,
+            "value": "Josh"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "I'm Lucy",
+        "entities": [
+          {
+            "start": 4,
+            "entity": "name",
+            "end": 8,
+            "value": "Lucy"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "People call me Greg",
+        "entities": [
+          {
+            "start": 15,
+            "entity": "name",
+            "end": 19,
+            "value": "Greg"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "It's David",
+        "entities": [
+          {
+            "start": 5,
+            "entity": "name",
+            "end": 10,
+            "value": "David"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "Usually people call me Amy",
+        "entities": [
+          {
+            "start": 23,
+            "entity": "name",
+            "end": 26,
+            "value": "Amy"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "My name is John",
+        "entities": [
+          {
+            "start": 11,
+            "entity": "name",
+            "end": 15,
+            "value": "John"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "You can call me Sam",
+        "entities": [
+          {
+            "start": 16,
+            "entity": "name",
+            "end": 19,
+            "value": "Sam"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "Please call me Linda",
+        "entities": [
+          {
+            "start": 15,
+            "entity": "name",
+            "end": 20,
+            "value": "Linda"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "Name name is Tom",
+        "entities": [
+          {
+            "start": 13,
+            "entity": "name",
+            "end": 16,
+            "value": "Tom"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "I am Richard",
+        "entities": [
+          {
+            "start": 5,
+            "entity": "name",
+            "end": 12,
+            "value": "Richard"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "I'm Tracy",
+        "entities": [
+          {
+            "start": 4,
+            "entity": "name",
+            "end": 9,
+            "value": "Tracy"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "Call me Sally",
+        "entities": [
+          {
+            "start": 8,
+            "entity": "name",
+            "end": 13,
+            "value": "Sally"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "I am Philipp",
+        "entities": [
+          {
+            "start": 5,
+            "entity": "name",
+            "end": 12,
+            "value": "Philipp"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "I am Charlie",
+        "entities": [
+          {
+            "start": 5,
+            "entity": "name",
+            "end": 12,
+            "value": "Charlie"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "I am Charlie",
+        "entities": [
+          {
+            "start": 5,
+            "entity": "name",
+            "end": 12,
+            "value": "Charlie"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "I am Ben",
+        "entities": [
+          {
+            "start": 5,
+            "entity": "name",
+            "end": 8,
+            "value": "Ben"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "Call me Susan",
+        "entities": [
+          {
+            "start": 8,
+            "entity": "name",
+            "end": 13,
+            "value": "Susan"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "Lucy",
+        "entities": [
+          {
+            "start": 0,
+            "entity": "name",
+            "end": 4,
+            "value": "Lucy"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "Peter",
+        "entities": [
+          {
+            "start": 0,
+            "entity": "name",
+            "end": 5,
+            "value": "Peter"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "Mark",
+        "entities": [
+          {
+            "start": 0,
+            "entity": "name",
+            "end": 4,
+            "value": "Mark"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "Joseph",
+        "entities": [
+          {
+            "start": 0,
+            "entity": "name",
+            "end": 6,
+            "value": "Joseph"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "Tan",
+        "entities": [
+          {
+            "start": 0,
+            "entity": "name",
+            "end": 3,
+            "value": "Tan"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "Pete",
+        "entities": [
+          {
+            "start": 0,
+            "entity": "name",
+            "end": 4,
+            "value": "Pete"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "Elon",
+        "entities": [
+          {
+            "start": 0,
+            "entity": "name",
+            "end": 4,
+            "value": "Elon"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "Penny",
+        "entities": [
+          {
+            "start": 0,
+            "entity": "name",
+            "end": 5,
+            "value": "Penny"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "name is Andrew",
+        "entities": [
+          {
+            "start": 8,
+            "entity": "name",
+            "end": 14,
+            "value": "Andrew"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "I Lora",
+        "entities": [
+          {
+            "start": 2,
+            "entity": "name",
+            "end": 6,
+            "value": "Lora"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "Stan is my name",
+        "entities": [
+          {
+            "start": 0,
+            "entity": "name",
+            "end": 4,
+            "value": "Stan"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "Susan is the name",
+        "entities": [
+          {
+            "start": 0,
+            "entity": "name",
+            "end": 5,
+            "value": "Susan"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "Ross is my first name",
+        "entities": [
+          {
+            "start": 0,
+            "entity": "name",
+            "end": 4,
+            "value": "Ross"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "Bing is my last name",
+        "entities": [
+          {
+            "start": 0,
+            "entity": "name",
+            "end": 4,
+            "value": "Bing"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "Few call me as Angelina",
+        "entities": [
+          {
+            "start": 15,
+            "entity": "name",
+            "end": 23,
+            "value": "Angelina"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "Some call me Julia",
+        "entities": [
+          {
+            "start": 13,
+            "entity": "name",
+            "end": 18,
+            "value": "Julia"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "Everyone calls me Laura",
+        "entities": [
+          {
+            "start": 18,
+            "entity": "name",
+            "end": 23,
+            "value": "Laura"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "I am Ganesh",
+        "entities": [
+          {
+            "start": 5,
+            "entity": "name",
+            "end": 11,
+            "value": "Ganesh"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "My name is Mike",
+        "entities": [
+          {
+            "start": 11,
+            "entity": "name",
+            "end": 15,
+            "value": "Mike"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "just call me Monika",
+        "entities": [
+          {
+            "start": 13,
+            "entity": "name",
+            "end": 19,
+            "value": "Monika"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "Few call Dan",
+        "entities": [
+          {
+            "start": 9,
+            "entity": "name",
+            "end": 12,
+            "value": "Dan"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "You can always call me Suraj",
+        "entities": [
+          {
+            "start": 23,
+            "entity": "name",
+            "end": 28,
+            "value": "Suraj"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "Some will call me Andrew",
+        "entities": [
+          {
+            "start": 18,
+            "entity": "name",
+            "end": 24,
+            "value": "Andrew"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "My name is Ajay",
+        "entities": [
+          {
+            "start": 11,
+            "entity": "name",
+            "end": 15,
+            "value": "Ajay"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "I call Ding",
+        "entities": [
+          {
+            "start": 7,
+            "entity": "name",
+            "end": 11,
+            "value": "Ding"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "I'm Partia",
+        "entities": [
+          {
+            "start": 4,
+            "entity": "name",
+            "end": 10,
+            "value": "Partia"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "Please call me Leo",
+        "entities": [
+          {
+            "start": 15,
+            "entity": "name",
+            "end": 18,
+            "value": "Leo"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "name is Pari",
+        "entities": [
+          {
+            "start": 8,
+            "entity": "name",
+            "end": 12,
+            "value": "Pari"
+          }
+        ]
+      },
+      {
+        "intent": "name",
+        "text": "name Sanjay",
+        "entities": [
+          {
+            "start": 5,
+            "entity": "name",
+            "end": 11,
+            "value": "Sanjay"
+          }
+        ]
+      },
+      {
+        "intent": "joke",
+        "text": "Can you tell me a joke?"
+      },
+      {
+        "intent": "joke",
+        "text": "I would like to hear a joke"
+      },
+      {
+        "intent": "joke",
+        "text": "Tell me a joke"
+      },
+      {
+        "intent": "joke",
+        "text": "A joke please"
+      },
+      {
+        "intent": "joke",
+        "text": "Tell me a joke please"
+      },
+      {
+        "intent": "joke",
+        "text": "I would like to hear a joke"
+      },
+      {
+        "intent": "joke",
+        "text": "I would loke to hear a joke, please"
+      },
+      {
+        "intent": "joke",
+        "text": "Can you tell jokes?"
+      },
+      {
+        "intent": "joke",
+        "text": "Please tell me a joke"
+      },
+      {
+        "intent": "joke",
+        "text": "I need to hear a joke"
+      }
+    ],
+    "entity_synonyms": [],
+    "lookup_tables": [],
+    "regex_features": []
+  }
+}
