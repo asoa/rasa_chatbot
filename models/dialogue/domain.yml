@@ -1,53 +1,56 @@
 %YAML 1.1
 ---
 actions:
-- utter_thanks
-- utter_goodbye
 - utter_verify_name_dob
-- utter_ask_dob
 - utter_default
-- utter_empathy
-- utter_how_long
-- utter_bye
-- utter_greet
+- utter_goodbye
 - utter_thank_you
-- utter_elaborate_symptoms
+- utter_bye
 - utter_ask_patient_name
-- utter_patient_name
-- utter_purpose
+- utter_empathy
+- utter_ask_dob
+- utter_how_long
 - utter_dob
+- utter_elaborate_symptoms
+- utter_run_tests
+- utter_patient_name
+- utter_your_welcome
+- utter_purpose
+- utter_greet
 config:
   store_entities_as_slots: true
 entities:
-- patient_name
 - allergies
 - dob
+- patient_name
 forms:
 - patient_info_form
 intents:
-- utter_your_welcome:
-    use_entities: true
-- onset_quick:
+- deny:
     use_entities: true
 - thanks:
     use_entities: true
 - onset_gradually:
     use_entities: true
-- correct_name_dob:
+- symptoms:
     use_entities: true
-- greet:
+- utter_your_welcome:
+    use_entities: true
+- agree:
+    use_entities: true
+- goodbye:
     use_entities: true
 - patient_name:
     use_entities: true
-- symptoms:
-    use_entities: true
-- deny:
-    use_entities: true
 - utter_thank_you:
     use_entities: true
-- dob:
+- greet:
     use_entities: true
-- goodbye:
+- correct_name_dob:
+    use_entities: true
+- onset_quick:
+    use_entities: true
+- dob:
     use_entities: true
 slots:
   dob:
@@ -96,6 +99,8 @@ templates:
   utter_purpose:
   - text: What brings you in today?
   - text: What is bothering you today?
+  utter_run_tests:
+  - text: Alright, let's run some tests to figure out what's going on. Is that ok?
   utter_thank_you:
   - text: Thank you.
   - text: Thanks.

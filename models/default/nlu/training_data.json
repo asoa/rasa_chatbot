@@ -2,27 +2,9 @@
   "rasa_nlu_data": {
     "entity_synonyms": [
       {
-        "value": "alex",
-        "synonyms": [
-          "Alex"
-        ]
-      },
-      {
-        "value": "jan 29 , 2010",
-        "synonyms": [
-          "Jan 29, 2010"
-        ]
-      },
-      {
         "value": "october 12 , 1987",
         "synonyms": [
           "October 12, 1987"
-        ]
-      },
-      {
-        "value": "tom palen",
-        "synonyms": [
-          "Tom Palen"
         ]
       },
       {
@@ -32,1179 +14,1395 @@
         ]
       },
       {
+        "value": "tom palen",
+        "synonyms": [
+          "Tom Palen"
+        ]
+      },
+      {
+        "value": "alex",
+        "synonyms": [
+          "Alex"
+        ]
+      },
+      {
+        "value": "jan 31 , 1970",
+        "synonyms": [
+          "Jan 31, 1970"
+        ]
+      },
+      {
+        "value": "jan 29 , 2010",
+        "synonyms": [
+          "Jan 29, 2010"
+        ]
+      },
+      {
         "value": "jan 3 , 2001",
         "synonyms": [
           "jan 3, 2001"
         ]
       }
     ],
+    "lookup_tables": [],
+    "regex_features": [],
     "common_examples": [
       {
-        "intent": "correct_name_dob",
-        "text": "yes, that's correct"
+        "text": "yes, that's fine",
+        "intent": "agree"
       },
       {
-        "intent": "correct_name_dob",
-        "text": "yes"
+        "text": "ok",
+        "intent": "agree"
       },
       {
-        "intent": "correct_name_dob",
-        "text": "that's correct"
+        "text": "that's fine",
+        "intent": "agree"
       },
       {
-        "intent": "correct_name_dob",
-        "text": "you got it"
+        "text": "ok, thank you",
+        "intent": "agree"
       },
       {
-        "intent": "correct_name_dob",
-        "text": "that's right"
+        "text": "that's ok",
+        "intent": "agree"
       },
       {
-        "intent": "correct_name_dob",
-        "text": "yep"
+        "text": "alright",
+        "intent": "agree"
       },
       {
-        "intent": "correct_name_dob",
-        "text": "yes, correct"
+        "text": "yes",
+        "intent": "agree"
       },
       {
-        "intent": "correct_name_dob",
-        "text": "yes, thank you"
+        "text": "yes",
+        "intent": "agree"
       },
       {
-        "intent": "correct_name_dob",
-        "text": "ok"
+        "text": "yes, that's correct",
+        "intent": "correct_name_dob"
       },
       {
-        "intent": "correct_name_dob",
-        "text": "everything is correct"
+        "text": "yes",
+        "intent": "correct_name_dob"
       },
       {
-        "intent": "correct_name_dob",
-        "text": "that's accurate"
+        "text": "that's correct",
+        "intent": "correct_name_dob"
       },
       {
-        "intent": "correct_name_dob",
-        "text": "correct"
+        "text": "you got it",
+        "intent": "correct_name_dob"
       },
       {
-        "intent": "correct_name_dob",
-        "text": "yes"
+        "text": "that's right",
+        "intent": "correct_name_dob"
       },
       {
-        "intent": "correct_name_dob",
-        "text": "yes, that's correct"
+        "text": "yep",
+        "intent": "correct_name_dob"
       },
       {
-        "intent": "correct_name_dob",
-        "text": "yes, that's correct"
+        "text": "yes, correct",
+        "intent": "correct_name_dob"
       },
       {
-        "intent": "correct_name_dob",
-        "text": "yes, that's correct"
+        "text": "yes, thank you",
+        "intent": "correct_name_dob"
       },
       {
-        "intent": "correct_name_dob",
-        "text": "yes, that's right"
+        "text": "ok",
+        "intent": "correct_name_dob"
       },
       {
-        "intent": "correct_name_dob",
-        "text": "yes, that's correct"
+        "text": "everything is correct",
+        "intent": "correct_name_dob"
       },
       {
-        "intent": "correct_name_dob",
-        "text": "yes, that's correct"
+        "text": "that's accurate",
+        "intent": "correct_name_dob"
       },
       {
-        "intent": "correct_name_dob",
-        "text": "yes, that's right"
+        "text": "correct",
+        "intent": "correct_name_dob"
       },
       {
+        "text": "yes",
+        "intent": "correct_name_dob"
+      },
+      {
+        "text": "yes, that's correct",
+        "intent": "correct_name_dob"
+      },
+      {
+        "text": "yes, that's correct",
+        "intent": "correct_name_dob"
+      },
+      {
+        "text": "yes, that's correct",
+        "intent": "correct_name_dob"
+      },
+      {
+        "text": "yes, that's right",
+        "intent": "correct_name_dob"
+      },
+      {
+        "text": "yes, that's correct",
+        "intent": "correct_name_dob"
+      },
+      {
+        "text": "yes, that's correct",
+        "intent": "correct_name_dob"
+      },
+      {
+        "text": "yes, that's right",
+        "intent": "correct_name_dob"
+      },
+      {
+        "text": "yes, that's correct",
+        "intent": "correct_name_dob"
+      },
+      {
+        "text": "Yes",
+        "intent": "correct_name_dob"
+      },
+      {
+        "text": "yes, that's correct",
+        "intent": "correct_name_dob"
+      },
+      {
+        "text": "yes, that's right",
+        "intent": "correct_name_dob"
+      },
+      {
+        "text": "jan 1, 1945",
         "intent": "dob",
         "entities": [
           {
+            "end": 11,
             "start": 0,
             "value": "jan 1, 1945",
-            "entity": "dob",
-            "end": 11
+            "entity": "dob"
           }
-        ],
-        "text": "jan 1, 1945"
+        ]
       },
       {
+        "text": "Jan 1, 1950",
         "intent": "dob",
         "entities": [
           {
+            "end": 11,
             "start": 0,
             "value": "Jan 1, 1950",
-            "entity": "dob",
-            "end": 11
+            "entity": "dob"
           }
-        ],
-        "text": "Jan 1, 1950"
+        ]
       },
       {
+        "text": "JAN 25, 2001",
         "intent": "dob",
         "entities": [
           {
+            "end": 12,
             "start": 0,
             "value": "JAN 25, 2001",
-            "entity": "dob",
-            "end": 12
+            "entity": "dob"
           }
-        ],
-        "text": "JAN 25, 2001"
+        ]
       },
       {
+        "text": "dec 15 2006",
         "intent": "dob",
         "entities": [
           {
+            "end": 11,
             "start": 0,
             "value": "dec 15 2006",
-            "entity": "dob",
-            "end": 11
+            "entity": "dob"
           }
-        ],
-        "text": "dec 15 2006"
+        ]
       },
       {
+        "text": "mar 15 1987",
         "intent": "dob",
         "entities": [
           {
+            "end": 11,
             "start": 0,
             "value": "mar 15 1987",
-            "entity": "dob",
-            "end": 11
+            "entity": "dob"
           }
-        ],
-        "text": "mar 15 1987"
+        ]
       },
       {
+        "text": "november 27 2001",
         "intent": "dob",
         "entities": [
           {
+            "end": 16,
             "start": 0,
             "value": "november 27 2001",
-            "entity": "dob",
-            "end": 16
+            "entity": "dob"
           }
-        ],
-        "text": "november 27 2001"
+        ]
       },
       {
+        "text": "Feb 10, 1976",
         "intent": "dob",
         "entities": [
           {
+            "end": 12,
             "start": 0,
             "value": "Feb 10, 1976",
-            "entity": "dob",
-            "end": 12
+            "entity": "dob"
           }
-        ],
-        "text": "Feb 10, 1976"
+        ]
       },
       {
+        "text": "October 9 2010",
         "intent": "dob",
         "entities": [
           {
+            "end": 14,
             "start": 0,
             "value": "October 9 2010",
-            "entity": "dob",
-            "end": 14
+            "entity": "dob"
           }
-        ],
-        "text": "October 9 2010"
+        ]
       },
       {
+        "text": "1/21/2001",
         "intent": "dob",
         "entities": [
           {
+            "end": 9,
             "start": 0,
             "value": "1/21/2001",
-            "entity": "dob",
-            "end": 9
+            "entity": "dob"
           }
-        ],
-        "text": "1/21/2001"
+        ]
       },
       {
+        "text": "05/2/1976",
         "intent": "dob",
         "entities": [
           {
+            "end": 9,
             "start": 0,
             "value": "05/2/1976",
-            "entity": "dob",
-            "end": 9
+            "entity": "dob"
           }
-        ],
-        "text": "05/2/1976"
+        ]
       },
       {
+        "text": "march 25, 2000",
         "intent": "dob",
         "entities": [
           {
+            "end": 14,
             "start": 0,
             "value": "march 25, 2000",
-            "entity": "dob",
-            "end": 14
+            "entity": "dob"
           }
-        ],
-        "text": "march 25, 2000"
+        ]
       },
       {
+        "text": "5/15/1978",
         "intent": "dob",
         "entities": [
           {
+            "end": 9,
             "start": 0,
             "value": "5/15/1978",
-            "entity": "dob",
-            "end": 9
+            "entity": "dob"
           }
-        ],
-        "text": "5/15/1978"
+        ]
       },
       {
+        "text": "4/20/1950",
         "intent": "dob",
         "entities": [
           {
+            "end": 9,
             "start": 0,
             "value": "4/20/1950",
-            "entity": "dob",
-            "end": 9
+            "entity": "dob"
           }
-        ],
-        "text": "4/20/1950"
+        ]
       },
       {
+        "text": "jan 3, 2001",
         "intent": "dob",
         "entities": [
           {
+            "end": 11,
             "start": 0,
             "value": "jan 3 , 2001",
-            "entity": "dob",
-            "end": 11
+            "entity": "dob"
           }
-        ],
-        "text": "jan 3, 2001"
+        ]
       },
       {
+        "text": "October 12, 1987",
         "intent": "dob",
         "entities": [
           {
+            "end": 16,
             "start": 0,
             "value": "october 12 , 1987",
-            "entity": "dob",
-            "end": 16
+            "entity": "dob"
           }
-        ],
-        "text": "October 12, 1987"
+        ]
       },
       {
+        "text": "September 5, 2001",
         "intent": "dob",
         "entities": [
           {
+            "end": 17,
             "start": 0,
             "value": "september 5 , 2001",
-            "entity": "dob",
-            "end": 17
+            "entity": "dob"
           }
-        ],
-        "text": "September 5, 2001"
+        ]
       },
       {
+        "text": "Jan 29, 2010",
         "intent": "dob",
         "entities": [
           {
+            "end": 12,
             "start": 0,
             "value": "jan 29 , 2010",
-            "entity": "dob",
-            "end": 12
+            "entity": "dob"
           }
-        ],
-        "text": "Jan 29, 2010"
+        ]
       },
       {
-        "intent": "goodbye",
-        "text": "See you later"
+        "text": "Jan 31, 1970",
+        "intent": "dob",
+        "entities": [
+          {
+            "end": 12,
+            "start": 0,
+            "value": "jan 31 , 1970",
+            "entity": "dob"
+          }
+        ]
       },
       {
-        "intent": "goodbye",
-        "text": "Bye"
+        "text": "01/18/2010",
+        "intent": "dob",
+        "entities": [
+          {
+            "end": 10,
+            "start": 0,
+            "value": "01/18/2010",
+            "entity": "dob"
+          }
+        ]
       },
       {
-        "intent": "goodbye",
-        "text": "have a blessed day"
+        "text": "1/1/2001",
+        "intent": "dob",
+        "entities": [
+          {
+            "end": 8,
+            "start": 0,
+            "value": "1/1/2001",
+            "entity": "dob"
+          }
+        ]
       },
       {
-        "intent": "goodbye",
-        "text": "gotta go"
+        "text": "nov 22, 1982",
+        "intent": "dob",
+        "entities": [
+          {
+            "end": 12,
+            "start": 0,
+            "value": "nov 22, 1982",
+            "entity": "dob"
+          }
+        ]
       },
       {
-        "intent": "goodbye",
-        "text": "See you"
+        "text": "See you later",
+        "intent": "goodbye"
       },
       {
-        "intent": "goodbye",
-        "text": "have a nice day"
+        "text": "Bye",
+        "intent": "goodbye"
       },
       {
-        "intent": "goodbye",
-        "text": "later"
+        "text": "have a blessed day",
+        "intent": "goodbye"
       },
       {
-        "intent": "goodbye",
-        "text": "take care"
+        "text": "gotta go",
+        "intent": "goodbye"
       },
       {
-        "intent": "greet",
-        "text": "Hi"
+        "text": "See you",
+        "intent": "goodbye"
       },
       {
-        "intent": "greet",
-        "text": "Hey"
+        "text": "have a nice day",
+        "intent": "goodbye"
       },
       {
-        "intent": "greet",
-        "text": "Hello"
+        "text": "later",
+        "intent": "goodbye"
       },
       {
-        "intent": "greet",
-        "text": "Good morning"
+        "text": "take care",
+        "intent": "goodbye"
       },
       {
-        "intent": "greet",
-        "text": "hi again"
+        "text": "Hi",
+        "intent": "greet"
       },
       {
-        "intent": "greet",
-        "text": "good morning ma'am"
+        "text": "Hey",
+        "intent": "greet"
       },
       {
-        "intent": "greet",
-        "text": "hello ma'am"
+        "text": "Hello",
+        "intent": "greet"
       },
       {
-        "intent": "greet",
-        "text": "good afternoon"
+        "text": "Good morning",
+        "intent": "greet"
       },
       {
-        "intent": "greet",
-        "text": "how are you"
+        "text": "hi again",
+        "intent": "greet"
       },
       {
-        "intent": "greet",
-        "text": "hi there"
+        "text": "good morning ma'am",
+        "intent": "greet"
       },
       {
-        "intent": "greet",
-        "text": "greetings"
+        "text": "hello ma'am",
+        "intent": "greet"
       },
       {
-        "intent": "greet",
-        "text": "hello everybody"
+        "text": "good afternoon",
+        "intent": "greet"
       },
       {
-        "intent": "greet",
-        "text": "hello is anybody there"
+        "text": "how are you",
+        "intent": "greet"
       },
       {
-        "intent": "greet",
-        "text": "HELLO HOW ARE YOU"
+        "text": "hi there",
+        "intent": "greet"
       },
       {
-        "intent": "greet",
-        "text": "what's up"
+        "text": "greetings",
+        "intent": "greet"
       },
       {
-        "intent": "greet",
-        "text": "hi"
+        "text": "hello everybody",
+        "intent": "greet"
       },
       {
-        "intent": "greet",
-        "text": "hi, how are you?"
+        "text": "hello is anybody there",
+        "intent": "greet"
       },
       {
-        "intent": "greet",
-        "text": "hi"
+        "text": "HELLO HOW ARE YOU",
+        "intent": "greet"
       },
       {
-        "intent": "greet",
-        "text": "hi"
+        "text": "what's up",
+        "intent": "greet"
       },
       {
-        "intent": "greet",
-        "text": "hi"
+        "text": "hi",
+        "intent": "greet"
       },
       {
-        "intent": "incorrect_name_dob",
-        "text": "no, that's not correct"
+        "text": "hi, how are you?",
+        "intent": "greet"
       },
       {
-        "intent": "incorrect_name_dob",
-        "text": "my name is incorrect"
+        "text": "hi",
+        "intent": "greet"
       },
       {
-        "intent": "incorrect_name_dob",
-        "text": "my date of birth is incorrect"
+        "text": "hi",
+        "intent": "greet"
       },
       {
-        "intent": "incorrect_name_dob",
-        "text": "no, that's not right"
+        "text": "hi",
+        "intent": "greet"
       },
       {
-        "intent": "incorrect_name_dob",
-        "text": "no"
+        "text": "hello",
+        "intent": "greet"
       },
       {
-        "intent": "incorrect_name_dob",
-        "text": "not correct"
+        "text": "Hey there",
+        "intent": "greet"
       },
       {
-        "intent": "incorrect_name_dob",
-        "text": "sorry, no"
+        "text": "hi",
+        "intent": "greet"
       },
       {
-        "intent": "incorrect_name_dob",
-        "text": "wrong name"
+        "text": "hi",
+        "intent": "greet"
       },
       {
-        "intent": "incorrect_name_dob",
-        "text": "wrong date"
+        "text": "no, that's not correct",
+        "intent": "incorrect_name_dob"
       },
       {
-        "intent": "incorrect_name_dob",
-        "text": "wrong month"
+        "text": "my name is incorrect",
+        "intent": "incorrect_name_dob"
       },
       {
-        "intent": "incorrect_name_dob",
-        "text": "wrong birth date"
+        "text": "my date of birth is incorrect",
+        "intent": "incorrect_name_dob"
       },
       {
-        "intent": "incorrect_name_dob",
-        "text": "nope"
+        "text": "no, that's not right",
+        "intent": "incorrect_name_dob"
       },
       {
-        "intent": "onset_gradually",
-        "text": "a few days"
+        "text": "no",
+        "intent": "incorrect_name_dob"
       },
       {
-        "intent": "onset_gradually",
-        "text": "2 or 3 days"
+        "text": "not correct",
+        "intent": "incorrect_name_dob"
       },
       {
-        "intent": "onset_gradually",
-        "text": "two or three days"
+        "text": "sorry, no",
+        "intent": "incorrect_name_dob"
       },
       {
-        "intent": "onset_gradually",
-        "text": "last week"
+        "text": "wrong name",
+        "intent": "incorrect_name_dob"
       },
       {
-        "intent": "onset_gradually",
-        "text": "for a few days now"
+        "text": "wrong date",
+        "intent": "incorrect_name_dob"
       },
       {
-        "intent": "onset_gradually",
-        "text": "for a while now"
+        "text": "wrong month",
+        "intent": "incorrect_name_dob"
       },
       {
-        "intent": "onset_gradually",
-        "text": "a few weeks"
+        "text": "wrong birth date",
+        "intent": "incorrect_name_dob"
       },
       {
-        "intent": "onset_gradually",
-        "text": "for a few weeks"
+        "text": "nope",
+        "intent": "incorrect_name_dob"
       },
       {
-        "intent": "onset_gradually",
-        "text": "for a couple of weeks"
+        "text": "a few days",
+        "intent": "onset_gradually"
       },
       {
-        "intent": "onset_gradually",
-        "text": "For a few days"
+        "text": "2 or 3 days",
+        "intent": "onset_gradually"
       },
       {
-        "intent": "onset_quick",
-        "text": "last 24 hours"
+        "text": "two or three days",
+        "intent": "onset_gradually"
       },
       {
-        "intent": "onset_quick",
-        "text": "yesterday"
+        "text": "last week",
+        "intent": "onset_gradually"
       },
       {
-        "intent": "onset_quick",
-        "text": "early this morning"
+        "text": "for a few days now",
+        "intent": "onset_gradually"
       },
       {
-        "intent": "onset_quick",
-        "text": "last night"
+        "text": "for a while now",
+        "intent": "onset_gradually"
       },
       {
-        "intent": "onset_quick",
-        "text": "yesterday afternoon"
+        "text": "a few weeks",
+        "intent": "onset_gradually"
       },
       {
-        "intent": "onset_quick",
-        "text": "suddenly"
+        "text": "for a few weeks",
+        "intent": "onset_gradually"
       },
       {
-        "intent": "onset_quick",
-        "text": "all of a sudden"
+        "text": "for a couple of weeks",
+        "intent": "onset_gradually"
       },
       {
-        "intent": "onset_quick",
-        "text": "out of nowhere"
+        "text": "For a few days",
+        "intent": "onset_gradually"
       },
       {
-        "intent": "onset_quick",
-        "text": "quickly"
+        "text": "for a few weeks",
+        "intent": "onset_gradually"
       },
       {
-        "intent": "onset_quick",
-        "text": "abruptly"
+        "text": "for the past 2 days",
+        "intent": "onset_gradually"
       },
       {
-        "intent": "onset_quick",
-        "text": "all of a sudden"
+        "text": "last 24 hours",
+        "intent": "onset_quick"
       },
       {
-        "intent": "onset_quick",
-        "text": "last night"
+        "text": "yesterday",
+        "intent": "onset_quick"
       },
       {
-        "intent": "onset_quick",
-        "text": "all of a sudden"
+        "text": "early this morning",
+        "intent": "onset_quick"
       },
       {
-        "intent": "onset_quick",
-        "text": "sometime yesterday"
+        "text": "last night",
+        "intent": "onset_quick"
       },
       {
-        "intent": "onset_quick",
-        "text": "last 24 hours or so"
+        "text": "yesterday afternoon",
+        "intent": "onset_quick"
       },
       {
+        "text": "suddenly",
+        "intent": "onset_quick"
+      },
+      {
+        "text": "all of a sudden",
+        "intent": "onset_quick"
+      },
+      {
+        "text": "out of nowhere",
+        "intent": "onset_quick"
+      },
+      {
+        "text": "quickly",
+        "intent": "onset_quick"
+      },
+      {
+        "text": "abruptly",
+        "intent": "onset_quick"
+      },
+      {
+        "text": "all of a sudden",
+        "intent": "onset_quick"
+      },
+      {
+        "text": "last night",
+        "intent": "onset_quick"
+      },
+      {
+        "text": "all of a sudden",
+        "intent": "onset_quick"
+      },
+      {
+        "text": "sometime yesterday",
+        "intent": "onset_quick"
+      },
+      {
+        "text": "last 24 hours or so",
+        "intent": "onset_quick"
+      },
+      {
+        "text": "started this late last night",
+        "intent": "onset_quick"
+      },
+      {
+        "text": "It came on suddenly. Since yesterday",
+        "intent": "onset_quick"
+      },
+      {
+        "text": "My name is Juste Ball",
         "intent": "patient_name",
         "entities": [
           {
+            "end": 21,
             "start": 11,
             "value": "Juste Ball",
-            "entity": "patient_name",
-            "end": 21
+            "entity": "patient_name"
           }
-        ],
-        "text": "My name is Juste Ball"
+        ]
       },
       {
+        "text": "I am Josh Smith",
         "intent": "patient_name",
         "entities": [
           {
+            "end": 15,
             "start": 5,
             "value": "Josh Smith",
-            "entity": "patient_name",
-            "end": 15
+            "entity": "patient_name"
           }
-        ],
-        "text": "I am Josh Smith"
+        ]
       },
       {
+        "text": "I'm Lucy Perry",
         "intent": "patient_name",
         "entities": [
           {
+            "end": 14,
             "start": 4,
             "value": "Lucy Perry",
-            "entity": "patient_name",
-            "end": 14
+            "entity": "patient_name"
           }
-        ],
-        "text": "I'm Lucy Perry"
+        ]
       },
       {
+        "text": "People call me Greg Gilmore",
         "intent": "patient_name",
         "entities": [
           {
+            "end": 27,
             "start": 15,
             "value": "Greg Gilmore",
-            "entity": "patient_name",
-            "end": 27
+            "entity": "patient_name"
           }
-        ],
-        "text": "People call me Greg Gilmore"
+        ]
       },
       {
+        "text": "It's David Johnson",
         "intent": "patient_name",
         "entities": [
           {
+            "end": 18,
             "start": 5,
             "value": "David Johnson",
-            "entity": "patient_name",
-            "end": 18
+            "entity": "patient_name"
           }
-        ],
-        "text": "It's David Johnson"
+        ]
       },
       {
+        "text": "Usually people call me Amy Jenkins",
         "intent": "patient_name",
         "entities": [
           {
+            "end": 34,
             "start": 23,
             "value": "Amy Jenkins",
-            "entity": "patient_name",
-            "end": 34
+            "entity": "patient_name"
           }
-        ],
-        "text": "Usually people call me Amy Jenkins"
+        ]
       },
       {
+        "text": "My name is Sophie Rodriques",
         "intent": "patient_name",
         "entities": [
           {
+            "end": 27,
             "start": 11,
             "value": "Sophie Rodriques",
-            "entity": "patient_name",
-            "end": 27
+            "entity": "patient_name"
           }
-        ],
-        "text": "My name is Sophie Rodriques"
+        ]
       },
       {
+        "text": "You can call me Joane Gerald",
         "intent": "patient_name",
         "entities": [
           {
+            "end": 28,
             "start": 16,
             "value": "Joane Gerald",
-            "entity": "patient_name",
-            "end": 28
+            "entity": "patient_name"
           }
-        ],
-        "text": "You can call me Joane Gerald"
+        ]
       },
       {
+        "text": "Please call me Royal Navarrette",
         "intent": "patient_name",
         "entities": [
           {
+            "end": 31,
             "start": 15,
             "value": "Royal Navarrette",
-            "entity": "patient_name",
-            "end": 31
+            "entity": "patient_name"
           }
-        ],
-        "text": "Please call me Royal Navarrette"
+        ]
       },
       {
+        "text": "Name name is Tom Palen",
         "intent": "patient_name",
         "entities": [
           {
+            "end": 22,
             "start": 13,
             "value": "Tom Palen",
-            "entity": "patient_name",
-            "end": 22
+            "entity": "patient_name"
           }
-        ],
-        "text": "Name name is Tom Palen"
+        ]
       },
       {
+        "text": "I am Richard Brainard",
         "intent": "patient_name",
         "entities": [
           {
+            "end": 21,
             "start": 5,
             "value": "Richard Brainard",
-            "entity": "patient_name",
-            "end": 21
+            "entity": "patient_name"
           }
-        ],
-        "text": "I am Richard Brainard"
+        ]
       },
       {
+        "text": "Natacha Weathersby",
         "intent": "patient_name",
         "entities": [
           {
+            "end": 18,
             "start": 0,
             "value": "Natacha Weathersby",
-            "entity": "patient_name",
-            "end": 18
+            "entity": "patient_name"
           }
-        ],
-        "text": "Natacha Weathersby"
+        ]
       },
       {
+        "text": "Belinda Beaupre",
         "intent": "patient_name",
         "entities": [
           {
+            "end": 15,
             "start": 0,
             "value": "Belinda Beaupre",
-            "entity": "patient_name",
-            "end": 15
+            "entity": "patient_name"
           }
-        ],
-        "text": "Belinda Beaupre"
+        ]
       },
       {
+        "text": "Tonya Carnes",
         "intent": "patient_name",
         "entities": [
           {
+            "end": 12,
             "start": 0,
             "value": "Tonya Carnes",
-            "entity": "patient_name",
-            "end": 12
+            "entity": "patient_name"
           }
-        ],
-        "text": "Tonya Carnes"
+        ]
       },
       {
+        "text": "Joseph Greenleaf",
         "intent": "patient_name",
         "entities": [
           {
+            "end": 16,
             "start": 0,
             "value": "Joseph Greenleaf",
-            "entity": "patient_name",
-            "end": 16
+            "entity": "patient_name"
           }
-        ],
-        "text": "Joseph Greenleaf"
+        ]
       },
       {
+        "text": "Tan Gaal",
         "intent": "patient_name",
         "entities": [
           {
+            "end": 8,
             "start": 0,
             "value": "Tan Gaal",
-            "entity": "patient_name",
-            "end": 8
+            "entity": "patient_name"
           }
-        ],
-        "text": "Tan Gaal"
+        ]
       },
       {
+        "text": "Pete Toy",
         "intent": "patient_name",
         "entities": [
           {
+            "end": 8,
             "start": 0,
             "value": "Pete Toy",
-            "entity": "patient_name",
-            "end": 8
+            "entity": "patient_name"
           }
-        ],
-        "text": "Pete Toy"
+        ]
       },
       {
+        "text": "Elon Musk",
         "intent": "patient_name",
         "entities": [
           {
+            "end": 9,
             "start": 0,
             "value": "Elon Musk",
-            "entity": "patient_name",
-            "end": 9
+            "entity": "patient_name"
           }
-        ],
-        "text": "Elon Musk"
+        ]
       },
       {
+        "text": "Penny Prue",
         "intent": "patient_name",
         "entities": [
           {
+            "end": 10,
             "start": 0,
             "value": "Penny Prue",
-            "entity": "patient_name",
-            "end": 10
+            "entity": "patient_name"
           }
-        ],
-        "text": "Penny Prue"
+        ]
       },
       {
+        "text": "name is Andrew Wendel",
         "intent": "patient_name",
         "entities": [
           {
+            "end": 21,
             "start": 8,
             "value": "Andrew Wendel",
-            "entity": "patient_name",
-            "end": 21
+            "entity": "patient_name"
           }
-        ],
-        "text": "name is Andrew Wendel"
+        ]
       },
       {
+        "text": "I am Ganesh",
         "intent": "patient_name",
         "entities": [
           {
+            "end": 11,
             "start": 5,
             "value": "Ganesh",
-            "entity": "patient_name",
-            "end": 11
+            "entity": "patient_name"
           }
-        ],
-        "text": "I am Ganesh"
+        ]
       },
       {
+        "text": "My name is Mike",
         "intent": "patient_name",
         "entities": [
           {
+            "end": 15,
             "start": 11,
             "value": "Mike",
-            "entity": "patient_name",
-            "end": 15
+            "entity": "patient_name"
           }
-        ],
-        "text": "My name is Mike"
+        ]
       },
       {
+        "text": "My name is Ajay",
         "intent": "patient_name",
         "entities": [
           {
+            "end": 15,
             "start": 11,
             "value": "Ajay",
-            "entity": "patient_name",
-            "end": 15
+            "entity": "patient_name"
           }
-        ],
-        "text": "My name is Ajay"
+        ]
       },
       {
+        "text": "I'm Partia",
         "intent": "patient_name",
         "entities": [
           {
+            "end": 10,
             "start": 4,
             "value": "Partia",
-            "entity": "patient_name",
-            "end": 10
+            "entity": "patient_name"
           }
-        ],
-        "text": "I'm Partia"
+        ]
       },
       {
+        "text": "Please call me Leo",
         "intent": "patient_name",
         "entities": [
           {
+            "end": 18,
             "start": 15,
             "value": "Leo",
-            "entity": "patient_name",
-            "end": 18
+            "entity": "patient_name"
           }
-        ],
-        "text": "Please call me Leo"
+        ]
       },
       {
+        "text": "name is Pari",
         "intent": "patient_name",
         "entities": [
           {
+            "end": 12,
             "start": 8,
             "value": "Pari",
-            "entity": "patient_name",
-            "end": 12
+            "entity": "patient_name"
           }
-        ],
-        "text": "name is Pari"
+        ]
       },
       {
+        "text": "name Sanjay",
         "intent": "patient_name",
         "entities": [
           {
+            "end": 11,
             "start": 5,
             "value": "Sanjay",
-            "entity": "patient_name",
-            "end": 11
+            "entity": "patient_name"
           }
-        ],
-        "text": "name Sanjay"
+        ]
       },
       {
+        "text": "My name is Alex",
         "intent": "patient_name",
         "entities": [
           {
+            "end": 15,
             "start": 11,
             "value": "alex",
-            "entity": "patient_name",
-            "end": 15
+            "entity": "patient_name"
           }
-        ],
-        "text": "My name is Alex"
+        ]
       },
       {
+        "text": "Samantha Bell",
         "intent": "patient_name",
         "entities": [
           {
+            "end": 13,
             "start": 0,
             "value": "Samantha Bell",
-            "entity": "patient_name",
-            "end": 13
+            "entity": "patient_name"
           }
-        ],
-        "text": "Samantha Bell"
+        ]
       },
       {
+        "text": "my name is Samantha Bell",
         "intent": "patient_name",
         "entities": [
           {
+            "end": 24,
             "start": 11,
             "value": "Samantha Bell",
-            "entity": "patient_name",
-            "end": 24
+            "entity": "patient_name"
           }
-        ],
-        "text": "my name is Samantha Bell"
+        ]
       },
       {
+        "text": "My name is Tom Palen",
         "intent": "patient_name",
         "entities": [
           {
+            "end": 20,
             "start": 11,
             "value": "tom palen",
-            "entity": "patient_name",
-            "end": 20
+            "entity": "patient_name"
           }
-        ],
-        "text": "My name is Tom Palen"
+        ]
       },
       {
-        "intent": "symptoms",
-        "text": "stuffy nose"
+        "text": "Alexander Bailey",
+        "intent": "patient_name"
       },
       {
-        "intent": "symptoms",
-        "text": "sneezing"
+        "text": "Shanika Latoya",
+        "intent": "patient_name"
       },
       {
-        "intent": "symptoms",
-        "text": "sore throat"
+        "text": "alex bailey",
+        "intent": "patient_name"
       },
       {
-        "intent": "symptoms",
-        "text": "constant cough"
+        "text": "my name is jack wilson",
+        "intent": "patient_name",
+        "entities": [
+          {
+            "end": 22,
+            "start": 11,
+            "value": "jack wilson",
+            "entity": "patient_name"
+          }
+        ]
       },
       {
-        "intent": "symptoms",
-        "text": "nagging cough"
+        "text": "stuffy nose",
+        "intent": "symptoms"
       },
       {
-        "intent": "symptoms",
-        "text": "runny nose"
+        "text": "sneezing",
+        "intent": "symptoms"
       },
       {
-        "intent": "symptoms",
-        "text": "scratchy throat"
+        "text": "sore throat",
+        "intent": "symptoms"
       },
       {
-        "intent": "symptoms",
-        "text": "nose congestion"
+        "text": "constant cough",
+        "intent": "symptoms"
       },
       {
-        "intent": "symptoms",
-        "text": "coughing"
+        "text": "nagging cough",
+        "intent": "symptoms"
       },
       {
-        "intent": "symptoms",
-        "text": "something stuck in throat"
+        "text": "runny nose",
+        "intent": "symptoms"
       },
       {
-        "intent": "symptoms",
-        "text": "mucus discharge"
+        "text": "scratchy throat",
+        "intent": "symptoms"
       },
       {
-        "intent": "symptoms",
-        "text": "yellow thick mucus"
+        "text": "nose congestion",
+        "intent": "symptoms"
       },
       {
-        "intent": "symptoms",
-        "text": "green mucus"
+        "text": "coughing",
+        "intent": "symptoms"
       },
       {
-        "intent": "symptoms",
-        "text": "I have a nagging cough"
+        "text": "something stuck in throat",
+        "intent": "symptoms"
       },
       {
-        "intent": "symptoms",
-        "text": "terrible"
+        "text": "mucus discharge",
+        "intent": "symptoms"
       },
       {
-        "intent": "symptoms",
-        "text": "i feel horrible"
+        "text": "yellow thick mucus",
+        "intent": "symptoms"
       },
       {
-        "intent": "symptoms",
-        "text": "i'm in pain"
+        "text": "green mucus",
+        "intent": "symptoms"
       },
       {
-        "intent": "symptoms",
-        "text": "my head hurts"
+        "text": "I have a nagging cough",
+        "intent": "symptoms"
       },
       {
-        "intent": "symptoms",
-        "text": "not so good"
+        "text": "terrible",
+        "intent": "symptoms"
       },
       {
-        "intent": "symptoms",
-        "text": "so bad"
+        "text": "i feel horrible",
+        "intent": "symptoms"
       },
       {
-        "intent": "symptoms",
-        "text": "horrible"
+        "text": "i'm in pain",
+        "intent": "symptoms"
       },
       {
-        "intent": "symptoms",
-        "text": "i think i have the flu"
+        "text": "my head hurts",
+        "intent": "symptoms"
       },
       {
-        "intent": "symptoms",
-        "text": "i have the flu"
+        "text": "not so good",
+        "intent": "symptoms"
       },
       {
-        "intent": "symptoms",
-        "text": "i have a fever"
+        "text": "so bad",
+        "intent": "symptoms"
       },
       {
-        "intent": "symptoms",
-        "text": "fever"
+        "text": "horrible",
+        "intent": "symptoms"
       },
       {
-        "intent": "symptoms",
-        "text": "i'm very weak"
+        "text": "i think i have the flu",
+        "intent": "symptoms"
       },
       {
-        "intent": "symptoms",
-        "text": "my body aches and i have a fever"
+        "text": "i have the flu",
+        "intent": "symptoms"
       },
       {
-        "intent": "symptoms",
-        "text": "i'm having trouble breathing"
+        "text": "i have a fever",
+        "intent": "symptoms"
       },
       {
-        "intent": "symptoms",
-        "text": "i have a cold that won't go away"
+        "text": "fever",
+        "intent": "symptoms"
       },
       {
-        "intent": "symptoms",
-        "text": "high grade fever"
+        "text": "i'm very weak",
+        "intent": "symptoms"
       },
       {
-        "intent": "symptoms",
-        "text": "body aches"
+        "text": "my body aches and i have a fever",
+        "intent": "symptoms"
       },
       {
-        "intent": "symptoms",
-        "text": "extreme tiredness"
+        "text": "i'm having trouble breathing",
+        "intent": "symptoms"
       },
       {
-        "intent": "symptoms",
-        "text": "dry cough"
+        "text": "i have a cold that won't go away",
+        "intent": "symptoms"
       },
       {
-        "intent": "symptoms",
-        "text": "i feel horrible"
+        "text": "high grade fever",
+        "intent": "symptoms"
       },
       {
-        "intent": "symptoms",
-        "text": "I feel horrible"
+        "text": "body aches",
+        "intent": "symptoms"
       },
       {
-        "intent": "symptoms",
-        "text": "I feel horrible"
+        "text": "extreme tiredness",
+        "intent": "symptoms"
       },
       {
-        "intent": "symptoms",
-        "text": "I think i have the flu"
+        "text": "dry cough",
+        "intent": "symptoms"
       },
       {
-        "intent": "symptoms",
-        "text": "symptoms started last night"
+        "text": "i feel horrible",
+        "intent": "symptoms"
       },
       {
-        "intent": "symptoms",
-        "text": "i think i may have the flu"
+        "text": "I feel horrible",
+        "intent": "symptoms"
       },
       {
-        "intent": "symptoms",
-        "text": "I have a nagging cough"
+        "text": "I feel horrible",
+        "intent": "symptoms"
       },
       {
-        "intent": "symptoms",
-        "text": "I think i have the flu"
+        "text": "I think i have the flu",
+        "intent": "symptoms"
       },
       {
-        "intent": "symptoms",
-        "text": "fever, chills and aches"
+        "text": "symptoms started last night",
+        "intent": "symptoms"
       },
       {
-        "intent": "symptoms",
-        "text": "I think i have the flu"
+        "text": "i think i may have the flu",
+        "intent": "symptoms"
       },
       {
-        "intent": "symptoms",
-        "text": "coughing, runny nose, and aches"
+        "text": "I have a nagging cough",
+        "intent": "symptoms"
       },
       {
-        "intent": "thanks",
-        "text": "Thanks"
+        "text": "I think i have the flu",
+        "intent": "symptoms"
       },
       {
-        "intent": "thanks",
-        "text": "Thank you"
+        "text": "fever, chills and aches",
+        "intent": "symptoms"
       },
       {
-        "intent": "thanks",
-        "text": "Thank you so much"
+        "text": "I think i have the flu",
+        "intent": "symptoms"
       },
       {
-        "intent": "thanks",
-        "text": "Thanks bot"
+        "text": "coughing, runny nose, and aches",
+        "intent": "symptoms"
       },
       {
-        "intent": "thanks",
-        "text": "Thanks for that"
+        "text": "coughing, runny nose, sore throat",
+        "intent": "symptoms"
       },
       {
-        "intent": "thanks",
-        "text": "cheers"
+        "text": "didn't sleep much, headache, fever",
+        "intent": "symptoms"
       },
       {
-        "intent": "thanks",
-        "text": "cheers bro"
+        "text": "fever, aches and a headache",
+        "intent": "symptoms"
       },
       {
-        "intent": "thanks",
-        "text": "ok thanks!"
+        "text": "I have a fever",
+        "intent": "symptoms"
       },
       {
-        "intent": "thanks",
-        "text": "perfect thank you"
+        "text": "Temperature 101.4, chills, nausea, diarrhea",
+        "intent": "symptoms"
       },
       {
-        "intent": "thanks",
-        "text": "thanks a bunch for everything"
+        "text": "i think i have the flu",
+        "intent": "symptoms"
       },
       {
-        "intent": "thanks",
-        "text": "thanks for the help"
+        "text": "my body aches and I'm very tired",
+        "intent": "symptoms"
       },
       {
-        "intent": "thanks",
-        "text": "thanks a lot"
+        "text": "i am very weak and have chills",
+        "intent": "symptoms"
       },
       {
-        "intent": "thanks",
-        "text": "amazing, thanks"
+        "text": "I wake up with chills. I don't really have an appetite",
+        "intent": "symptoms"
       },
       {
-        "intent": "thanks",
-        "text": "cool, thanks"
+        "text": "Thanks",
+        "intent": "thanks"
       },
       {
-        "intent": "thanks",
-        "text": "cool thank you"
+        "text": "Thank you",
+        "intent": "thanks"
       },
       {
-        "intent": "thanks",
-        "text": "thank you"
+        "text": "Thank you so much",
+        "intent": "thanks"
       },
       {
-        "intent": "thanks",
-        "text": "thank you"
+        "text": "Thanks bot",
+        "intent": "thanks"
       },
       {
-        "intent": "thanks",
-        "text": "thanks"
+        "text": "Thanks for that",
+        "intent": "thanks"
+      },
+      {
+        "text": "cheers",
+        "intent": "thanks"
+      },
+      {
+        "text": "cheers bro",
+        "intent": "thanks"
+      },
+      {
+        "text": "ok thanks!",
+        "intent": "thanks"
+      },
+      {
+        "text": "perfect thank you",
+        "intent": "thanks"
+      },
+      {
+        "text": "thanks a bunch for everything",
+        "intent": "thanks"
+      },
+      {
+        "text": "thanks for the help",
+        "intent": "thanks"
+      },
+      {
+        "text": "thanks a lot",
+        "intent": "thanks"
+      },
+      {
+        "text": "amazing, thanks",
+        "intent": "thanks"
+      },
+      {
+        "text": "cool, thanks",
+        "intent": "thanks"
+      },
+      {
+        "text": "cool thank you",
+        "intent": "thanks"
+      },
+      {
+        "text": "thank you",
+        "intent": "thanks"
+      },
+      {
+        "text": "thank you",
+        "intent": "thanks"
+      },
+      {
+        "text": "thanks",
+        "intent": "thanks"
+      },
+      {
+        "text": "thanks",
+        "intent": "thanks"
       }
-    ],
-    "lookup_tables": [],
-    "regex_features": []
+    ]
   }
 }

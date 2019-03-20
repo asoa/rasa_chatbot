@@ -1,41 +1,42 @@
 %YAML 1.1
 ---
 actions:
-- utter_how_long
 - utter_verify_name_dob
-- utter_empathy
-- utter_goodbye
-- utter_dob
-- utter_ask_dob
-- utter_bye
-- utter_greet
-- utter_thank_you
-- utter_elaborate_symptoms
-- utter_patient_name
-- utter_thanks
-- utter_ask_patient_name
 - utter_default
-- utter_purpose
+- utter_goodbye
+- utter_thank_you
+- utter_bye
+- utter_ask_patient_name
+- utter_empathy
+- utter_ask_dob
+- utter_how_long
+- utter_dob
+- utter_elaborate_symptoms
+- utter_run_tests
+- utter_patient_name
 - utter_your_welcome
+- utter_purpose
+- utter_greet
 entities:
-- dob
 - allergies
+- dob
 - patient_name
 forms:
 - patient_info_form
 intents:
-- correct_name_dob
-- utter_thank_you
-- utter_your_welcome
 - deny
+- patient_name
 - thanks
-- onset_gradually
-- goodbye
-- greet
 - symptoms
 - dob
-- patient_name
+- goodbye
+- correct_name_dob
 - onset_quick
+- onset_gradually
+- greet
+- agree
+- utter_thank_you
+- utter_your_welcome
 slots:
   dob:
     type: unfeaturized
@@ -77,6 +78,8 @@ templates:
   utter_purpose:
   - text: What brings you in today?
   - text: What is bothering you today?
+  utter_run_tests:
+  - text: Alright, let's run some tests to figure out what's going on. Is that ok?
   utter_thank_you:
   - text: Thank you.
   - text: Thanks.

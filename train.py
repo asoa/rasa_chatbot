@@ -20,7 +20,6 @@ import os
 import traceback
 
 
-# TODO: implement cmdline option using https://github.com/RasaHQ/rasa_core/blob/master/rasa_core/run.py
 # TODO: add logging
 
 class Train(object):
@@ -45,7 +44,6 @@ class Train(object):
         trainer = Trainer(nlu_config.load(self.nlu_config_file))
         trainer.train(training_data)
         trainer.persist(self.nlu_model_dir, fixed_model_name="nlu")
-        # trainer.persist(self.nlu_model_dir)
 
     def predict_intent(self, text):
         """loads the trained model, parses the text argument and returns the predicted intent
@@ -78,13 +76,7 @@ class Train(object):
         * KerasPolicy by default uses LSTM
 
         """
-        # agent = Agent('domain.yml', policies=[MemoizationPolicy(), KerasPolicy(), SklearnPolicy()])  # training pipeline to use (i.e. RNN, embeddings)
-        # training_data = agent.load_data(self.stories_file)
-        # _interpreter = Interpreter.load('models/default/model_20190314-004438')
         _interpreter = NaturalLanguageInterpreter.create('models/default/nlu')
-
-        # _interpreter = Interpreter.load('models/default/nlu')
-
         #  train_dialogue_model returns agent object
         train_agent = train_dialogue_model(domain_file=self.domain_file,
                                            stories_file=self.stories_file,
@@ -94,8 +86,6 @@ class Train(object):
                                            )
         interactive.run_interactive_learning(train_agent, skip_visualization=True)
         train_agent.persist(self.core_model_dir)
-
-
 
     @classmethod
     def parse_arg(cls):

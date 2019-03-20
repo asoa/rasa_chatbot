@@ -1,3 +1,13 @@
+## intent:agree
+- yes, that's fine
+- ok
+- that's fine
+- ok, thank you
+- that's ok
+- alright
+- yes
+- yes
+
 ## intent:correct_name_dob
 - yes, that's correct
 - yes
@@ -20,6 +30,9 @@
 - yes, that's correct
 - yes, that's right
 - yes, that's correct
+- Yes
+- yes, that's correct
+- yes, that's right
 
 ## intent:dob
 - [jan 1, 1945](dob)
@@ -40,6 +53,9 @@
 - [September 5, 2001](dob:september 5 , 2001)
 - [Jan 29, 2010](dob:jan 29 , 2010)
 - [Jan 31, 1970](dob:jan 31 , 1970)
+- [01/18/2010](dob)
+- [1/1/2001](dob)
+- [nov 22, 1982](dob)
 
 ## intent:goodbye
 - See you later
@@ -73,6 +89,9 @@
 - hi
 - hi
 - hello
+- Hey there
+- hi
+- hi
 
 ## intent:incorrect_name_dob
 - no, that's not correct
@@ -99,6 +118,8 @@
 - for a few weeks
 - for a couple of weeks
 - For a few days
+- for a few weeks
+- for the past 2 days
 
 ## intent:onset_quick
 - last 24 hours
@@ -117,6 +138,7 @@
 - sometime yesterday
 - last 24 hours or so
 - started this late last night
+- It came on suddenly. Since yesterday
 
 ## intent:patient_name
 - My name is [Juste Ball](patient_name)
@@ -150,7 +172,10 @@
 - [Samantha Bell](patient_name)
 - my name is [Samantha Bell](patient_name)
 - My name is [Tom Palen](patient_name:tom palen)
-- Alexander Bailey
+- [Alexander Bailey](patient_name)
+- [Shanika Latoya](patient_name)
+- [alex bailey](patient_name)
+- my name is [jack wilson](patient_name)
 
 ## intent:symptoms
 - stuffy nose
@@ -200,6 +225,12 @@
 - coughing, runny nose, sore throat
 - didn't sleep much, headache, fever
 - fever, aches and a headache
+- I have a fever
+- Temperature 101.4, chills, nausea, diarrhea
+- i think i have the flu
+- my body aches and I'm very tired
+- i am very weak and have chills
+- I wake up with chills. I don't really have an appetite
 
 ## intent:thanks
 - Thanks
@@ -230,6 +261,9 @@
 
 ## synonym:jan 3 , 2001
 - jan 3, 2001
+
+## synonym:jan 31 , 1970
+- Jan 31, 1970
 
 ## synonym:october 12 , 1987
 - October 12, 1987

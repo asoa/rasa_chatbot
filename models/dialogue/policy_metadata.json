@@ -1,38 +1,37 @@
 {
+  "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble",
+  "sklearn": "0.20.3",
+  "python": "3.5.6",
   "max_histories": [
     5,
     null,
     5,
     2
   ],
-  "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble",
+  "rasa_core": "0.13.3",
   "action_fingerprints": {
+    "action_deactivate_form": {
+      "slots": [
+        "requested_slot"
+      ]
+    },
+    "action_listen": {
+      "slots": []
+    },
     "patient_info_form": {
       "slots": [
         "patient_name",
         "requested_slot",
         "dob"
       ]
-    },
-    "utter_thank_you": {
-      "slots": []
-    },
-    "utter_thanks": {
-      "slots": []
-    },
-    "action_listen": {
-      "slots": []
     }
   },
+  "trained_at": "20190315-002253",
   "tensorflow": "1.12.0",
-  "python": "3.5.6",
-  "trained_at": "20190314-024303",
   "policy_names": [
     "rasa_core.policies.keras_policy.KerasPolicy",
     "rasa_core.policies.fallback.FallbackPolicy",
     "rasa_core.policies.memoization.MemoizationPolicy",
     "rasa_core.policies.form_policy.FormPolicy"
-  ],
-  "sklearn": "0.20.2",
-  "rasa_core": "0.13.3"
+  ]
 }
