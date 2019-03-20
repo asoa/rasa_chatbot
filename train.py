@@ -1,6 +1,5 @@
 #!/usr/bin/env python
-
-
+import rasa_core.policies
 from rasa_nlu.training_data import load_data
 from rasa_nlu.model import Trainer
 from rasa_nlu import config as nlu_config
@@ -31,7 +30,7 @@ class Train(object):
         self.do_train_core = self.kwargs.get('do_train_core', False)
         self.nlu_data = self.kwargs.get('nlu_data', 'data/nlu.md')
         self.domain_file = self.kwargs.get('domain_file', 'domain.yml')
-        self.nlu_model_dir = self.kwargs.get('nlu_model_dir', 'models/default/chat_bot')
+        self.nlu_model_dir = self.kwargs.get('nlu_model_dir', 'models')
         self.core_config_file = self.kwargs.get('core_config_file', 'config/core_config.yml')
         self.nlu_config_file = self.kwargs.get('nlu_config_file', 'config/nlu_config.yml')
         self.stories_file = self.kwargs.get('stories_file', 'data/stories.md')
@@ -45,7 +44,8 @@ class Train(object):
         training_data = load_data(self.nlu_data)
         trainer = Trainer(nlu_config.load(self.nlu_config_file))
         trainer.train(training_data)
-        self.nlu_model_dir = trainer.persist(self.nlu_model_dir, fixed_model_name='chat_bot')
+        trainer.persist(self.nlu_model_dir, fixed_model_name="nlu")
+        # trainer.persist(self.nlu_model_dir)
 
     def predict_intent(self, text):
         """loads the trained model, parses the text argument and returns the predicted intent
@@ -54,7 +54,7 @@ class Train(object):
         Returns: json result with predicted intent score for all intents
 
         """
-        interpreter = Interpreter.load(self.nlu_model_dir)
+        interpreter = Interpreter.load('models/default/nlu')
         pprint.pprint(interpreter.parse(text))
 
     def train_core(self):
@@ -64,7 +64,7 @@ class Train(object):
 
         """
         print('training core model', file=sys.stderr)
-        agent = Agent('domain.yml', policies=[MemoizationPolicy(), KerasPolicy(), SklearnPolicy()])  # training pipeline to use (i.e. RNN, embeddings)
+        agent = Agent('domain.yml', policies=[MemoizationPolicy(), KerasPolicy(), SklearnPolicy(), rasa_core.policies.FormPolicy()])  # training pipeline to use (i.e. RNN, embeddings)
         training_data = agent.load_data(self.stories_file)
 
         #  passing policy settings to the train function is not supported anymore
@@ -80,7 +80,11 @@ class Train(object):
         """
         # agent = Agent('domain.yml', policies=[MemoizationPolicy(), KerasPolicy(), SklearnPolicy()])  # training pipeline to use (i.e. RNN, embeddings)
         # training_data = agent.load_data(self.stories_file)
-        _interpreter = NaturalLanguageInterpreter.create('models/default/chat_bot')
+        # _interpreter = Interpreter.load('models/default/model_20190314-004438')
+        _interpreter = NaturalLanguageInterpreter.create('models/default/nlu')
+
+        # _interpreter = Interpreter.load('models/default/nlu')
+
         #  train_dialogue_model returns agent object
         train_agent = train_dialogue_model(domain_file=self.domain_file,
                                            stories_file=self.stories_file,
@@ -90,6 +94,8 @@ class Train(object):
                                            )
         interactive.run_interactive_learning(train_agent, skip_visualization=True)
         train_agent.persist(self.core_model_dir)
+
+
 
     @classmethod
     def parse_arg(cls):
@@ -113,7 +119,7 @@ class Train(object):
                 cls.train_nlu(train_obj)
             elif args.core:
                 print('core')
-                cls.train_core()
+                cls.train_core(train_obj)
             elif args.both:
                 print('both')
                 cls.train_nlu(train_obj)
@@ -129,6 +135,7 @@ class Train(object):
 
 def main():
     t = Train.parse_arg()
+    # t = Train().train_interactive()
 
 
 if __name__ == "__main__":

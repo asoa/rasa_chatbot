@@ -1,47 +1,88 @@
-intents:
-  - greet
-  - goodbye
-  - thanks
-  - deny
-  - joke
-  - name
-
-
-entities:
-  - name
-
-
-slots:
-  name:
-    type: text
-
-
-templates:
-  utter_name:
-    - text: "Hey there! Tell me your name."
-
-  utter_thanks:
-    - text: "My pleasure."
-
-  utter_greet:
-    - text: "Nice to you meet you {name}. How can I help?"
-
-  utter_goodbye:
-    - text: "Talk to you later!"
-
-  utter_default:
-    - text: "default triggered, resetting to fallback - 1"
-
-
-
+%YAML 1.1
+---
 actions:
-  - utter_name
-  - utter_thanks
-  - utter_greet
-  - utter_goodbye
-  - action_joke
-  - utter_default
-
-  
-
-  
+- utter_how_long
+- utter_verify_name_dob
+- utter_empathy
+- utter_goodbye
+- utter_dob
+- utter_ask_dob
+- utter_bye
+- utter_greet
+- utter_thank_you
+- utter_elaborate_symptoms
+- utter_patient_name
+- utter_thanks
+- utter_ask_patient_name
+- utter_default
+- utter_purpose
+- utter_your_welcome
+entities:
+- dob
+- allergies
+- patient_name
+forms:
+- patient_info_form
+intents:
+- correct_name_dob
+- utter_thank_you
+- utter_your_welcome
+- deny
+- thanks
+- onset_gradually
+- goodbye
+- greet
+- symptoms
+- dob
+- patient_name
+- onset_quick
+slots:
+  dob:
+    type: unfeaturized
+  patient_name:
+    type: unfeaturized
+  requested_slot:
+    type: unfeaturized
+templates:
+  utter_ask_dob:
+  - text: What is your date of birth
+  utter_ask_patient_name:
+  - text: What is you full name
+  utter_bye:
+  - text: Hope you feel better
+  - text: Have a good day
+  utter_default:
+  - text: default triggered, resetting to fallback - 1
+  utter_dob:
+  - text: Your dob is {dob}, right?
+  utter_elaborate_symptoms:
+  - text: Can you please elaborate a little more about your symptoms?
+  - text: Please tell me more about your symptoms
+  utter_empathy:
+  - text: I'm sorry to hear that.
+  - text: I'm sorry you're not feeling well.
+  utter_goodbye:
+  - text: Talk to you later!
+  utter_greet:
+  - text: Hello, my name is Sue.
+  - text: Hi, I'm Sue.
+  utter_how_long:
+  - text: How long have you experienced those symptoms?
+  - text: How long have you felt that way?
+  utter_name_dob:
+  - text: Before we go any further, can you please verify your name and date of birth.
+  - text: Can you please verify your name and date of birth?
+  utter_patient_name:
+  - text: Your name is {patient_name}, right?
+  utter_purpose:
+  - text: What brings you in today?
+  - text: What is bothering you today?
+  utter_thank_you:
+  - text: Thank you.
+  - text: Thanks.
+  utter_verify_name_dob:
+  - text: Your name is {patient_name} and {dob} -- is that correct?
+  - text: Your name is {patient_name} and date of birth is {dob}.  Is that correct?
+  utter_your_welcome:
+  - text: My pleasure.
+  - text: No problem at all.

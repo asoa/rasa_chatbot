@@ -1,34 +1,28 @@
 {
-    "language": "en",
-    "rasa_nlu_version": "0.14.4",
-    "training_data": "training_data.json",
-    "trained_at": "20190312-165818",
     "pipeline": [
         {
             "case_sensitive": false,
             "class": "rasa_nlu.utils.spacy_utils.SpacyNLP",
-            "model": "en",
-            "name": "nlp_spacy"
+            "name": "nlp_spacy",
+            "model": "en"
         },
         {
-            "name": "tokenizer_spacy",
-            "class": "rasa_nlu.tokenizers.spacy_tokenizer.SpacyTokenizer"
+            "class": "rasa_nlu.tokenizers.spacy_tokenizer.SpacyTokenizer",
+            "name": "tokenizer_spacy"
         },
         {
-            "name": "intent_featurizer_spacy",
-            "class": "rasa_nlu.featurizers.spacy_featurizer.SpacyFeaturizer"
+            "class": "rasa_nlu.featurizers.spacy_featurizer.SpacyFeaturizer",
+            "name": "intent_featurizer_spacy"
         },
         {
-            "name": "intent_entity_featurizer_regex",
             "class": "rasa_nlu.featurizers.regex_featurizer.RegexFeaturizer",
-            "regex_file": "regex_featurizer.json"
+            "regex_file": "regex_featurizer.json",
+            "name": "intent_entity_featurizer_regex"
         },
         {
-            "L1_c": 0.1,
             "max_iterations": 50,
-            "BILOU_flag": true,
-            "name": "ner_crf",
-            "class": "rasa_nlu.extractors.crf_entity_extractor.CRFEntityExtractor",
+            "L2_c": 0.1,
+            "classifier_file": "crf_model.pkl",
             "features": [
                 [
                     "low",
@@ -54,23 +48,20 @@
                     "upper"
                 ]
             ],
-            "classifier_file": "crf_model.pkl",
-            "L2_c": 0.1
+            "class": "rasa_nlu.extractors.crf_entity_extractor.CRFEntityExtractor",
+            "BILOU_flag": true,
+            "name": "ner_crf",
+            "L1_c": 0.1
         },
         {
-            "name": "ner_synonyms",
+            "synonyms_file": "entity_synonyms.json",
             "class": "rasa_nlu.extractors.entity_synonyms.EntitySynonymMapper",
-            "synonyms_file": null
+            "name": "ner_synonyms"
         },
         {
-            "class": "rasa_nlu.classifiers.sklearn_intent_classifier.SklearnIntentClassifier",
-            "classifier_file": "intent_classifier_sklearn.pkl",
             "name": "intent_classifier_sklearn",
+            "class": "rasa_nlu.classifiers.sklearn_intent_classifier.SklearnIntentClassifier",
             "scoring_function": "f1_weighted",
-            "gamma": [
-                0.1
-            ],
-            "max_cross_validation_folds": 5,
             "C": [
                 1,
                 2,
@@ -79,9 +70,18 @@
                 20,
                 100
             ],
+            "classifier_file": "intent_classifier_sklearn.pkl",
+            "gamma": [
+                0.1
+            ],
+            "max_cross_validation_folds": 5,
             "kernels": [
                 "linear"
             ]
         }
-    ]
+    ],
+    "rasa_nlu_version": "0.14.4",
+    "trained_at": "20190314-024253",
+    "language": "en",
+    "training_data": "training_data.json"
 }

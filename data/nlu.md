@@ -1,39 +1,205 @@
-<!--- Make sure to update this training data file with more training examples from https://forum.rasa.com/t/rasa-starter-pack/704 --> 
+## intent:correct_name_dob
+- yes, that's correct
+- yes
+- that's correct
+- you got it
+- that's right
+- yep
+- yes, correct
+- yes, thank you
+- ok
+- everything is correct
+- that's accurate
+- correct
+- yes
+- yes, that's correct
+- yes, that's correct
+- yes, that's correct
+- yes, that's right
+- yes, that's correct
+- yes, that's correct
+- yes, that's right
+- yes, that's correct
 
-## intent:goodbye <!--- The label of the intent --> 
-- Bye 			<!--- Training examples for intent 'bye'--> 
-- Goodbye
+## intent:dob
+- [jan 1, 1945](dob)
+- [Jan 1, 1950](dob)
+- [JAN 25, 2001](dob)
+- [dec 15 2006](dob)
+- [mar 15 1987](dob)
+- [november 27 2001](dob)
+- [Feb 10, 1976](dob)
+- [October 9 2010](dob)
+- [1/21/2001](dob)
+- [05/2/1976](dob)
+- [march 25, 2000](dob)
+- [5/15/1978](dob)
+- [4/20/1950](dob)
+- [jan 3, 2001](dob:jan 3 , 2001)
+- [October 12, 1987](dob:october 12 , 1987)
+- [September 5, 2001](dob:september 5 , 2001)
+- [Jan 29, 2010](dob:jan 29 , 2010)
+- [Jan 31, 1970](dob:jan 31 , 1970)
+
+## intent:goodbye
 - See you later
-- Bye bot
-- Goodbye friend
-- bye
-- bye for now
-- catch you later
+- Bye
+- have a blessed day
 - gotta go
 - See you
-- goodnight
 - have a nice day
-- i'm off
-- see you later alligator
-- we'll speak soon
+- later
+- take care
 
 ## intent:greet
 - Hi
 - Hey
-- Hi bot
-- Hey bot
 - Hello
 - Good morning
 - hi again
-- hi folks
-- hi Mister
-- hi pal!
+- good morning ma'am
+- hello ma'am
+- good afternoon
+- how are you
 - hi there
 - greetings
 - hello everybody
 - hello is anybody there
-- hello robot
 - HELLO HOW ARE YOU
+- what's up
+- hi
+- hi, how are you?
+- hi
+- hi
+- hi
+- hello
+
+## intent:incorrect_name_dob
+- no, that's not correct
+- my name is incorrect
+- my date of birth is incorrect
+- no, that's not right
+- no
+- not correct
+- sorry, no
+- wrong name
+- wrong date
+- wrong month
+- wrong birth date
+- nope
+
+## intent:onset_gradually
+- a few days
+- 2 or 3 days
+- two or three days
+- last week
+- for a few days now
+- for a while now
+- a few weeks
+- for a few weeks
+- for a couple of weeks
+- For a few days
+
+## intent:onset_quick
+- last 24 hours
+- yesterday
+- early this morning
+- last night
+- yesterday afternoon
+- suddenly
+- all of a sudden
+- out of nowhere
+- quickly
+- abruptly
+- all of a sudden
+- last night
+- all of a sudden
+- sometime yesterday
+- last 24 hours or so
+- started this late last night
+
+## intent:patient_name
+- My name is [Juste Ball](patient_name)
+- I am [Josh Smith](patient_name)
+- I'm [Lucy Perry](patient_name)
+- People call me [Greg Gilmore](patient_name)
+- It's [David Johnson](patient_name)
+- Usually people call me [Amy Jenkins](patient_name)
+- My name is [Sophie Rodriques](patient_name)
+- You can call me [Joane Gerald](patient_name)
+- Please call me [Royal Navarrette](patient_name)
+- Name name is [Tom Palen](patient_name)
+- I am [Richard Brainard](patient_name)
+- [Natacha Weathersby](patient_name)
+- [Belinda Beaupre](patient_name)
+- [Tonya Carnes](patient_name)
+- [Joseph Greenleaf](patient_name)
+- [Tan Gaal](patient_name)
+- [Pete Toy](patient_name)
+- [Elon Musk](patient_name)
+- [Penny Prue](patient_name)
+- name is [Andrew Wendel](patient_name)
+- I am [Ganesh](patient_name)
+- My name is [Mike](patient_name)
+- My name is [Ajay](patient_name)
+- I'm [Partia](patient_name)
+- Please call me [Leo](patient_name)
+- name is [Pari](patient_name)
+- name [Sanjay](patient_name)
+- My name is [Alex](patient_name:alex)
+- [Samantha Bell](patient_name)
+- my name is [Samantha Bell](patient_name)
+- My name is [Tom Palen](patient_name:tom palen)
+- Alexander Bailey
+
+## intent:symptoms
+- stuffy nose
+- sneezing
+- sore throat
+- constant cough
+- nagging cough
+- runny nose
+- scratchy throat
+- nose congestion
+- coughing
+- something stuck in throat
+- mucus discharge
+- yellow thick mucus
+- green mucus
+- I have a nagging cough
+- terrible
+- i feel horrible
+- i'm in pain
+- my head hurts
+- not so good
+- so bad
+- horrible
+- i think i have the flu
+- i have the flu
+- i have a fever
+- fever
+- i'm very weak
+- my body aches and i have a fever
+- i'm having trouble breathing
+- i have a cold that won't go away
+- high grade fever
+- body aches
+- extreme tiredness
+- dry cough
+- i feel horrible
+- I feel horrible
+- I feel horrible
+- I think i have the flu
+- symptoms started last night
+- i think i may have the flu
+- I have a nagging cough
+- I think i have the flu
+- fever, chills and aches
+- I think i have the flu
+- coughing, runny nose, and aches
+- coughing, runny nose, sore throat
+- didn't sleep much, headache, fever
+- fever, aches and a headache
 
 ## intent:thanks
 - Thanks
@@ -51,74 +217,25 @@
 - amazing, thanks
 - cool, thanks
 - cool thank you
+- thank you
+- thank you
+- thanks
+- thanks
 
-## intent:affirm
-- yes
-- yes sure
-- absolutely
-- for sure
-- yes yes yes
-- definitely
+## synonym:alex
+- Alex
 
+## synonym:jan 29 , 2010
+- Jan 29, 2010
 
-## intent:name
-- My name is [Juste](name)  <!--- Square brackets contain the value of entity while the text in parentheses is a a label of the entity --> 
-- I am [Josh](name)
-- I'm [Lucy](name)
-- People call me [Greg](name)
-- It's [David](name)
-- Usually people call me [Amy](name)
-- My name is [John](name)
-- You can call me [Sam](name)
-- Please call me [Linda](name)
-- Name name is [Tom](name)
-- I am [Richard](name)
-- I'm [Tracy](name)
-- Call me [Sally](name)
-- I am [Philipp](name)
-- I am [Charlie](name)
-- I am [Charlie](name)
-- I am [Ben](name)
-- Call me [Susan](name)
-- [Lucy](name)
-- [Peter](name)
-- [Mark](name)
-- [Joseph](name)
-- [Tan](name)
-- [Pete](name)
-- [Elon](name)
-- [Penny](name)
-- name is [Andrew](name)
-- I [Lora](name)
-- [Stan](name) is my name
-- [Susan](name) is the name
-- [Ross](name) is my first name
-- [Bing](name) is my last name
-- Few call me as [Angelina](name)
-- Some call me [Julia](name)
-- Everyone calls me [Laura](name)
-- I am [Ganesh](name)
-- My name is [Mike](name)
-- just call me [Monika](name)
-- Few call [Dan](name)
-- You can always call me [Suraj](name)
-- Some will call me [Andrew](name)
-- My name is [Ajay](name)
-- I call [Ding](name)
-- I'm [Partia](name)
-- Please call me [Leo](name)
-- name is [Pari](name)
-- name [Sanjay](name)
+## synonym:jan 3 , 2001
+- jan 3, 2001
 
+## synonym:october 12 , 1987
+- October 12, 1987
 
-## intent:joke
-- Can you tell me a joke?
-- I would like to hear a joke
-- Tell me a joke
-- A joke please
-- Tell me a joke please
-- I would like to hear a joke
-- I would loke to hear a joke, please
-- Can you tell jokes?
-- Please tell me a joke
-- I need to hear a joke
+## synonym:september 5 , 2001
+- September 5, 2001
+
+## synonym:tom palen
+- Tom Palen

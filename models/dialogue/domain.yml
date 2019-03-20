@@ -1,43 +1,107 @@
 %YAML 1.1
 ---
 actions:
-- utter_name
 - utter_thanks
-- utter_greet
 - utter_goodbye
-- action_joke
+- utter_verify_name_dob
+- utter_ask_dob
 - utter_default
+- utter_empathy
+- utter_how_long
+- utter_bye
+- utter_greet
+- utter_thank_you
+- utter_elaborate_symptoms
+- utter_ask_patient_name
+- utter_patient_name
+- utter_purpose
+- utter_dob
 config:
   store_entities_as_slots: true
 entities:
-- name
-forms: []
+- patient_name
+- allergies
+- dob
+forms:
+- patient_info_form
 intents:
+- utter_your_welcome:
+    use_entities: true
+- onset_quick:
+    use_entities: true
 - thanks:
     use_entities: true
-- joke:
+- onset_gradually:
     use_entities: true
-- goodbye:
-    use_entities: true
-- deny:
-    use_entities: true
-- name:
+- correct_name_dob:
     use_entities: true
 - greet:
     use_entities: true
+- patient_name:
+    use_entities: true
+- symptoms:
+    use_entities: true
+- deny:
+    use_entities: true
+- utter_thank_you:
+    use_entities: true
+- dob:
+    use_entities: true
+- goodbye:
+    use_entities: true
 slots:
-  name:
+  dob:
     auto_fill: true
     initial_value: null
-    type: rasa_core.slots.TextSlot
+    type: rasa_core.slots.UnfeaturizedSlot
+  patient_name:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  requested_slot:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
 templates:
+  utter_ask_dob:
+  - text: What is your date of birth
+  utter_ask_patient_name:
+  - text: What is you full name
+  utter_bye:
+  - text: Hope you feel better
+  - text: Have a good day
   utter_default:
   - text: default triggered, resetting to fallback - 1
+  utter_dob:
+  - text: Your dob is {dob}, right?
+  utter_elaborate_symptoms:
+  - text: Can you please elaborate a little more about your symptoms?
+  - text: Please tell me more about your symptoms
+  utter_empathy:
+  - text: I'm sorry to hear that.
+  - text: I'm sorry you're not feeling well.
   utter_goodbye:
   - text: Talk to you later!
   utter_greet:
-  - text: Nice to you meet you {name}. How can I help?
-  utter_name:
-  - text: Hey there! Tell me your name.
-  utter_thanks:
+  - text: Hello, my name is Sue.
+  - text: Hi, I'm Sue.
+  utter_how_long:
+  - text: How long have you experienced those symptoms?
+  - text: How long have you felt that way?
+  utter_name_dob:
+  - text: Before we go any further, can you please verify your name and date of birth.
+  - text: Can you please verify your name and date of birth?
+  utter_patient_name:
+  - text: Your name is {patient_name}, right?
+  utter_purpose:
+  - text: What brings you in today?
+  - text: What is bothering you today?
+  utter_thank_you:
+  - text: Thank you.
+  - text: Thanks.
+  utter_verify_name_dob:
+  - text: Your name is {patient_name} and {dob} -- is that correct?
+  - text: Your name is {patient_name} and date of birth is {dob}.  Is that correct?
+  utter_your_welcome:
   - text: My pleasure.
+  - text: No problem at all.
