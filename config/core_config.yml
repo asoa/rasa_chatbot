@@ -6,10 +6,10 @@ policies:
 #  - name: EmbeddingPolicy
 #    epochs: 100
 #    random_seed: 1
+  - name: MemoizationPolicy
+    max_history: 5
+  - name: FormPolicy
   - name: FallbackPolicy
     nlu_threshold: 0.3
     core_threshold: 0.3
     fallback_action_name: 'action_default_fallback'
-  - name: MemoizationPolicy
-    max_history: 5
-  - name: FormPolicy

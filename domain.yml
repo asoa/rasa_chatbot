@@ -1,45 +1,53 @@
 %YAML 1.1
 ---
 actions:
-- utter_verify_name_dob
-- utter_default
-- utter_goodbye
-- utter_thank_you
-- utter_bye
-- utter_ask_patient_name
-- utter_empathy
-- utter_ask_dob
 - utter_how_long
-- utter_dob
 - utter_elaborate_symptoms
-- utter_run_tests
-- utter_patient_name
 - utter_your_welcome
-- utter_purpose
+- utter_verify_name_dob
+- utter_patient_name
+- utter_bye
+- utter_ask_dob
+- utter_ask_medicines
+- utter_verify_medicines
+- action_medicine_info
+- utter_ask_patient_name
+- utter_goodbye
+- utter_empathy
 - utter_greet
+- utter_dob
+- utter_purpose
+- utter_default
+- utter_thank_you
+- utter_run_tests
 entities:
-- allergies
 - dob
+- allergies
 - patient_name
+- medicines
 forms:
+- patient_medicine_form
 - patient_info_form
 intents:
-- deny
-- patient_name
 - thanks
-- symptoms
-- dob
-- goodbye
-- correct_name_dob
-- onset_quick
-- onset_gradually
-- greet
-- agree
-- utter_thank_you
 - utter_your_welcome
+- agree
+- dob
+- onset_quick
+- deny
+- greet
+- correct_name_dob
+- utter_thank_you
+- patient_name
+- symptoms
+- medicines
+- onset_gradually
+- goodbye
 slots:
   dob:
     type: unfeaturized
+  medicines:
+    type: list
   patient_name:
     type: unfeaturized
   requested_slot:
@@ -47,6 +55,8 @@ slots:
 templates:
   utter_ask_dob:
   - text: What is your date of birth
+  utter_ask_medicines:
+  - text: What medicines are you currently taking?
   utter_ask_patient_name:
   - text: What is you full name
   utter_bye:
@@ -70,6 +80,8 @@ templates:
   utter_how_long:
   - text: How long have you experienced those symptoms?
   - text: How long have you felt that way?
+  utter_medicine_effects:
+  - text: Are you experiencing any side effects with your medicines?
   utter_name_dob:
   - text: Before we go any further, can you please verify your name and date of birth.
   - text: Can you please verify your name and date of birth?
@@ -83,8 +95,9 @@ templates:
   utter_thank_you:
   - text: Thank you.
   - text: Thanks.
+  utter_verify_medicines:
+  - text: Please verify your medicines - {medicines}
   utter_verify_name_dob:
-  - text: Your name is {patient_name} and {dob} -- is that correct?
   - text: Your name is {patient_name} and date of birth is {dob}.  Is that correct?
   utter_your_welcome:
   - text: My pleasure.

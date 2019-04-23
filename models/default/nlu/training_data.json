@@ -1,50 +1,5 @@
 {
   "rasa_nlu_data": {
-    "entity_synonyms": [
-      {
-        "value": "october 12 , 1987",
-        "synonyms": [
-          "October 12, 1987"
-        ]
-      },
-      {
-        "value": "september 5 , 2001",
-        "synonyms": [
-          "September 5, 2001"
-        ]
-      },
-      {
-        "value": "tom palen",
-        "synonyms": [
-          "Tom Palen"
-        ]
-      },
-      {
-        "value": "alex",
-        "synonyms": [
-          "Alex"
-        ]
-      },
-      {
-        "value": "jan 31 , 1970",
-        "synonyms": [
-          "Jan 31, 1970"
-        ]
-      },
-      {
-        "value": "jan 29 , 2010",
-        "synonyms": [
-          "Jan 29, 2010"
-        ]
-      },
-      {
-        "value": "jan 3 , 2001",
-        "synonyms": [
-          "jan 3, 2001"
-        ]
-      }
-    ],
-    "lookup_tables": [],
     "regex_features": [],
     "common_examples": [
       {
@@ -81,351 +36,391 @@
       },
       {
         "text": "yes, that's correct",
-        "intent": "correct_name_dob"
+        "intent": "correct_information"
       },
       {
         "text": "yes",
-        "intent": "correct_name_dob"
+        "intent": "correct_information"
       },
       {
         "text": "that's correct",
-        "intent": "correct_name_dob"
+        "intent": "correct_information"
       },
       {
         "text": "you got it",
-        "intent": "correct_name_dob"
+        "intent": "correct_information"
       },
       {
         "text": "that's right",
-        "intent": "correct_name_dob"
+        "intent": "correct_information"
       },
       {
         "text": "yep",
-        "intent": "correct_name_dob"
+        "intent": "correct_information"
       },
       {
         "text": "yes, correct",
-        "intent": "correct_name_dob"
+        "intent": "correct_information"
       },
       {
         "text": "yes, thank you",
-        "intent": "correct_name_dob"
+        "intent": "correct_information"
       },
       {
         "text": "ok",
-        "intent": "correct_name_dob"
+        "intent": "correct_information"
       },
       {
         "text": "everything is correct",
-        "intent": "correct_name_dob"
+        "intent": "correct_information"
       },
       {
         "text": "that's accurate",
-        "intent": "correct_name_dob"
+        "intent": "correct_information"
       },
       {
         "text": "correct",
-        "intent": "correct_name_dob"
+        "intent": "correct_information"
       },
       {
         "text": "yes",
-        "intent": "correct_name_dob"
+        "intent": "correct_information"
       },
       {
         "text": "yes, that's correct",
-        "intent": "correct_name_dob"
+        "intent": "correct_information"
       },
       {
         "text": "yes, that's correct",
-        "intent": "correct_name_dob"
+        "intent": "correct_information"
       },
       {
         "text": "yes, that's correct",
-        "intent": "correct_name_dob"
+        "intent": "correct_information"
       },
       {
         "text": "yes, that's right",
-        "intent": "correct_name_dob"
+        "intent": "correct_information"
       },
       {
         "text": "yes, that's correct",
-        "intent": "correct_name_dob"
+        "intent": "correct_information"
       },
       {
         "text": "yes, that's correct",
-        "intent": "correct_name_dob"
+        "intent": "correct_information"
       },
       {
         "text": "yes, that's right",
-        "intent": "correct_name_dob"
+        "intent": "correct_information"
       },
       {
         "text": "yes, that's correct",
-        "intent": "correct_name_dob"
+        "intent": "correct_information"
       },
       {
         "text": "Yes",
-        "intent": "correct_name_dob"
+        "intent": "correct_information"
       },
       {
         "text": "yes, that's correct",
-        "intent": "correct_name_dob"
+        "intent": "correct_information"
       },
       {
         "text": "yes, that's right",
-        "intent": "correct_name_dob"
+        "intent": "correct_information"
       },
       {
-        "text": "jan 1, 1945",
-        "intent": "dob",
+        "text": "that is correct",
+        "intent": "correct_information"
+      },
+      {
+        "text": "yes, thanks",
+        "intent": "correct_information"
+      },
+      {
+        "text": "Yes",
+        "intent": "correct_information"
+      },
+      {
+        "text": "Yes",
+        "intent": "correct_information"
+      },
+      {
         "entities": [
           {
-            "end": 11,
-            "start": 0,
             "value": "jan 1, 1945",
+            "start": 0,
+            "end": 11,
             "entity": "dob"
           }
-        ]
+        ],
+        "intent": "dob",
+        "text": "jan 1, 1945"
       },
       {
-        "text": "Jan 1, 1950",
-        "intent": "dob",
         "entities": [
           {
-            "end": 11,
-            "start": 0,
             "value": "Jan 1, 1950",
+            "start": 0,
+            "end": 11,
             "entity": "dob"
           }
-        ]
+        ],
+        "intent": "dob",
+        "text": "Jan 1, 1950"
       },
       {
-        "text": "JAN 25, 2001",
-        "intent": "dob",
         "entities": [
           {
-            "end": 12,
-            "start": 0,
             "value": "JAN 25, 2001",
+            "start": 0,
+            "end": 12,
             "entity": "dob"
           }
-        ]
+        ],
+        "intent": "dob",
+        "text": "JAN 25, 2001"
       },
       {
-        "text": "dec 15 2006",
-        "intent": "dob",
         "entities": [
           {
-            "end": 11,
-            "start": 0,
             "value": "dec 15 2006",
+            "start": 0,
+            "end": 11,
             "entity": "dob"
           }
-        ]
+        ],
+        "intent": "dob",
+        "text": "dec 15 2006"
       },
       {
-        "text": "mar 15 1987",
-        "intent": "dob",
         "entities": [
           {
-            "end": 11,
-            "start": 0,
             "value": "mar 15 1987",
-            "entity": "dob"
-          }
-        ]
-      },
-      {
-        "text": "november 27 2001",
-        "intent": "dob",
-        "entities": [
-          {
-            "end": 16,
             "start": 0,
-            "value": "november 27 2001",
-            "entity": "dob"
-          }
-        ]
-      },
-      {
-        "text": "Feb 10, 1976",
-        "intent": "dob",
-        "entities": [
-          {
-            "end": 12,
-            "start": 0,
-            "value": "Feb 10, 1976",
-            "entity": "dob"
-          }
-        ]
-      },
-      {
-        "text": "October 9 2010",
-        "intent": "dob",
-        "entities": [
-          {
-            "end": 14,
-            "start": 0,
-            "value": "October 9 2010",
-            "entity": "dob"
-          }
-        ]
-      },
-      {
-        "text": "1/21/2001",
-        "intent": "dob",
-        "entities": [
-          {
-            "end": 9,
-            "start": 0,
-            "value": "1/21/2001",
-            "entity": "dob"
-          }
-        ]
-      },
-      {
-        "text": "05/2/1976",
-        "intent": "dob",
-        "entities": [
-          {
-            "end": 9,
-            "start": 0,
-            "value": "05/2/1976",
-            "entity": "dob"
-          }
-        ]
-      },
-      {
-        "text": "march 25, 2000",
-        "intent": "dob",
-        "entities": [
-          {
-            "end": 14,
-            "start": 0,
-            "value": "march 25, 2000",
-            "entity": "dob"
-          }
-        ]
-      },
-      {
-        "text": "5/15/1978",
-        "intent": "dob",
-        "entities": [
-          {
-            "end": 9,
-            "start": 0,
-            "value": "5/15/1978",
-            "entity": "dob"
-          }
-        ]
-      },
-      {
-        "text": "4/20/1950",
-        "intent": "dob",
-        "entities": [
-          {
-            "end": 9,
-            "start": 0,
-            "value": "4/20/1950",
-            "entity": "dob"
-          }
-        ]
-      },
-      {
-        "text": "jan 3, 2001",
-        "intent": "dob",
-        "entities": [
-          {
             "end": 11,
-            "start": 0,
-            "value": "jan 3 , 2001",
             "entity": "dob"
           }
-        ]
+        ],
+        "intent": "dob",
+        "text": "mar 15 1987"
       },
       {
-        "text": "October 12, 1987",
-        "intent": "dob",
         "entities": [
           {
+            "value": "november 27 2001",
+            "start": 0,
             "end": 16,
+            "entity": "dob"
+          }
+        ],
+        "intent": "dob",
+        "text": "november 27 2001"
+      },
+      {
+        "entities": [
+          {
+            "value": "Feb 10, 1976",
             "start": 0,
+            "end": 12,
+            "entity": "dob"
+          }
+        ],
+        "intent": "dob",
+        "text": "Feb 10, 1976"
+      },
+      {
+        "entities": [
+          {
+            "value": "October 9 2010",
+            "start": 0,
+            "end": 14,
+            "entity": "dob"
+          }
+        ],
+        "intent": "dob",
+        "text": "October 9 2010"
+      },
+      {
+        "entities": [
+          {
+            "value": "1/21/2001",
+            "start": 0,
+            "end": 9,
+            "entity": "dob"
+          }
+        ],
+        "intent": "dob",
+        "text": "1/21/2001"
+      },
+      {
+        "entities": [
+          {
+            "value": "05/2/1976",
+            "start": 0,
+            "end": 9,
+            "entity": "dob"
+          }
+        ],
+        "intent": "dob",
+        "text": "05/2/1976"
+      },
+      {
+        "entities": [
+          {
+            "value": "march 25, 2000",
+            "start": 0,
+            "end": 14,
+            "entity": "dob"
+          }
+        ],
+        "intent": "dob",
+        "text": "march 25, 2000"
+      },
+      {
+        "entities": [
+          {
+            "value": "5/15/1978",
+            "start": 0,
+            "end": 9,
+            "entity": "dob"
+          }
+        ],
+        "intent": "dob",
+        "text": "5/15/1978"
+      },
+      {
+        "entities": [
+          {
+            "value": "4/20/1950",
+            "start": 0,
+            "end": 9,
+            "entity": "dob"
+          }
+        ],
+        "intent": "dob",
+        "text": "4/20/1950"
+      },
+      {
+        "entities": [
+          {
+            "value": "jan 3 , 2001",
+            "start": 0,
+            "end": 11,
+            "entity": "dob"
+          }
+        ],
+        "intent": "dob",
+        "text": "jan 3, 2001"
+      },
+      {
+        "entities": [
+          {
             "value": "october 12 , 1987",
+            "start": 0,
+            "end": 16,
             "entity": "dob"
           }
-        ]
+        ],
+        "intent": "dob",
+        "text": "October 12, 1987"
       },
       {
-        "text": "September 5, 2001",
-        "intent": "dob",
         "entities": [
           {
-            "end": 17,
-            "start": 0,
             "value": "september 5 , 2001",
+            "start": 0,
+            "end": 17,
             "entity": "dob"
           }
-        ]
+        ],
+        "intent": "dob",
+        "text": "September 5, 2001"
       },
       {
-        "text": "Jan 29, 2010",
-        "intent": "dob",
         "entities": [
           {
-            "end": 12,
-            "start": 0,
             "value": "jan 29 , 2010",
+            "start": 0,
+            "end": 12,
             "entity": "dob"
           }
-        ]
+        ],
+        "intent": "dob",
+        "text": "Jan 29, 2010"
       },
       {
-        "text": "Jan 31, 1970",
-        "intent": "dob",
         "entities": [
           {
-            "end": 12,
-            "start": 0,
             "value": "jan 31 , 1970",
-            "entity": "dob"
-          }
-        ]
-      },
-      {
-        "text": "01/18/2010",
-        "intent": "dob",
-        "entities": [
-          {
-            "end": 10,
             "start": 0,
-            "value": "01/18/2010",
-            "entity": "dob"
-          }
-        ]
-      },
-      {
-        "text": "1/1/2001",
-        "intent": "dob",
-        "entities": [
-          {
-            "end": 8,
-            "start": 0,
-            "value": "1/1/2001",
-            "entity": "dob"
-          }
-        ]
-      },
-      {
-        "text": "nov 22, 1982",
-        "intent": "dob",
-        "entities": [
-          {
             "end": 12,
-            "start": 0,
-            "value": "nov 22, 1982",
             "entity": "dob"
           }
-        ]
+        ],
+        "intent": "dob",
+        "text": "Jan 31, 1970"
+      },
+      {
+        "entities": [
+          {
+            "value": "01/18/2010",
+            "start": 0,
+            "end": 10,
+            "entity": "dob"
+          }
+        ],
+        "intent": "dob",
+        "text": "01/18/2010"
+      },
+      {
+        "entities": [
+          {
+            "value": "1/1/2001",
+            "start": 0,
+            "end": 8,
+            "entity": "dob"
+          }
+        ],
+        "intent": "dob",
+        "text": "1/1/2001"
+      },
+      {
+        "entities": [
+          {
+            "value": "nov 22, 1982",
+            "start": 0,
+            "end": 12,
+            "entity": "dob"
+          }
+        ],
+        "intent": "dob",
+        "text": "nov 22, 1982"
+      },
+      {
+        "entities": [
+          {
+            "value": "jan 30 , 2001",
+            "start": 0,
+            "end": 12,
+            "entity": "dob"
+          }
+        ],
+        "intent": "dob",
+        "text": "jan 30, 2001"
+      },
+      {
+        "entities": [
+          {
+            "value": "may 1 , 2001",
+            "start": 0,
+            "end": 11,
+            "entity": "dob"
+          }
+        ],
+        "intent": "dob",
+        "text": "may 1, 2001"
       },
       {
         "text": "See you later",
@@ -556,6 +551,14 @@
         "intent": "greet"
       },
       {
+        "text": "hello",
+        "intent": "greet"
+      },
+      {
+        "text": "hello",
+        "intent": "greet"
+      },
+      {
         "text": "no, that's not correct",
         "intent": "incorrect_name_dob"
       },
@@ -604,6 +607,198 @@
         "intent": "incorrect_name_dob"
       },
       {
+        "text": "vicodin",
+        "intent": "medicines"
+      },
+      {
+        "text": "simvastatin",
+        "intent": "medicines"
+      },
+      {
+        "text": "lisinopril",
+        "intent": "medicines"
+      },
+      {
+        "text": "levothyroxine",
+        "intent": "medicines"
+      },
+      {
+        "text": "azithromycin",
+        "intent": "medicines"
+      },
+      {
+        "text": "Metformin",
+        "intent": "medicines"
+      },
+      {
+        "text": "Lipitor",
+        "intent": "medicines"
+      },
+      {
+        "text": "Amlodipine",
+        "intent": "medicines"
+      },
+      {
+        "text": "Amoxicillin",
+        "intent": "medicines"
+      },
+      {
+        "text": "Hydrochlorothiazide",
+        "intent": "medicines"
+      },
+      {
+        "text": "hydrocodone",
+        "intent": "medicines"
+      },
+      {
+        "text": "acetaminophen",
+        "intent": "medicines"
+      },
+      {
+        "text": "Zocor",
+        "intent": "medicines"
+      },
+      {
+        "text": "Prinivil",
+        "intent": "medicines"
+      },
+      {
+        "text": "Zestril",
+        "intent": "medicines"
+      },
+      {
+        "text": "Synthroid",
+        "intent": "medicines"
+      },
+      {
+        "text": "Zithromax",
+        "intent": "medicines"
+      },
+      {
+        "text": "Z-PAK",
+        "intent": "medicines"
+      },
+      {
+        "text": "Zithromax",
+        "intent": "medicines"
+      },
+      {
+        "text": "atorvastatin",
+        "intent": "medicines"
+      },
+      {
+        "text": "Norvasc",
+        "intent": "medicines"
+      },
+      {
+        "entities": [
+          {
+            "value": "vicodin",
+            "start": 0,
+            "end": 7,
+            "entity": "medicines"
+          },
+          {
+            "value": "Zocor",
+            "start": 9,
+            "end": 14,
+            "entity": "medicines"
+          }
+        ],
+        "intent": "medicines",
+        "text": "vicodin, Zocor"
+      },
+      {
+        "entities": [
+          {
+            "value": "vicodin",
+            "start": 0,
+            "end": 7,
+            "entity": "medicines"
+          },
+          {
+            "value": "simvastatin",
+            "start": 8,
+            "end": 19,
+            "entity": "medicines"
+          }
+        ],
+        "intent": "medicines",
+        "text": "vicodin,simvastatin"
+      },
+      {
+        "entities": [
+          {
+            "value": "vicodin simvastatin",
+            "start": 0,
+            "end": 19,
+            "entity": "medicines"
+          }
+        ],
+        "intent": "medicines",
+        "text": "vicodin simvastatin"
+      },
+      {
+        "entities": [
+          {
+            "value": "levothyroxine Synthroid",
+            "start": 0,
+            "end": 23,
+            "entity": "medicines"
+          }
+        ],
+        "intent": "medicines",
+        "text": "levothyroxine Synthroid"
+      },
+      {
+        "entities": [
+          {
+            "value": "Zithromax Norvasc Synthroid",
+            "start": 0,
+            "end": 27,
+            "entity": "medicines"
+          }
+        ],
+        "intent": "medicines",
+        "text": "Zithromax Norvasc Synthroid"
+      },
+      {
+        "entities": [
+          {
+            "value": "hydrocodone vicodin levothyroxine",
+            "start": 0,
+            "end": 33,
+            "entity": "medicines"
+          }
+        ],
+        "intent": "medicines",
+        "text": "hydrocodone vicodin levothyroxine"
+      },
+      {
+        "entities": [
+          {
+            "value": "hydrocodone,vicodin,levothyroxine",
+            "start": 0,
+            "end": 33,
+            "entity": "medicines"
+          }
+        ],
+        "intent": "medicines",
+        "text": "hydrocodone,vicodin,levothyroxine"
+      },
+      {
+        "entities": [
+          {
+            "value": "Zithromax, Lipitor, Zocor",
+            "start": 0,
+            "end": 25,
+            "entity": "medicines"
+          }
+        ],
+        "intent": "medicines",
+        "text": "Zithromax, Lipitor, Zocor"
+      },
+      {
         "text": "a few days",
         "intent": "onset_gradually"
       },
@@ -649,6 +844,14 @@
       },
       {
         "text": "for the past 2 days",
+        "intent": "onset_gradually"
+      },
+      {
+        "text": "for a long time",
+        "intent": "onset_gradually"
+      },
+      {
+        "text": "for about a week",
         "intent": "onset_gradually"
       },
       {
@@ -720,400 +923,440 @@
         "intent": "onset_quick"
       },
       {
-        "text": "My name is Juste Ball",
-        "intent": "patient_name",
         "entities": [
           {
-            "end": 21,
-            "start": 11,
             "value": "Juste Ball",
+            "start": 11,
+            "end": 21,
             "entity": "patient_name"
           }
-        ]
+        ],
+        "intent": "patient_name",
+        "text": "My name is Juste Ball"
       },
       {
-        "text": "I am Josh Smith",
-        "intent": "patient_name",
         "entities": [
           {
-            "end": 15,
-            "start": 5,
             "value": "Josh Smith",
+            "start": 5,
+            "end": 15,
             "entity": "patient_name"
           }
-        ]
+        ],
+        "intent": "patient_name",
+        "text": "I am Josh Smith"
       },
       {
-        "text": "I'm Lucy Perry",
-        "intent": "patient_name",
         "entities": [
           {
-            "end": 14,
-            "start": 4,
             "value": "Lucy Perry",
-            "entity": "patient_name"
-          }
-        ]
-      },
-      {
-        "text": "People call me Greg Gilmore",
-        "intent": "patient_name",
-        "entities": [
-          {
-            "end": 27,
-            "start": 15,
-            "value": "Greg Gilmore",
-            "entity": "patient_name"
-          }
-        ]
-      },
-      {
-        "text": "It's David Johnson",
-        "intent": "patient_name",
-        "entities": [
-          {
-            "end": 18,
-            "start": 5,
-            "value": "David Johnson",
-            "entity": "patient_name"
-          }
-        ]
-      },
-      {
-        "text": "Usually people call me Amy Jenkins",
-        "intent": "patient_name",
-        "entities": [
-          {
-            "end": 34,
-            "start": 23,
-            "value": "Amy Jenkins",
-            "entity": "patient_name"
-          }
-        ]
-      },
-      {
-        "text": "My name is Sophie Rodriques",
-        "intent": "patient_name",
-        "entities": [
-          {
-            "end": 27,
-            "start": 11,
-            "value": "Sophie Rodriques",
-            "entity": "patient_name"
-          }
-        ]
-      },
-      {
-        "text": "You can call me Joane Gerald",
-        "intent": "patient_name",
-        "entities": [
-          {
-            "end": 28,
-            "start": 16,
-            "value": "Joane Gerald",
-            "entity": "patient_name"
-          }
-        ]
-      },
-      {
-        "text": "Please call me Royal Navarrette",
-        "intent": "patient_name",
-        "entities": [
-          {
-            "end": 31,
-            "start": 15,
-            "value": "Royal Navarrette",
-            "entity": "patient_name"
-          }
-        ]
-      },
-      {
-        "text": "Name name is Tom Palen",
-        "intent": "patient_name",
-        "entities": [
-          {
-            "end": 22,
-            "start": 13,
-            "value": "Tom Palen",
-            "entity": "patient_name"
-          }
-        ]
-      },
-      {
-        "text": "I am Richard Brainard",
-        "intent": "patient_name",
-        "entities": [
-          {
-            "end": 21,
-            "start": 5,
-            "value": "Richard Brainard",
-            "entity": "patient_name"
-          }
-        ]
-      },
-      {
-        "text": "Natacha Weathersby",
-        "intent": "patient_name",
-        "entities": [
-          {
-            "end": 18,
-            "start": 0,
-            "value": "Natacha Weathersby",
-            "entity": "patient_name"
-          }
-        ]
-      },
-      {
-        "text": "Belinda Beaupre",
-        "intent": "patient_name",
-        "entities": [
-          {
-            "end": 15,
-            "start": 0,
-            "value": "Belinda Beaupre",
-            "entity": "patient_name"
-          }
-        ]
-      },
-      {
-        "text": "Tonya Carnes",
-        "intent": "patient_name",
-        "entities": [
-          {
-            "end": 12,
-            "start": 0,
-            "value": "Tonya Carnes",
-            "entity": "patient_name"
-          }
-        ]
-      },
-      {
-        "text": "Joseph Greenleaf",
-        "intent": "patient_name",
-        "entities": [
-          {
-            "end": 16,
-            "start": 0,
-            "value": "Joseph Greenleaf",
-            "entity": "patient_name"
-          }
-        ]
-      },
-      {
-        "text": "Tan Gaal",
-        "intent": "patient_name",
-        "entities": [
-          {
-            "end": 8,
-            "start": 0,
-            "value": "Tan Gaal",
-            "entity": "patient_name"
-          }
-        ]
-      },
-      {
-        "text": "Pete Toy",
-        "intent": "patient_name",
-        "entities": [
-          {
-            "end": 8,
-            "start": 0,
-            "value": "Pete Toy",
-            "entity": "patient_name"
-          }
-        ]
-      },
-      {
-        "text": "Elon Musk",
-        "intent": "patient_name",
-        "entities": [
-          {
-            "end": 9,
-            "start": 0,
-            "value": "Elon Musk",
-            "entity": "patient_name"
-          }
-        ]
-      },
-      {
-        "text": "Penny Prue",
-        "intent": "patient_name",
-        "entities": [
-          {
-            "end": 10,
-            "start": 0,
-            "value": "Penny Prue",
-            "entity": "patient_name"
-          }
-        ]
-      },
-      {
-        "text": "name is Andrew Wendel",
-        "intent": "patient_name",
-        "entities": [
-          {
-            "end": 21,
-            "start": 8,
-            "value": "Andrew Wendel",
-            "entity": "patient_name"
-          }
-        ]
-      },
-      {
-        "text": "I am Ganesh",
-        "intent": "patient_name",
-        "entities": [
-          {
-            "end": 11,
-            "start": 5,
-            "value": "Ganesh",
-            "entity": "patient_name"
-          }
-        ]
-      },
-      {
-        "text": "My name is Mike",
-        "intent": "patient_name",
-        "entities": [
-          {
-            "end": 15,
-            "start": 11,
-            "value": "Mike",
-            "entity": "patient_name"
-          }
-        ]
-      },
-      {
-        "text": "My name is Ajay",
-        "intent": "patient_name",
-        "entities": [
-          {
-            "end": 15,
-            "start": 11,
-            "value": "Ajay",
-            "entity": "patient_name"
-          }
-        ]
-      },
-      {
-        "text": "I'm Partia",
-        "intent": "patient_name",
-        "entities": [
-          {
-            "end": 10,
             "start": 4,
-            "value": "Partia",
+            "end": 14,
             "entity": "patient_name"
           }
-        ]
+        ],
+        "intent": "patient_name",
+        "text": "I'm Lucy Perry"
       },
       {
-        "text": "Please call me Leo",
-        "intent": "patient_name",
         "entities": [
           {
-            "end": 18,
+            "value": "Greg Gilmore",
             "start": 15,
-            "value": "Leo",
+            "end": 27,
             "entity": "patient_name"
           }
-        ]
+        ],
+        "intent": "patient_name",
+        "text": "People call me Greg Gilmore"
       },
       {
-        "text": "name is Pari",
-        "intent": "patient_name",
         "entities": [
           {
-            "end": 12,
-            "start": 8,
-            "value": "Pari",
-            "entity": "patient_name"
-          }
-        ]
-      },
-      {
-        "text": "name Sanjay",
-        "intent": "patient_name",
-        "entities": [
-          {
-            "end": 11,
+            "value": "David Johnson",
             "start": 5,
-            "value": "Sanjay",
+            "end": 18,
             "entity": "patient_name"
           }
-        ]
+        ],
+        "intent": "patient_name",
+        "text": "It's David Johnson"
       },
       {
-        "text": "My name is Alex",
-        "intent": "patient_name",
         "entities": [
           {
-            "end": 15,
+            "value": "Amy Jenkins",
+            "start": 23,
+            "end": 34,
+            "entity": "patient_name"
+          }
+        ],
+        "intent": "patient_name",
+        "text": "Usually people call me Amy Jenkins"
+      },
+      {
+        "entities": [
+          {
+            "value": "Sophie Rodriques",
             "start": 11,
-            "value": "alex",
+            "end": 27,
             "entity": "patient_name"
           }
-        ]
+        ],
+        "intent": "patient_name",
+        "text": "My name is Sophie Rodriques"
       },
       {
-        "text": "Samantha Bell",
-        "intent": "patient_name",
         "entities": [
           {
-            "end": 13,
-            "start": 0,
-            "value": "Samantha Bell",
+            "value": "Joane Gerald",
+            "start": 16,
+            "end": 28,
             "entity": "patient_name"
           }
-        ]
+        ],
+        "intent": "patient_name",
+        "text": "You can call me Joane Gerald"
       },
       {
-        "text": "my name is Samantha Bell",
-        "intent": "patient_name",
         "entities": [
           {
-            "end": 24,
-            "start": 11,
-            "value": "Samantha Bell",
+            "value": "Royal Navarrette",
+            "start": 15,
+            "end": 31,
             "entity": "patient_name"
           }
-        ]
+        ],
+        "intent": "patient_name",
+        "text": "Please call me Royal Navarrette"
       },
       {
-        "text": "My name is Tom Palen",
-        "intent": "patient_name",
         "entities": [
           {
-            "end": 20,
-            "start": 11,
-            "value": "tom palen",
-            "entity": "patient_name"
-          }
-        ]
-      },
-      {
-        "text": "Alexander Bailey",
-        "intent": "patient_name"
-      },
-      {
-        "text": "Shanika Latoya",
-        "intent": "patient_name"
-      },
-      {
-        "text": "alex bailey",
-        "intent": "patient_name"
-      },
-      {
-        "text": "my name is jack wilson",
-        "intent": "patient_name",
-        "entities": [
-          {
+            "value": "Tom Palen",
+            "start": 13,
             "end": 22,
-            "start": 11,
-            "value": "jack wilson",
             "entity": "patient_name"
           }
-        ]
+        ],
+        "intent": "patient_name",
+        "text": "Name name is Tom Palen"
+      },
+      {
+        "entities": [
+          {
+            "value": "Richard Brainard",
+            "start": 5,
+            "end": 21,
+            "entity": "patient_name"
+          }
+        ],
+        "intent": "patient_name",
+        "text": "I am Richard Brainard"
+      },
+      {
+        "entities": [
+          {
+            "value": "Natacha Weathersby",
+            "start": 0,
+            "end": 18,
+            "entity": "patient_name"
+          }
+        ],
+        "intent": "patient_name",
+        "text": "Natacha Weathersby"
+      },
+      {
+        "entities": [
+          {
+            "value": "Belinda Beaupre",
+            "start": 0,
+            "end": 15,
+            "entity": "patient_name"
+          }
+        ],
+        "intent": "patient_name",
+        "text": "Belinda Beaupre"
+      },
+      {
+        "entities": [
+          {
+            "value": "Tonya Carnes",
+            "start": 0,
+            "end": 12,
+            "entity": "patient_name"
+          }
+        ],
+        "intent": "patient_name",
+        "text": "Tonya Carnes"
+      },
+      {
+        "entities": [
+          {
+            "value": "Joseph Greenleaf",
+            "start": 0,
+            "end": 16,
+            "entity": "patient_name"
+          }
+        ],
+        "intent": "patient_name",
+        "text": "Joseph Greenleaf"
+      },
+      {
+        "entities": [
+          {
+            "value": "Tan Gaal",
+            "start": 0,
+            "end": 8,
+            "entity": "patient_name"
+          }
+        ],
+        "intent": "patient_name",
+        "text": "Tan Gaal"
+      },
+      {
+        "entities": [
+          {
+            "value": "Pete Toy",
+            "start": 0,
+            "end": 8,
+            "entity": "patient_name"
+          }
+        ],
+        "intent": "patient_name",
+        "text": "Pete Toy"
+      },
+      {
+        "entities": [
+          {
+            "value": "Elon Musk",
+            "start": 0,
+            "end": 9,
+            "entity": "patient_name"
+          }
+        ],
+        "intent": "patient_name",
+        "text": "Elon Musk"
+      },
+      {
+        "entities": [
+          {
+            "value": "Penny Prue",
+            "start": 0,
+            "end": 10,
+            "entity": "patient_name"
+          }
+        ],
+        "intent": "patient_name",
+        "text": "Penny Prue"
+      },
+      {
+        "entities": [
+          {
+            "value": "Andrew Wendel",
+            "start": 8,
+            "end": 21,
+            "entity": "patient_name"
+          }
+        ],
+        "intent": "patient_name",
+        "text": "name is Andrew Wendel"
+      },
+      {
+        "entities": [
+          {
+            "value": "Ganesh",
+            "start": 5,
+            "end": 11,
+            "entity": "patient_name"
+          }
+        ],
+        "intent": "patient_name",
+        "text": "I am Ganesh"
+      },
+      {
+        "entities": [
+          {
+            "value": "Mike",
+            "start": 11,
+            "end": 15,
+            "entity": "patient_name"
+          }
+        ],
+        "intent": "patient_name",
+        "text": "My name is Mike"
+      },
+      {
+        "entities": [
+          {
+            "value": "Ajay",
+            "start": 11,
+            "end": 15,
+            "entity": "patient_name"
+          }
+        ],
+        "intent": "patient_name",
+        "text": "My name is Ajay"
+      },
+      {
+        "entities": [
+          {
+            "value": "Partia",
+            "start": 4,
+            "end": 10,
+            "entity": "patient_name"
+          }
+        ],
+        "intent": "patient_name",
+        "text": "I'm Partia"
+      },
+      {
+        "entities": [
+          {
+            "value": "Leo",
+            "start": 15,
+            "end": 18,
+            "entity": "patient_name"
+          }
+        ],
+        "intent": "patient_name",
+        "text": "Please call me Leo"
+      },
+      {
+        "entities": [
+          {
+            "value": "Pari",
+            "start": 8,
+            "end": 12,
+            "entity": "patient_name"
+          }
+        ],
+        "intent": "patient_name",
+        "text": "name is Pari"
+      },
+      {
+        "entities": [
+          {
+            "value": "Sanjay",
+            "start": 5,
+            "end": 11,
+            "entity": "patient_name"
+          }
+        ],
+        "intent": "patient_name",
+        "text": "name Sanjay"
+      },
+      {
+        "entities": [
+          {
+            "value": "alex",
+            "start": 11,
+            "end": 15,
+            "entity": "patient_name"
+          }
+        ],
+        "intent": "patient_name",
+        "text": "My name is Alex"
+      },
+      {
+        "entities": [
+          {
+            "value": "Samantha Bell",
+            "start": 0,
+            "end": 13,
+            "entity": "patient_name"
+          }
+        ],
+        "intent": "patient_name",
+        "text": "Samantha Bell"
+      },
+      {
+        "entities": [
+          {
+            "value": "Samantha Bell",
+            "start": 11,
+            "end": 24,
+            "entity": "patient_name"
+          }
+        ],
+        "intent": "patient_name",
+        "text": "my name is Samantha Bell"
+      },
+      {
+        "entities": [
+          {
+            "value": "tom palen",
+            "start": 11,
+            "end": 20,
+            "entity": "patient_name"
+          }
+        ],
+        "intent": "patient_name",
+        "text": "My name is Tom Palen"
+      },
+      {
+        "entities": [
+          {
+            "value": "Alexander Bailey",
+            "start": 0,
+            "end": 16,
+            "entity": "patient_name"
+          }
+        ],
+        "intent": "patient_name",
+        "text": "Alexander Bailey"
+      },
+      {
+        "entities": [
+          {
+            "value": "Shanika Latoya",
+            "start": 0,
+            "end": 14,
+            "entity": "patient_name"
+          }
+        ],
+        "intent": "patient_name",
+        "text": "Shanika Latoya"
+      },
+      {
+        "entities": [
+          {
+            "value": "alex bailey",
+            "start": 0,
+            "end": 11,
+            "entity": "patient_name"
+          }
+        ],
+        "intent": "patient_name",
+        "text": "alex bailey"
+      },
+      {
+        "entities": [
+          {
+            "value": "jack wilson",
+            "start": 11,
+            "end": 22,
+            "entity": "patient_name"
+          }
+        ],
+        "intent": "patient_name",
+        "text": "my name is jack wilson"
+      },
+      {
+        "text": "my name is vishal",
+        "intent": "patient_name"
+      },
+      {
+        "entities": [
+          {
+            "value": "Bob Dylan",
+            "start": 0,
+            "end": 9,
+            "entity": "patient_name"
+          }
+        ],
+        "intent": "patient_name",
+        "text": "Bob Dylan"
       },
       {
         "text": "stuffy nose",
@@ -1328,6 +1571,22 @@
         "intent": "symptoms"
       },
       {
+        "text": "i have the flu",
+        "intent": "symptoms"
+      },
+      {
+        "text": "i am sick",
+        "intent": "symptoms"
+      },
+      {
+        "text": "Not feeling well, i think i have the flu",
+        "intent": "symptoms"
+      },
+      {
+        "text": "fever, chills, my body hurts",
+        "intent": "symptoms"
+      },
+      {
         "text": "Thanks",
         "intent": "thanks"
       },
@@ -1403,6 +1662,63 @@
         "text": "thanks",
         "intent": "thanks"
       }
-    ]
+    ],
+    "entity_synonyms": [
+      {
+        "value": "alex",
+        "synonyms": [
+          "Alex"
+        ]
+      },
+      {
+        "value": "tom palen",
+        "synonyms": [
+          "Tom Palen"
+        ]
+      },
+      {
+        "value": "jan 3 , 2001",
+        "synonyms": [
+          "jan 3, 2001"
+        ]
+      },
+      {
+        "value": "may 1 , 2001",
+        "synonyms": [
+          "may 1, 2001"
+        ]
+      },
+      {
+        "value": "jan 29 , 2010",
+        "synonyms": [
+          "Jan 29, 2010"
+        ]
+      },
+      {
+        "value": "october 12 , 1987",
+        "synonyms": [
+          "October 12, 1987"
+        ]
+      },
+      {
+        "value": "jan 30 , 2001",
+        "synonyms": [
+          "jan 30, 2001"
+        ]
+      },
+      {
+        "value": "september 5 , 2001",
+        "synonyms": [
+          "September 5, 2001"
+        ]
+      },
+      {
+        "value": "jan 31 , 1970",
+        "synonyms": [
+          "Jan 31, 1970"
+        ]
+      }
+    ],
+    "lookup_tables": []
   }
 }

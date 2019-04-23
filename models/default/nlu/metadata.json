@@ -1,12 +1,12 @@
 {
-    "training_data": "training_data.json",
-    "trained_at": "20190315-002241",
+    "rasa_nlu_version": "0.14.4",
+    "trained_at": "20190411-122716",
     "pipeline": [
         {
             "name": "nlp_spacy",
             "model": "en",
-            "case_sensitive": false,
-            "class": "rasa_nlu.utils.spacy_utils.SpacyNLP"
+            "class": "rasa_nlu.utils.spacy_utils.SpacyNLP",
+            "case_sensitive": false
         },
         {
             "name": "tokenizer_spacy",
@@ -17,15 +17,13 @@
             "class": "rasa_nlu.featurizers.spacy_featurizer.SpacyFeaturizer"
         },
         {
-            "name": "intent_entity_featurizer_regex",
             "regex_file": "regex_featurizer.json",
+            "name": "intent_entity_featurizer_regex",
             "class": "rasa_nlu.featurizers.regex_featurizer.RegexFeaturizer"
         },
         {
+            "BILOU_flag": true,
             "classifier_file": "crf_model.pkl",
-            "class": "rasa_nlu.extractors.crf_entity_extractor.CRFEntityExtractor",
-            "max_iterations": 50,
-            "L2_c": 0.1,
             "features": [
                 [
                     "low",
@@ -51,9 +49,11 @@
                     "upper"
                 ]
             ],
+            "max_iterations": 50,
+            "L2_c": 0.1,
             "name": "ner_crf",
             "L1_c": 0.1,
-            "BILOU_flag": true
+            "class": "rasa_nlu.extractors.crf_entity_extractor.CRFEntityExtractor"
         },
         {
             "name": "ner_synonyms",
@@ -61,6 +61,12 @@
             "synonyms_file": "entity_synonyms.json"
         },
         {
+            "kernels": [
+                "linear"
+            ],
+            "gamma": [
+                0.1
+            ],
             "C": [
                 1,
                 2,
@@ -69,19 +75,13 @@
                 20,
                 100
             ],
-            "gamma": [
-                0.1
-            ],
-            "scoring_function": "f1_weighted",
+            "max_cross_validation_folds": 5,
             "name": "intent_classifier_sklearn",
-            "kernels": [
-                "linear"
-            ],
             "classifier_file": "intent_classifier_sklearn.pkl",
             "class": "rasa_nlu.classifiers.sklearn_intent_classifier.SklearnIntentClassifier",
-            "max_cross_validation_folds": 5
+            "scoring_function": "f1_weighted"
         }
     ],
-    "rasa_nlu_version": "0.14.4",
-    "language": "en"
+    "language": "en",
+    "training_data": "training_data.json"
 }

@@ -3,7 +3,6 @@ import rasa_core.policies
 from rasa_nlu.training_data import load_data
 from rasa_nlu.model import Trainer
 from rasa_nlu import config as nlu_config
-from rasa_core import config as core_config
 from rasa_core.train import train_dialogue_model
 from rasa_nlu.model import Interpreter
 from rasa_core.interpreter import NaturalLanguageInterpreter
@@ -21,6 +20,8 @@ import traceback
 
 
 # TODO: add logging
+# TODO: add form action for medicine
+# TODO: add custom action to search side effects
 
 class Train(object):
     def __init__(self, **kwargs):
@@ -120,7 +121,7 @@ class Train(object):
                 print('interactive')
                 cls.train_interactive(train_obj)
         except Exception as e:
-            traceback.print_exc(e)
+            traceback.print_exc()
 
 
 def main():

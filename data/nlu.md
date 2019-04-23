@@ -8,7 +8,7 @@
 - yes
 - yes
 
-## intent:correct_name_dob
+## intent:correct_information
 - yes, that's correct
 - yes
 - that's correct
@@ -33,6 +33,10 @@
 - Yes
 - yes, that's correct
 - yes, that's right
+- that is correct
+- yes, thanks
+- Yes
+- Yes
 
 ## intent:dob
 - [jan 1, 1945](dob)
@@ -56,6 +60,8 @@
 - [01/18/2010](dob)
 - [1/1/2001](dob)
 - [nov 22, 1982](dob)
+- [jan 30, 2001](dob:jan 30 , 2001)
+- [may 1, 2001](dob:may 1 , 2001)
 
 ## intent:goodbye
 - See you later
@@ -92,6 +98,8 @@
 - Hey there
 - hi
 - hi
+- hello
+- hello
 
 ## intent:incorrect_name_dob
 - no, that's not correct
@@ -107,6 +115,37 @@
 - wrong birth date
 - nope
 
+## intent:medicines
+- [vicodin](medicine) 
+- [simvastatin](medicine)
+- [lisinopril](medicine)
+- [levothyroxine](medicine)
+- azithromycin
+- Metformin
+- Lipitor
+- Amlodipine
+- Amoxicillin
+- Hydrochlorothiazide
+- hydrocodone
+- acetaminophen
+- Zocor
+- Prinivil
+- Zestril
+- Synthroid
+- Zithromax
+- Z-PAK
+- Zithromax
+- atorvastatin
+- Norvasc
+- [vicodin](medicines), [Zocor](medicines)
+- [vicodin](medicines),[simvastatin](medicines)
+- [vicodin simvastatin](medicines)
+- [levothyroxine Synthroid](medicines)
+- [Zithromax Norvasc Synthroid](medicines)
+- [hydrocodone vicodin levothyroxine](medicines)
+- [hydrocodone,vicodin,levothyroxine](medicines)
+- [Zithromax, Lipitor, Zocor](medicines)
+
 ## intent:onset_gradually
 - a few days
 - 2 or 3 days
@@ -120,6 +159,8 @@
 - For a few days
 - for a few weeks
 - for the past 2 days
+- for a long time
+- for about a week
 
 ## intent:onset_quick
 - last 24 hours
@@ -176,6 +217,8 @@
 - [Shanika Latoya](patient_name)
 - [alex bailey](patient_name)
 - my name is [jack wilson](patient_name)
+- my name is vishal
+- [Bob Dylan](patient_name)
 
 ## intent:symptoms
 - stuffy nose
@@ -231,6 +274,10 @@
 - my body aches and I'm very tired
 - i am very weak and have chills
 - I wake up with chills. I don't really have an appetite
+- i have the flu
+- i am sick
+- Not feeling well, i think i have the flu
+- fever, chills, my body hurts
 
 ## intent:thanks
 - Thanks
@@ -261,6 +308,9 @@
 
 ## synonym:jan 3 , 2001
 - jan 3, 2001
+
+## synonym:jan 30 , 2001
+- jan 30, 2001
 
 ## synonym:jan 31 , 1970
 - Jan 31, 1970
