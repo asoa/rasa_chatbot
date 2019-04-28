@@ -36,6 +36,7 @@
 * onset_gradually
     - utter_run_tests
 * agree
+    - utter_your_welcome
 
 ## Generated Story 2423273420425193787
 * greet
@@ -83,6 +84,7 @@
 * onset_gradually
     - utter_run_tests
 * agree
+    - utter_your_welcome
 
 ## Generated Story -3793258723292826179
 * greet

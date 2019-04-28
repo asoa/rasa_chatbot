@@ -78,6 +78,7 @@ class MedicineInfo(Action):
         """ use beautiful soup to parse google search results for sever side effects of the medicine """
         return 'medicine info'
 
+
 class GetName(FormAction):
     """ get name from intent """
     def name(self):
@@ -85,8 +86,6 @@ class GetName(FormAction):
 
     def slot_mappings(self):
         return {'patient_name': self.from_text(intent='patient_name')}
-
-
 
 
 class GetSymptoms(FormAction):
@@ -111,7 +110,7 @@ class GetSymptoms(FormAction):
 
     def submit(self, dispatcher, tracker, domain):
         # dispatcher.utter_message(self.pred)
-        dispatcher.utter_template('utter_thank_you', tracker)
+        # dispatcher.utter_template('utter_thank_you', tracker)
         return []
 
 
@@ -136,10 +135,10 @@ class CorrelateSymptoms(Action):
 class OutOfScope(Action):
     """ user intent is not recognized by NLU -> summarize google search and return to user"""
     def name(self):
-        return "out_of_scope"
+        return "action_google_search"
 
     def run(self, dispatcher, tracker, domain):
-        # do stuff
+        # TODO
 
         return [SlotSet("<slot>")]
 

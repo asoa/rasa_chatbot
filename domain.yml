@@ -21,6 +21,7 @@ actions:
 - utter_verify_medicines
 - utter_ask_patient_name
 - action_medicine_info
+- action_google_search
 entities:
 - symptoms
 - allergies
