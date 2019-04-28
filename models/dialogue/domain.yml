@@ -1,63 +1,68 @@
 %YAML 1.1
 ---
 actions:
-- utter_how_long
-- utter_elaborate_symptoms
-- utter_your_welcome
-- utter_verify_name_dob
-- utter_patient_name
-- utter_bye
-- utter_ask_dob
-- utter_ask_medicines
-- utter_verify_medicines
-- action_medicine_info
-- utter_ask_patient_name
 - utter_goodbye
-- utter_empathy
-- utter_greet
-- utter_dob
-- utter_purpose
-- utter_default
 - utter_thank_you
+- utter_patient_name
+- utter_elaborate_symptoms
+- utter_ask_medicines
+- utter_ask_dob
+- utter_purpose
+- utter_dob
+- utter_greet
+- utter_verify_name_dob
+- utter_empathy
+- utter_bye
+- utter_how_long
+- action_correlate_symptoms
+- utter_default
 - utter_run_tests
+- utter_your_welcome
+- utter_verify_medicines
+- utter_ask_patient_name
+- action_medicine_info
 config:
   store_entities_as_slots: true
 entities:
-- dob
+- symptoms
 - allergies
-- patient_name
+- dob
 - medicines
+- patient_name
 forms:
+- get_symptoms_form
 - patient_medicine_form
 - patient_info_form
 intents:
-- utter_thank_you:
-    use_entities: true
-- goodbye:
-    use_entities: true
-- correct_name_dob:
-    use_entities: true
 - patient_name:
     use_entities: true
 - greet:
     use_entities: true
-- onset_quick:
+- correct_name_dob:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- deny:
+    use_entities: true
+- agree:
+    use_entities: true
+- medicines:
+    use_entities: true
+- correct_information:
     use_entities: true
 - onset_gradually:
     use_entities: true
 - symptoms:
     use_entities: true
-- agree:
-    use_entities: true
-- thanks:
-    use_entities: true
-- dob:
+- utter_thank_you:
     use_entities: true
 - utter_your_welcome:
     use_entities: true
-- medicines:
+- dob:
     use_entities: true
-- deny:
+- onset_quick:
+    use_entities: true
+- thanks:
     use_entities: true
 slots:
   dob:
@@ -67,12 +72,20 @@ slots:
   medicines:
     auto_fill: true
     initial_value: null
-    type: rasa_core.slots.ListSlot
+    type: rasa_core.slots.UnfeaturizedSlot
   patient_name:
     auto_fill: true
     initial_value: null
     type: rasa_core.slots.UnfeaturizedSlot
+  prob_medicine:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
   requested_slot:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  symptoms:
     auto_fill: true
     initial_value: null
     type: rasa_core.slots.UnfeaturizedSlot
@@ -83,6 +96,9 @@ templates:
   - text: What medicines are you currently taking?
   utter_ask_patient_name:
   - text: What is you full name
+  utter_ask_symptoms:
+  - text: What brings you in today?
+  - text: What is bothering you today?
   utter_bye:
   - text: Hope you feel better
   - text: Have a good day

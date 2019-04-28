@@ -12,6 +12,11 @@ import string
 from nltk.corpus import stopwords
 from nltk import BigramAssocMeasures  # bigram scorer
 from nltk import BigramCollocationFinder  # used to get bigrams
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.naive_bayes import GaussianNB, MultinomialNB
+from sklearn.utils import resample
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import classification_report
 
 
 class Drug:
@@ -21,6 +26,11 @@ class Drug:
         self.drug_side_effects = defaultdict(list)
         self.url = 'https://www.drugs.com/'
         self.stopwords = [word for word in stopwords.words('english')]
+
+        if self.kwargs.get('symptoms'):
+            pp = self.pre_process(self.kwargs.get('symptoms'))
+            self.pred = self.nb_predict(pp)
+            print(self.pred)
 
     def init_drugs(self):
         """ initialize drug dictionary and pickle to disk """
@@ -42,7 +52,7 @@ class Drug:
                     continue
                 if isinstance(sibling, bs4.Tag) and 'interactions' in sibling.attrs.values():
                     break
-                if isinstance(sibling, bs4.Tag):
+                if isinstance(sibling, bs4.Tag):  # append drug side affects
                     # print(sibling.text)
                     self.drug_side_effects[drug].append(sibling.text.lstrip().rstrip())
 
@@ -50,50 +60,87 @@ class Drug:
         with open('drug_side_effects.pkl', 'wb') as f:
             pickle.dump(self.drug_side_effects, f)
 
-    def pre_proces(self, text):
+    def pre_process(self, text):
         """ remove irrelevant strings """
-        replace_dict = {'Get emergency medical help if you have signs of an allergic reaction to \w+: ':'',
-                        'This is not a complete list of side effects and others may occur. Call your doctor for medical advice about side effects. You may report side effects to FDA at 1-800-FDA-1088.':'',
-                        }
-        for pattern, replace in replace_dict.items():
-            pass
+        pattern = re.compile(r""" 
+                ^Get\semergency.*
+            |   ^Call\syour\sdoctor.*
+            |   ^This\sis\snot\sa\scomplete\slist\sof\sside\seffects.*
+            |   ^See also:\s.*
+            |   '!"\#\$%&'\(\)\*\+,\./:;<=>\?@\[\\]\^_`{|}~
+            |   :
+            |   ,
+            |   "
+        """, re.VERBOSE)
 
+        clean_text = pattern.sub('', text)
+        punc_split_pattern = re.compile(r""";|--|-|\n\n|\n|\(|\)""")  # remove joined tokens such as word1-word2
+        replacement_string = punc_split_pattern.sub(' ', clean_text)
 
-    def tokenize(self, text):
-        # tokens = [nltk.word_tokenize(sent) for sent in text]
-        tokens = [word.lower() for sent in text for word in nltk.word_tokenize(sent)
-                  if word not in string.punctuation and word not in self.stopwords]
+        tokens = nltk.word_tokenize(replacement_string)
         return tokens
 
-    def get_bigrams(self, sents):
+    def create_classifier(self, medicines, labels):
         """ generate bigrams to add to feature set
-        - do this before removing puntuation and stop words
+        - do this before removing punctuation and stop words
 
         """
-        # remove punctuation
-        for sent in sents:
-            # _words = [word.lower() for word in sent if word not in string.punctuation]
-            scorer = BigramAssocMeasures()
-            bigrams = BigramCollocationFinder.from_words(sent.split())
-            scored_bigrams = bigrams.score_ngrams(scorer.raw_freq)
-            print([x for x in scored_bigrams])
+        vectorizer = CountVectorizer(stop_words='english', ngram_range=(1,2))
+        freq_matrix = vectorizer.fit_transform([' '.join(medicine) for medicine in medicines])
+        array = freq_matrix.toarray()
 
-    def vectorize(self):
-        """ transform to vector representation if used in SVM """
-        pass
+        # create classifier
+        X, y = resample(array, labels, n_samples=1000, random_state=155, replace=True)
+        train_x, test_x, train_y, test_y = train_test_split(X, y, train_size=0.8, test_size=0.2, random_state=155)
+        self.clf = MultinomialNB(alpha=1)
+        # self.clf = GaussianNB()
+        self.clf.fit(array, labels)
+        self.c_vocab = vectorizer.get_feature_names()
+        # pred = self.clf.predict(train_x)
+        # print(classification_report(train_y, pred))
+        with open('c_vocab', 'wb') as v:
+            pickle.dump(self.c_vocab, v)
+        with open('nb_model.pkl', 'wb') as f:
+            pickle.dump(self.clf, f)
 
+    def nb_predict(self, input_string):
+        with open('c_vocab', 'rb') as v:
+            c_vocab = pickle.load(v)
+        with open('nb_model.pkl', 'rb') as f:
+            clf = pickle.load(f)
+        # array = self.pre_process(input_string)
+        vectorizer = CountVectorizer(stop_words='english', ngram_range=(1, 2), vocabulary=c_vocab)
+        freq_matrix = vectorizer.fit_transform([' '.join(input_string)])
+        _array = freq_matrix.toarray()
+
+        # pred = self.clf.predict_proba(_array)
+        pred = clf.predict(_array)
+        return pred
 
 
 def main():
-    drug = Drug()
-    with open('drug_side_effects.pkl', 'rb') as f:
-        d = pickle.load(f)
-    my_dict = defaultdict(list)
-    for k,v in d.items():
-        tokens = drug.tokenize(v)
-        print(len(tokens))
-        # my_dict[k].append(tokens)
-    # print(my_dict)
+    d_class = Drug(symptoms="it burns when i urinate")  # create instance of drug class
+
+    # create/train classifier
+
+    # with open('drug_side_effects.pkl', 'rb') as f:  # load drug side effects from disk
+    #     d = pickle.load(f)
+    # data = {}
+    # for drug, symptoms in d.items():
+    #     drug_symptoms = [d_class.pre_process(symptom) for symptom in symptoms]  # preprocess the drug data
+    #
+    #     flattened_symptoms = [item for l in drug_symptoms for item in l if item != '.']
+    #     data[drug] = flattened_symptoms
+    # symptom_documents = [v for k, v in data.items()]
+    # symptom_labels = [k for k, v in data.items()]
+    # d_class.create_classifier(symptom_documents, symptom_labels)  # data and labels to train the nb model
+
+    # predict
+
+    # symptoms = "it burns when i urinate"
+    # pp = d_class.pre_process(symptoms)
+    # d_class.nb_predict(pp)
+
 
 if __name__ == "__main__":
     main()

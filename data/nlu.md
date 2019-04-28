@@ -7,6 +7,8 @@
 - alright
 - yes
 - yes
+- yes, thank you
+- yes, thank you
 
 ## intent:correct_information
 - yes, that's correct
@@ -37,6 +39,10 @@
 - yes, thanks
 - Yes
 - Yes
+- yes
+- yes
+- yes
+- yes, that's the only one
 
 ## intent:dob
 - [jan 1, 1945](dob)
@@ -62,6 +68,8 @@
 - [nov 22, 1982](dob)
 - [jan 30, 2001](dob:jan 30 , 2001)
 - [may 1, 2001](dob:may 1 , 2001)
+- [jan 1 1000](dob)
+- [oct 15, 1978](dob:oct 15 , 1978)
 
 ## intent:goodbye
 - See you later
@@ -100,6 +108,8 @@
 - hi
 - hello
 - hello
+- hi
+- hi
 
 ## intent:incorrect_name_dob
 - no, that's not correct
@@ -116,27 +126,27 @@
 - nope
 
 ## intent:medicines
-- [vicodin](medicine) 
-- [simvastatin](medicine)
-- [lisinopril](medicine)
-- [levothyroxine](medicine)
-- azithromycin
-- Metformin
-- Lipitor
-- Amlodipine
-- Amoxicillin
-- Hydrochlorothiazide
-- hydrocodone
-- acetaminophen
-- Zocor
-- Prinivil
-- Zestril
-- Synthroid
-- Zithromax
-- Z-PAK
-- Zithromax
-- atorvastatin
-- Norvasc
+- [vicodin](medicines)
+- [simvastatin](medicines)
+- [lisinopril](medicines)
+- [levothyroxine](medicines)
+- [azithromycin](medicines)
+- [Metformin](medicines)
+- [Lipitor](medicines)
+- [Amlodipine](medicines)
+- [Amoxicillin](medicines)
+- [Hydrochlorothiazide](medicines)
+- [hydrocodone](medicines)
+- [acetaminophen](medicines)
+- [Zocor](medicines)
+- [Prinivil](medicines)
+- [Zestril](medicines)
+- [Synthroid](medicines)
+- [Zithromax](medicines)
+- [Z-PAK](medicines)
+- [Zithromax](medicines)
+- [atorvastatin](medicines)
+- [Norvasc](medicines)
 - [vicodin](medicines), [Zocor](medicines)
 - [vicodin](medicines),[simvastatin](medicines)
 - [vicodin simvastatin](medicines)
@@ -145,6 +155,8 @@
 - [hydrocodone vicodin levothyroxine](medicines)
 - [hydrocodone,vicodin,levothyroxine](medicines)
 - [Zithromax, Lipitor, Zocor](medicines)
+- [vicodin simvastatin](medicines)
+- [zithromax](medicines)
 
 ## intent:onset_gradually
 - a few days
@@ -161,6 +173,8 @@
 - for the past 2 days
 - for a long time
 - for about a week
+- for a long time now
+- the last few days
 
 ## intent:onset_quick
 - last 24 hours
@@ -217,8 +231,12 @@
 - [Shanika Latoya](patient_name)
 - [alex bailey](patient_name)
 - my name is [jack wilson](patient_name)
-- my name is vishal
+- my name is [vishal](patient_name)
 - [Bob Dylan](patient_name)
+- [alex bailey](patient_name)
+- [Jake Black](patient_name)
+- [Leslie Walters](patient_name)
+- [Perry Jones](patient_name:perry jones)
 
 ## intent:symptoms
 - stuffy nose
@@ -278,6 +296,8 @@
 - i am sick
 - Not feeling well, i think i have the flu
 - fever, chills, my body hurts
+- drowsiness, headache, upset stomach
+- I have a constant headache, vomiting, and stomach pain
 
 ## intent:thanks
 - Thanks
@@ -315,6 +335,9 @@
 ## synonym:jan 31 , 1970
 - Jan 31, 1970
 
+## synonym:may 1 , 2001
+- may 1, 2001
+
 ## synonym:october 12 , 1987
 - October 12, 1987
 
@@ -323,3 +346,8 @@
 
 ## synonym:tom palen
 - Tom Palen
+
+## regex:name
+- [\w+\s\w+\s\w+](patient_name)
+- [\w+\s\w+](patient_name)
+- [\w+\s\w.\w+](patient_name)

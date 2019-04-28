@@ -1,31 +1,9 @@
 {
+  "sklearn": "0.20.3",
   "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble",
-  "action_fingerprints": {
-    "patient_info_form": {
-      "slots": [
-        "patient_name",
-        "dob",
-        "requested_slot"
-      ]
-    },
-    "patient_medicine_form": {
-      "slots": [
-        "requested_slot",
-        "medicines"
-      ]
-    },
-    "utter_run_tests": {
-      "slots": []
-    },
-    "action_listen": {
-      "slots": []
-    },
-    "action_deactivate_form": {
-      "slots": [
-        "requested_slot"
-      ]
-    }
-  },
+  "rasa_core": "0.13.3",
+  "python": "3.5.6",
+  "tensorflow": "1.12.0",
   "policy_names": [
     "rasa_core.policies.keras_policy.KerasPolicy",
     "rasa_core.policies.memoization.MemoizationPolicy",
@@ -38,9 +16,37 @@
     2,
     null
   ],
-  "python": "3.5.6",
-  "trained_at": "20190411-122735",
-  "rasa_core": "0.13.3",
-  "tensorflow": "1.12.0",
-  "sklearn": "0.20.3"
+  "action_fingerprints": {
+    "patient_info_form": {
+      "slots": [
+        "patient_name",
+        "requested_slot",
+        "dob"
+      ]
+    },
+    "get_symptoms_form": {
+      "slots": [
+        "requested_slot",
+        "symptoms"
+      ]
+    },
+    "action_correlate_symptoms": {
+      "slots": [
+        "prob_medicine"
+      ]
+    },
+    "action_listen": {
+      "slots": []
+    },
+    "utter_your_welcome": {
+      "slots": []
+    },
+    "patient_medicine_form": {
+      "slots": [
+        "requested_slot",
+        "medicines"
+      ]
+    }
+  },
+  "trained_at": "20190428-133355"
 }

@@ -1,56 +1,64 @@
 %YAML 1.1
 ---
 actions:
-- utter_how_long
-- utter_elaborate_symptoms
-- utter_your_welcome
-- utter_verify_name_dob
-- utter_patient_name
-- utter_bye
-- utter_ask_dob
-- utter_ask_medicines
-- utter_verify_medicines
-- action_medicine_info
-- utter_ask_patient_name
 - utter_goodbye
-- utter_empathy
-- utter_greet
-- utter_dob
-- utter_purpose
-- utter_default
 - utter_thank_you
+- utter_patient_name
+- utter_elaborate_symptoms
+- utter_ask_medicines
+- utter_ask_dob
+- utter_purpose
+- utter_dob
+- utter_greet
+- utter_verify_name_dob
+- utter_empathy
+- utter_bye
+- utter_how_long
+- action_correlate_symptoms
+- utter_default
 - utter_run_tests
+- utter_your_welcome
+- utter_verify_medicines
+- utter_ask_patient_name
+- action_medicine_info
 entities:
-- dob
+- symptoms
 - allergies
-- patient_name
+- dob
 - medicines
+- patient_name
 forms:
+- get_symptoms_form
 - patient_medicine_form
 - patient_info_form
 intents:
-- thanks
-- utter_your_welcome
 - agree
-- dob
-- onset_quick
-- deny
+- goodbye
 - greet
-- correct_name_dob
 - utter_thank_you
+- correct_information
+- correct_name_dob
+- deny
+- onset_quick
+- onset_gradually
+- thanks
+- dob
+- utter_your_welcome
+- medicines
 - patient_name
 - symptoms
-- medicines
-- onset_gradually
-- goodbye
 slots:
   dob:
     type: unfeaturized
   medicines:
-    type: list
+    type: unfeaturized
   patient_name:
     type: unfeaturized
+  prob_medicine:
+    type: unfeaturized
   requested_slot:
+    type: unfeaturized
+  symptoms:
     type: unfeaturized
 templates:
   utter_ask_dob:
@@ -59,6 +67,9 @@ templates:
   - text: What medicines are you currently taking?
   utter_ask_patient_name:
   - text: What is you full name
+  utter_ask_symptoms:
+  - text: What brings you in today?
+  - text: What is bothering you today?
   utter_bye:
   - text: Hope you feel better
   - text: Have a good day

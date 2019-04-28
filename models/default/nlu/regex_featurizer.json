@@ -1,1 +1,14 @@
-[]
+[
+    {
+        "name": "name",
+        "pattern": "[\\w+\\s\\w+\\s\\w+](patient_name)"
+    },
+    {
+        "name": "name",
+        "pattern": "[\\w+\\s\\w+](patient_name)"
+    },
+    {
+        "name": "name",
+        "pattern": "[\\w+\\s\\w.\\w+](patient_name)"
+    }
+]
