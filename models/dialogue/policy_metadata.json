@@ -1,55 +1,55 @@
 {
+  "rasa_core": "0.13.3",
+  "sklearn": "0.20.3",
+  "tensorflow": "1.12.0",
   "action_fingerprints": {
     "action_listen": {
       "slots": []
     },
-    "action_restarted": {
+    "utter_unclear": {
       "slots": []
+    },
+    "patient_info_form": {
+      "slots": [
+        "dob",
+        "requested_slot",
+        "patient_name"
+      ]
+    },
+    "get_symptoms_form": {
+      "slots": [
+        "requested_slot",
+        "symptoms"
+      ]
+    },
+    "patient_medicine_form": {
+      "slots": [
+        "requested_slot",
+        "medicines"
+      ]
     },
     "action_correlate_symptoms": {
       "slots": [
         "prob_medicine"
       ]
     },
-    "utter_unclear": {
+    "action_restarted": {
       "slots": []
-    },
-    "patient_medicine_form": {
-      "slots": [
-        "medicines",
-        "requested_slot"
-      ]
-    },
-    "get_symptoms_form": {
-      "slots": [
-        "symptoms",
-        "requested_slot"
-      ]
-    },
-    "patient_info_form": {
-      "slots": [
-        "dob",
-        "patient_name",
-        "requested_slot"
-      ]
     }
   },
-  "max_histories": [
-    5,
-    5,
-    2,
-    null
-  ],
-  "sklearn": "0.20.3",
-  "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble",
-  "trained_at": "20190428-211924",
-  "python": "3.5.6",
   "policy_names": [
     "rasa_core.policies.keras_policy.KerasPolicy",
     "rasa_core.policies.memoization.MemoizationPolicy",
     "rasa_core.policies.form_policy.FormPolicy",
     "rasa_core.policies.fallback.FallbackPolicy"
   ],
-  "tensorflow": "1.12.0",
-  "rasa_core": "0.13.3"
+  "python": "3.5.6",
+  "max_histories": [
+    5,
+    5,
+    2,
+    null
+  ],
+  "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble",
+  "trained_at": "20190428-220722"
 }

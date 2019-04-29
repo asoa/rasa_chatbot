@@ -1,5 +1,106 @@
 {
   "rasa_nlu_data": {
+    "lookup_tables": [],
+    "regex_features": [
+      {
+        "pattern": "[\\w+\\s+\\w+\\s+\\w+](patient_name)",
+        "name": "name"
+      },
+      {
+        "pattern": "[\\w+\\s+\\w.\\s+\\w+](patient_name)",
+        "name": "name"
+      },
+      {
+        "pattern": "[\\w+\\s\\w+](patient_name)",
+        "name": "name"
+      }
+    ],
+    "entity_synonyms": [
+      {
+        "synonyms": [
+          "September 5, 2001"
+        ],
+        "value": "september 5 , 2001"
+      },
+      {
+        "synonyms": [
+          "oct 15, 1978"
+        ],
+        "value": "oct 15 , 1978"
+      },
+      {
+        "synonyms": [
+          "Alex"
+        ],
+        "value": "alex"
+      },
+      {
+        "synonyms": [
+          "jan 3, 2001"
+        ],
+        "value": "jan 3 , 2001"
+      },
+      {
+        "synonyms": [
+          "Tom Palen"
+        ],
+        "value": "tom palen"
+      },
+      {
+        "synonyms": [
+          "Brian Kelly"
+        ],
+        "value": "brian kelly"
+      },
+      {
+        "synonyms": [
+          "jan 30, 2001"
+        ],
+        "value": "jan 30 , 2001"
+      },
+      {
+        "synonyms": [
+          "October 12, 1987"
+        ],
+        "value": "october 12 , 1987"
+      },
+      {
+        "synonyms": [
+          "Jan 31, 1970"
+        ],
+        "value": "jan 31 , 1970"
+      },
+      {
+        "synonyms": [
+          "Hydrocodone"
+        ],
+        "value": "hydrocodone"
+      },
+      {
+        "synonyms": [
+          "may 1, 2001"
+        ],
+        "value": "may 1 , 2001"
+      },
+      {
+        "synonyms": [
+          "Jan 29, 2010"
+        ],
+        "value": "jan 29 , 2010"
+      },
+      {
+        "synonyms": [
+          "october 18, 1965"
+        ],
+        "value": "october 18 , 1965"
+      },
+      {
+        "synonyms": [
+          "Perry Jones"
+        ],
+        "value": "perry jones"
+      }
+    ],
     "common_examples": [
       {
         "intent": "agree",
@@ -194,328 +295,352 @@
         "text": "yes, that's it"
       },
       {
+        "intent": "correct_information",
+        "text": "yes"
+      },
+      {
+        "intent": "correct_information",
+        "text": "yes, that's correct"
+      },
+      {
+        "intent": "correct_information",
+        "text": "ok, thanks"
+      },
+      {
+        "intent": "dob",
         "entities": [
           {
-            "entity": "dob",
-            "end": 11,
+            "start": 0,
             "value": "jan 1, 1945",
-            "start": 0
+            "entity": "dob",
+            "end": 11
           }
         ],
-        "intent": "dob",
         "text": "jan 1, 1945"
       },
       {
+        "intent": "dob",
         "entities": [
           {
-            "entity": "dob",
-            "end": 11,
+            "start": 0,
             "value": "Jan 1, 1950",
-            "start": 0
+            "entity": "dob",
+            "end": 11
           }
         ],
-        "intent": "dob",
         "text": "Jan 1, 1950"
       },
       {
+        "intent": "dob",
         "entities": [
           {
-            "entity": "dob",
-            "end": 12,
+            "start": 0,
             "value": "JAN 25, 2001",
-            "start": 0
+            "entity": "dob",
+            "end": 12
           }
         ],
-        "intent": "dob",
         "text": "JAN 25, 2001"
       },
       {
+        "intent": "dob",
         "entities": [
           {
-            "entity": "dob",
-            "end": 11,
+            "start": 0,
             "value": "dec 15 2006",
-            "start": 0
+            "entity": "dob",
+            "end": 11
           }
         ],
-        "intent": "dob",
         "text": "dec 15 2006"
       },
       {
+        "intent": "dob",
         "entities": [
           {
-            "entity": "dob",
-            "end": 11,
+            "start": 0,
             "value": "mar 15 1987",
-            "start": 0
+            "entity": "dob",
+            "end": 11
           }
         ],
-        "intent": "dob",
         "text": "mar 15 1987"
       },
       {
+        "intent": "dob",
         "entities": [
           {
-            "entity": "dob",
-            "end": 16,
+            "start": 0,
             "value": "november 27 2001",
-            "start": 0
+            "entity": "dob",
+            "end": 16
           }
         ],
-        "intent": "dob",
         "text": "november 27 2001"
       },
       {
+        "intent": "dob",
         "entities": [
           {
-            "entity": "dob",
-            "end": 12,
+            "start": 0,
             "value": "Feb 10, 1976",
-            "start": 0
+            "entity": "dob",
+            "end": 12
           }
         ],
-        "intent": "dob",
         "text": "Feb 10, 1976"
       },
       {
+        "intent": "dob",
         "entities": [
           {
-            "entity": "dob",
-            "end": 14,
+            "start": 0,
             "value": "October 9 2010",
-            "start": 0
+            "entity": "dob",
+            "end": 14
           }
         ],
-        "intent": "dob",
         "text": "October 9 2010"
       },
       {
+        "intent": "dob",
         "entities": [
           {
-            "entity": "dob",
-            "end": 9,
+            "start": 0,
             "value": "1/21/2001",
-            "start": 0
+            "entity": "dob",
+            "end": 9
           }
         ],
-        "intent": "dob",
         "text": "1/21/2001"
       },
       {
+        "intent": "dob",
         "entities": [
           {
-            "entity": "dob",
-            "end": 9,
+            "start": 0,
             "value": "05/2/1976",
-            "start": 0
+            "entity": "dob",
+            "end": 9
           }
         ],
-        "intent": "dob",
         "text": "05/2/1976"
       },
       {
+        "intent": "dob",
         "entities": [
           {
-            "entity": "dob",
-            "end": 14,
+            "start": 0,
             "value": "march 25, 2000",
-            "start": 0
+            "entity": "dob",
+            "end": 14
           }
         ],
-        "intent": "dob",
         "text": "march 25, 2000"
       },
       {
+        "intent": "dob",
         "entities": [
           {
-            "entity": "dob",
-            "end": 9,
+            "start": 0,
             "value": "5/15/1978",
-            "start": 0
+            "entity": "dob",
+            "end": 9
           }
         ],
-        "intent": "dob",
         "text": "5/15/1978"
       },
       {
+        "intent": "dob",
         "entities": [
           {
-            "entity": "dob",
-            "end": 9,
+            "start": 0,
             "value": "4/20/1950",
-            "start": 0
+            "entity": "dob",
+            "end": 9
           }
         ],
-        "intent": "dob",
         "text": "4/20/1950"
       },
       {
+        "intent": "dob",
         "entities": [
           {
-            "entity": "dob",
-            "end": 11,
+            "start": 0,
             "value": "jan 3 , 2001",
-            "start": 0
+            "entity": "dob",
+            "end": 11
           }
         ],
-        "intent": "dob",
         "text": "jan 3, 2001"
       },
       {
+        "intent": "dob",
         "entities": [
           {
-            "entity": "dob",
-            "end": 16,
+            "start": 0,
             "value": "october 12 , 1987",
-            "start": 0
+            "entity": "dob",
+            "end": 16
           }
         ],
-        "intent": "dob",
         "text": "October 12, 1987"
       },
       {
+        "intent": "dob",
         "entities": [
           {
-            "entity": "dob",
-            "end": 17,
+            "start": 0,
             "value": "september 5 , 2001",
-            "start": 0
+            "entity": "dob",
+            "end": 17
           }
         ],
-        "intent": "dob",
         "text": "September 5, 2001"
       },
       {
+        "intent": "dob",
         "entities": [
           {
-            "entity": "dob",
-            "end": 12,
+            "start": 0,
             "value": "jan 29 , 2010",
-            "start": 0
+            "entity": "dob",
+            "end": 12
           }
         ],
-        "intent": "dob",
         "text": "Jan 29, 2010"
       },
       {
+        "intent": "dob",
         "entities": [
           {
-            "entity": "dob",
-            "end": 12,
+            "start": 0,
             "value": "jan 31 , 1970",
-            "start": 0
+            "entity": "dob",
+            "end": 12
           }
         ],
-        "intent": "dob",
         "text": "Jan 31, 1970"
       },
       {
+        "intent": "dob",
         "entities": [
           {
-            "entity": "dob",
-            "end": 10,
+            "start": 0,
             "value": "01/18/2010",
-            "start": 0
+            "entity": "dob",
+            "end": 10
           }
         ],
-        "intent": "dob",
         "text": "01/18/2010"
       },
       {
+        "intent": "dob",
         "entities": [
           {
-            "entity": "dob",
-            "end": 8,
+            "start": 0,
             "value": "1/1/2001",
-            "start": 0
+            "entity": "dob",
+            "end": 8
           }
         ],
-        "intent": "dob",
         "text": "1/1/2001"
       },
       {
+        "intent": "dob",
         "entities": [
           {
-            "entity": "dob",
-            "end": 12,
+            "start": 0,
             "value": "nov 22, 1982",
-            "start": 0
+            "entity": "dob",
+            "end": 12
           }
         ],
-        "intent": "dob",
         "text": "nov 22, 1982"
       },
       {
+        "intent": "dob",
         "entities": [
           {
-            "entity": "dob",
-            "end": 12,
+            "start": 0,
             "value": "jan 30 , 2001",
-            "start": 0
+            "entity": "dob",
+            "end": 12
           }
         ],
-        "intent": "dob",
         "text": "jan 30, 2001"
       },
       {
+        "intent": "dob",
         "entities": [
           {
-            "entity": "dob",
-            "end": 11,
+            "start": 0,
             "value": "may 1 , 2001",
-            "start": 0
+            "entity": "dob",
+            "end": 11
           }
         ],
-        "intent": "dob",
         "text": "may 1, 2001"
       },
       {
+        "intent": "dob",
         "entities": [
           {
-            "entity": "dob",
-            "end": 10,
+            "start": 0,
             "value": "jan 1 1000",
-            "start": 0
+            "entity": "dob",
+            "end": 10
           }
         ],
-        "intent": "dob",
         "text": "jan 1 1000"
       },
       {
+        "intent": "dob",
         "entities": [
           {
-            "entity": "dob",
-            "end": 12,
+            "start": 0,
             "value": "oct 15 , 1978",
-            "start": 0
+            "entity": "dob",
+            "end": 12
           }
         ],
-        "intent": "dob",
         "text": "oct 15, 1978"
       },
       {
+        "intent": "dob",
         "entities": [
           {
-            "entity": "dob",
-            "end": 16,
+            "start": 0,
             "value": "october 18 , 1965",
-            "start": 0
+            "entity": "dob",
+            "end": 16
           }
         ],
-        "intent": "dob",
         "text": "october 18, 1965"
       },
       {
+        "intent": "dob",
         "entities": [
           {
-            "entity": "dob",
-            "end": 11,
+            "start": 0,
             "value": "sep 25 1989",
-            "start": 0
+            "entity": "dob",
+            "end": 11
           }
         ],
-        "intent": "dob",
         "text": "sep 25 1989"
+      },
+      {
+        "intent": "dob",
+        "entities": [
+          {
+            "start": 0,
+            "value": "jun 7 1987",
+            "entity": "dob",
+            "end": 10
+          }
+        ],
+        "text": "jun 7 1987"
       },
       {
         "intent": "goodbye",
@@ -670,6 +795,10 @@
         "text": "hello, how are you?"
       },
       {
+        "intent": "greet",
+        "text": "hello"
+      },
+      {
         "intent": "incorrect_name_dob",
         "text": "no, that's not correct"
       },
@@ -716,432 +845,6 @@
       {
         "intent": "incorrect_name_dob",
         "text": "nope"
-      },
-      {
-        "entities": [
-          {
-            "entity": "medicines",
-            "end": 7,
-            "value": "vicodin",
-            "start": 0
-          }
-        ],
-        "intent": "medicines",
-        "text": "vicodin"
-      },
-      {
-        "entities": [
-          {
-            "entity": "medicines",
-            "end": 11,
-            "value": "simvastatin",
-            "start": 0
-          }
-        ],
-        "intent": "medicines",
-        "text": "simvastatin"
-      },
-      {
-        "entities": [
-          {
-            "entity": "medicines",
-            "end": 10,
-            "value": "lisinopril",
-            "start": 0
-          }
-        ],
-        "intent": "medicines",
-        "text": "lisinopril"
-      },
-      {
-        "entities": [
-          {
-            "entity": "medicines",
-            "end": 13,
-            "value": "levothyroxine",
-            "start": 0
-          }
-        ],
-        "intent": "medicines",
-        "text": "levothyroxine"
-      },
-      {
-        "entities": [
-          {
-            "entity": "medicines",
-            "end": 12,
-            "value": "azithromycin",
-            "start": 0
-          }
-        ],
-        "intent": "medicines",
-        "text": "azithromycin"
-      },
-      {
-        "entities": [
-          {
-            "entity": "medicines",
-            "end": 9,
-            "value": "Metformin",
-            "start": 0
-          }
-        ],
-        "intent": "medicines",
-        "text": "Metformin"
-      },
-      {
-        "entities": [
-          {
-            "entity": "medicines",
-            "end": 7,
-            "value": "Lipitor",
-            "start": 0
-          }
-        ],
-        "intent": "medicines",
-        "text": "Lipitor"
-      },
-      {
-        "entities": [
-          {
-            "entity": "medicines",
-            "end": 10,
-            "value": "Amlodipine",
-            "start": 0
-          }
-        ],
-        "intent": "medicines",
-        "text": "Amlodipine"
-      },
-      {
-        "entities": [
-          {
-            "entity": "medicines",
-            "end": 11,
-            "value": "Amoxicillin",
-            "start": 0
-          }
-        ],
-        "intent": "medicines",
-        "text": "Amoxicillin"
-      },
-      {
-        "entities": [
-          {
-            "entity": "medicines",
-            "end": 19,
-            "value": "Hydrochlorothiazide",
-            "start": 0
-          }
-        ],
-        "intent": "medicines",
-        "text": "Hydrochlorothiazide"
-      },
-      {
-        "entities": [
-          {
-            "entity": "medicines",
-            "end": 11,
-            "value": "hydrocodone",
-            "start": 0
-          }
-        ],
-        "intent": "medicines",
-        "text": "hydrocodone"
-      },
-      {
-        "entities": [
-          {
-            "entity": "medicines",
-            "end": 13,
-            "value": "acetaminophen",
-            "start": 0
-          }
-        ],
-        "intent": "medicines",
-        "text": "acetaminophen"
-      },
-      {
-        "entities": [
-          {
-            "entity": "medicines",
-            "end": 5,
-            "value": "Zocor",
-            "start": 0
-          }
-        ],
-        "intent": "medicines",
-        "text": "Zocor"
-      },
-      {
-        "entities": [
-          {
-            "entity": "medicines",
-            "end": 8,
-            "value": "Prinivil",
-            "start": 0
-          }
-        ],
-        "intent": "medicines",
-        "text": "Prinivil"
-      },
-      {
-        "entities": [
-          {
-            "entity": "medicines",
-            "end": 7,
-            "value": "Zestril",
-            "start": 0
-          }
-        ],
-        "intent": "medicines",
-        "text": "Zestril"
-      },
-      {
-        "entities": [
-          {
-            "entity": "medicines",
-            "end": 9,
-            "value": "Synthroid",
-            "start": 0
-          }
-        ],
-        "intent": "medicines",
-        "text": "Synthroid"
-      },
-      {
-        "entities": [
-          {
-            "entity": "medicines",
-            "end": 9,
-            "value": "Zithromax",
-            "start": 0
-          }
-        ],
-        "intent": "medicines",
-        "text": "Zithromax"
-      },
-      {
-        "entities": [
-          {
-            "entity": "medicines",
-            "end": 5,
-            "value": "Z-PAK",
-            "start": 0
-          }
-        ],
-        "intent": "medicines",
-        "text": "Z-PAK"
-      },
-      {
-        "entities": [
-          {
-            "entity": "medicines",
-            "end": 9,
-            "value": "Zithromax",
-            "start": 0
-          }
-        ],
-        "intent": "medicines",
-        "text": "Zithromax"
-      },
-      {
-        "entities": [
-          {
-            "entity": "medicines",
-            "end": 12,
-            "value": "atorvastatin",
-            "start": 0
-          }
-        ],
-        "intent": "medicines",
-        "text": "atorvastatin"
-      },
-      {
-        "entities": [
-          {
-            "entity": "medicines",
-            "end": 7,
-            "value": "Norvasc",
-            "start": 0
-          }
-        ],
-        "intent": "medicines",
-        "text": "Norvasc"
-      },
-      {
-        "entities": [
-          {
-            "entity": "medicines",
-            "end": 7,
-            "value": "vicodin",
-            "start": 0
-          },
-          {
-            "entity": "medicines",
-            "end": 14,
-            "value": "Zocor",
-            "start": 9
-          }
-        ],
-        "intent": "medicines",
-        "text": "vicodin, Zocor"
-      },
-      {
-        "entities": [
-          {
-            "entity": "medicines",
-            "end": 7,
-            "value": "vicodin",
-            "start": 0
-          },
-          {
-            "entity": "medicines",
-            "end": 19,
-            "value": "simvastatin",
-            "start": 8
-          }
-        ],
-        "intent": "medicines",
-        "text": "vicodin,simvastatin"
-      },
-      {
-        "entities": [
-          {
-            "entity": "medicines",
-            "end": 19,
-            "value": "vicodin simvastatin",
-            "start": 0
-          }
-        ],
-        "intent": "medicines",
-        "text": "vicodin simvastatin"
-      },
-      {
-        "entities": [
-          {
-            "entity": "medicines",
-            "end": 23,
-            "value": "levothyroxine Synthroid",
-            "start": 0
-          }
-        ],
-        "intent": "medicines",
-        "text": "levothyroxine Synthroid"
-      },
-      {
-        "entities": [
-          {
-            "entity": "medicines",
-            "end": 27,
-            "value": "Zithromax Norvasc Synthroid",
-            "start": 0
-          }
-        ],
-        "intent": "medicines",
-        "text": "Zithromax Norvasc Synthroid"
-      },
-      {
-        "entities": [
-          {
-            "entity": "medicines",
-            "end": 33,
-            "value": "hydrocodone vicodin levothyroxine",
-            "start": 0
-          }
-        ],
-        "intent": "medicines",
-        "text": "hydrocodone vicodin levothyroxine"
-      },
-      {
-        "entities": [
-          {
-            "entity": "medicines",
-            "end": 33,
-            "value": "hydrocodone,vicodin,levothyroxine",
-            "start": 0
-          }
-        ],
-        "intent": "medicines",
-        "text": "hydrocodone,vicodin,levothyroxine"
-      },
-      {
-        "entities": [
-          {
-            "entity": "medicines",
-            "end": 25,
-            "value": "Zithromax, Lipitor, Zocor",
-            "start": 0
-          }
-        ],
-        "intent": "medicines",
-        "text": "Zithromax, Lipitor, Zocor"
-      },
-      {
-        "entities": [
-          {
-            "entity": "medicines",
-            "end": 19,
-            "value": "vicodin simvastatin",
-            "start": 0
-          }
-        ],
-        "intent": "medicines",
-        "text": "vicodin simvastatin"
-      },
-      {
-        "entities": [
-          {
-            "entity": "medicines",
-            "end": 9,
-            "value": "zithromax",
-            "start": 0
-          }
-        ],
-        "intent": "medicines",
-        "text": "zithromax"
-      },
-      {
-        "entities": [
-          {
-            "entity": "medicines",
-            "end": 15,
-            "value": "Prinivil",
-            "start": 7
-          },
-          {
-            "entity": "medicines",
-            "end": 29,
-            "value": "synthroid",
-            "start": 20
-          }
-        ],
-        "intent": "medicines",
-        "text": "i take Prinivil and synthroid"
-      },
-      {
-        "entities": [
-          {
-            "entity": "medicines",
-            "end": 20,
-            "value": "metformin",
-            "start": 11
-          },
-          {
-            "entity": "medicines",
-            "end": 32,
-            "value": "amlodipine",
-            "start": 22
-          },
-          {
-            "entity": "medicines",
-            "end": 49,
-            "value": "hydrocodone",
-            "start": 38
-          }
-        ],
-        "intent": "medicines",
-        "text": "I'm taking metformin, amlodipine, and hydrocodone"
       },
       {
         "intent": "long_time",
@@ -1234,6 +937,976 @@
       {
         "intent": "long_time",
         "text": "since i was kid"
+      },
+      {
+        "intent": "long_time",
+        "text": "for a month or two"
+      },
+      {
+        "intent": "medicines",
+        "entities": [
+          {
+            "start": 0,
+            "value": "vicodin",
+            "entity": "medicines",
+            "end": 7
+          }
+        ],
+        "text": "vicodin"
+      },
+      {
+        "intent": "medicines",
+        "entities": [
+          {
+            "start": 0,
+            "value": "simvastatin",
+            "entity": "medicines",
+            "end": 11
+          }
+        ],
+        "text": "simvastatin"
+      },
+      {
+        "intent": "medicines",
+        "entities": [
+          {
+            "start": 0,
+            "value": "lisinopril",
+            "entity": "medicines",
+            "end": 10
+          }
+        ],
+        "text": "lisinopril"
+      },
+      {
+        "intent": "medicines",
+        "entities": [
+          {
+            "start": 0,
+            "value": "levothyroxine",
+            "entity": "medicines",
+            "end": 13
+          }
+        ],
+        "text": "levothyroxine"
+      },
+      {
+        "intent": "medicines",
+        "entities": [
+          {
+            "start": 0,
+            "value": "azithromycin",
+            "entity": "medicines",
+            "end": 12
+          }
+        ],
+        "text": "azithromycin"
+      },
+      {
+        "intent": "medicines",
+        "entities": [
+          {
+            "start": 0,
+            "value": "Metformin",
+            "entity": "medicines",
+            "end": 9
+          }
+        ],
+        "text": "Metformin"
+      },
+      {
+        "intent": "medicines",
+        "entities": [
+          {
+            "start": 0,
+            "value": "Lipitor",
+            "entity": "medicines",
+            "end": 7
+          }
+        ],
+        "text": "Lipitor"
+      },
+      {
+        "intent": "medicines",
+        "entities": [
+          {
+            "start": 0,
+            "value": "Amlodipine",
+            "entity": "medicines",
+            "end": 10
+          }
+        ],
+        "text": "Amlodipine"
+      },
+      {
+        "intent": "medicines",
+        "entities": [
+          {
+            "start": 0,
+            "value": "Amoxicillin",
+            "entity": "medicines",
+            "end": 11
+          }
+        ],
+        "text": "Amoxicillin"
+      },
+      {
+        "intent": "medicines",
+        "entities": [
+          {
+            "start": 0,
+            "value": "Hydrochlorothiazide",
+            "entity": "medicines",
+            "end": 19
+          }
+        ],
+        "text": "Hydrochlorothiazide"
+      },
+      {
+        "intent": "medicines",
+        "entities": [
+          {
+            "start": 0,
+            "value": "hydrocodone",
+            "entity": "medicines",
+            "end": 11
+          }
+        ],
+        "text": "hydrocodone"
+      },
+      {
+        "intent": "medicines",
+        "entities": [
+          {
+            "start": 0,
+            "value": "acetaminophen",
+            "entity": "medicines",
+            "end": 13
+          }
+        ],
+        "text": "acetaminophen"
+      },
+      {
+        "intent": "medicines",
+        "entities": [
+          {
+            "start": 0,
+            "value": "Zocor",
+            "entity": "medicines",
+            "end": 5
+          }
+        ],
+        "text": "Zocor"
+      },
+      {
+        "intent": "medicines",
+        "entities": [
+          {
+            "start": 0,
+            "value": "Prinivil",
+            "entity": "medicines",
+            "end": 8
+          }
+        ],
+        "text": "Prinivil"
+      },
+      {
+        "intent": "medicines",
+        "entities": [
+          {
+            "start": 0,
+            "value": "Zestril",
+            "entity": "medicines",
+            "end": 7
+          }
+        ],
+        "text": "Zestril"
+      },
+      {
+        "intent": "medicines",
+        "entities": [
+          {
+            "start": 0,
+            "value": "Synthroid",
+            "entity": "medicines",
+            "end": 9
+          }
+        ],
+        "text": "Synthroid"
+      },
+      {
+        "intent": "medicines",
+        "entities": [
+          {
+            "start": 0,
+            "value": "Zithromax",
+            "entity": "medicines",
+            "end": 9
+          }
+        ],
+        "text": "Zithromax"
+      },
+      {
+        "intent": "medicines",
+        "entities": [
+          {
+            "start": 0,
+            "value": "Z-PAK",
+            "entity": "medicines",
+            "end": 5
+          }
+        ],
+        "text": "Z-PAK"
+      },
+      {
+        "intent": "medicines",
+        "entities": [
+          {
+            "start": 0,
+            "value": "Zithromax",
+            "entity": "medicines",
+            "end": 9
+          }
+        ],
+        "text": "Zithromax"
+      },
+      {
+        "intent": "medicines",
+        "entities": [
+          {
+            "start": 0,
+            "value": "atorvastatin",
+            "entity": "medicines",
+            "end": 12
+          }
+        ],
+        "text": "atorvastatin"
+      },
+      {
+        "intent": "medicines",
+        "entities": [
+          {
+            "start": 0,
+            "value": "Norvasc",
+            "entity": "medicines",
+            "end": 7
+          }
+        ],
+        "text": "Norvasc"
+      },
+      {
+        "intent": "medicines",
+        "entities": [
+          {
+            "start": 0,
+            "value": "vicodin",
+            "entity": "medicines",
+            "end": 7
+          },
+          {
+            "start": 9,
+            "value": "Zocor",
+            "entity": "medicines",
+            "end": 14
+          }
+        ],
+        "text": "vicodin, Zocor"
+      },
+      {
+        "intent": "medicines",
+        "entities": [
+          {
+            "start": 0,
+            "value": "vicodin",
+            "entity": "medicines",
+            "end": 7
+          },
+          {
+            "start": 8,
+            "value": "simvastatin",
+            "entity": "medicines",
+            "end": 19
+          }
+        ],
+        "text": "vicodin,simvastatin"
+      },
+      {
+        "intent": "medicines",
+        "entities": [
+          {
+            "start": 0,
+            "value": "vicodin simvastatin",
+            "entity": "medicines",
+            "end": 19
+          }
+        ],
+        "text": "vicodin simvastatin"
+      },
+      {
+        "intent": "medicines",
+        "entities": [
+          {
+            "start": 0,
+            "value": "levothyroxine Synthroid",
+            "entity": "medicines",
+            "end": 23
+          }
+        ],
+        "text": "levothyroxine Synthroid"
+      },
+      {
+        "intent": "medicines",
+        "entities": [
+          {
+            "start": 0,
+            "value": "Zithromax Norvasc Synthroid",
+            "entity": "medicines",
+            "end": 27
+          }
+        ],
+        "text": "Zithromax Norvasc Synthroid"
+      },
+      {
+        "intent": "medicines",
+        "entities": [
+          {
+            "start": 0,
+            "value": "hydrocodone vicodin levothyroxine",
+            "entity": "medicines",
+            "end": 33
+          }
+        ],
+        "text": "hydrocodone vicodin levothyroxine"
+      },
+      {
+        "intent": "medicines",
+        "entities": [
+          {
+            "start": 0,
+            "value": "hydrocodone,vicodin,levothyroxine",
+            "entity": "medicines",
+            "end": 33
+          }
+        ],
+        "text": "hydrocodone,vicodin,levothyroxine"
+      },
+      {
+        "intent": "medicines",
+        "entities": [
+          {
+            "start": 0,
+            "value": "Zithromax, Lipitor, Zocor",
+            "entity": "medicines",
+            "end": 25
+          }
+        ],
+        "text": "Zithromax, Lipitor, Zocor"
+      },
+      {
+        "intent": "medicines",
+        "entities": [
+          {
+            "start": 0,
+            "value": "vicodin simvastatin",
+            "entity": "medicines",
+            "end": 19
+          }
+        ],
+        "text": "vicodin simvastatin"
+      },
+      {
+        "intent": "medicines",
+        "entities": [
+          {
+            "start": 0,
+            "value": "zithromax",
+            "entity": "medicines",
+            "end": 9
+          }
+        ],
+        "text": "zithromax"
+      },
+      {
+        "intent": "medicines",
+        "entities": [
+          {
+            "start": 7,
+            "value": "Prinivil",
+            "entity": "medicines",
+            "end": 15
+          },
+          {
+            "start": 20,
+            "value": "synthroid",
+            "entity": "medicines",
+            "end": 29
+          }
+        ],
+        "text": "i take Prinivil and synthroid"
+      },
+      {
+        "intent": "medicines",
+        "entities": [
+          {
+            "start": 11,
+            "value": "metformin",
+            "entity": "medicines",
+            "end": 20
+          },
+          {
+            "start": 22,
+            "value": "amlodipine",
+            "entity": "medicines",
+            "end": 32
+          },
+          {
+            "start": 38,
+            "value": "hydrocodone",
+            "entity": "medicines",
+            "end": 49
+          }
+        ],
+        "text": "I'm taking metformin, amlodipine, and hydrocodone"
+      },
+      {
+        "intent": "medicines",
+        "entities": [
+          {
+            "start": 0,
+            "value": "hydrocodone",
+            "entity": "medicines",
+            "end": 11
+          }
+        ],
+        "text": "Hydrocodone"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 11,
+            "value": "Juste Ball",
+            "entity": "patient_name",
+            "end": 21
+          }
+        ],
+        "text": "My name is Juste Ball"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 5,
+            "value": "Josh Smith",
+            "entity": "patient_name",
+            "end": 15
+          }
+        ],
+        "text": "I am Josh Smith"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 4,
+            "value": "Lucy Perry",
+            "entity": "patient_name",
+            "end": 14
+          }
+        ],
+        "text": "I'm Lucy Perry"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 15,
+            "value": "Greg Gilmore",
+            "entity": "patient_name",
+            "end": 27
+          }
+        ],
+        "text": "People call me Greg Gilmore"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 5,
+            "value": "David Johnson",
+            "entity": "patient_name",
+            "end": 18
+          }
+        ],
+        "text": "It's David Johnson"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 23,
+            "value": "Amy Jenkins",
+            "entity": "patient_name",
+            "end": 34
+          }
+        ],
+        "text": "Usually people call me Amy Jenkins"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 11,
+            "value": "Sophie Rodriques",
+            "entity": "patient_name",
+            "end": 27
+          }
+        ],
+        "text": "My name is Sophie Rodriques"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 16,
+            "value": "Joane Gerald",
+            "entity": "patient_name",
+            "end": 28
+          }
+        ],
+        "text": "You can call me Joane Gerald"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 15,
+            "value": "Royal Navarrette",
+            "entity": "patient_name",
+            "end": 31
+          }
+        ],
+        "text": "Please call me Royal Navarrette"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 13,
+            "value": "Tom Palen",
+            "entity": "patient_name",
+            "end": 22
+          }
+        ],
+        "text": "Name name is Tom Palen"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 5,
+            "value": "Richard Brainard",
+            "entity": "patient_name",
+            "end": 21
+          }
+        ],
+        "text": "I am Richard Brainard"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 0,
+            "value": "Natacha Weathersby",
+            "entity": "patient_name",
+            "end": 18
+          }
+        ],
+        "text": "Natacha Weathersby"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 0,
+            "value": "Belinda Beaupre",
+            "entity": "patient_name",
+            "end": 15
+          }
+        ],
+        "text": "Belinda Beaupre"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 0,
+            "value": "Tonya Carnes",
+            "entity": "patient_name",
+            "end": 12
+          }
+        ],
+        "text": "Tonya Carnes"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 0,
+            "value": "Joseph Greenleaf",
+            "entity": "patient_name",
+            "end": 16
+          }
+        ],
+        "text": "Joseph Greenleaf"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 0,
+            "value": "Tan Gaal",
+            "entity": "patient_name",
+            "end": 8
+          }
+        ],
+        "text": "Tan Gaal"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 0,
+            "value": "Pete Toy",
+            "entity": "patient_name",
+            "end": 8
+          }
+        ],
+        "text": "Pete Toy"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 0,
+            "value": "Elon Musk",
+            "entity": "patient_name",
+            "end": 9
+          }
+        ],
+        "text": "Elon Musk"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 0,
+            "value": "Penny Prue",
+            "entity": "patient_name",
+            "end": 10
+          }
+        ],
+        "text": "Penny Prue"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 8,
+            "value": "Andrew Wendel",
+            "entity": "patient_name",
+            "end": 21
+          }
+        ],
+        "text": "name is Andrew Wendel"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 5,
+            "value": "Ganesh",
+            "entity": "patient_name",
+            "end": 11
+          }
+        ],
+        "text": "I am Ganesh"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 11,
+            "value": "Mike",
+            "entity": "patient_name",
+            "end": 15
+          }
+        ],
+        "text": "My name is Mike"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 11,
+            "value": "Ajay",
+            "entity": "patient_name",
+            "end": 15
+          }
+        ],
+        "text": "My name is Ajay"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 4,
+            "value": "Partia",
+            "entity": "patient_name",
+            "end": 10
+          }
+        ],
+        "text": "I'm Partia"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 15,
+            "value": "Leo",
+            "entity": "patient_name",
+            "end": 18
+          }
+        ],
+        "text": "Please call me Leo"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 8,
+            "value": "Pari",
+            "entity": "patient_name",
+            "end": 12
+          }
+        ],
+        "text": "name is Pari"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 5,
+            "value": "Sanjay",
+            "entity": "patient_name",
+            "end": 11
+          }
+        ],
+        "text": "name Sanjay"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 11,
+            "value": "alex",
+            "entity": "patient_name",
+            "end": 15
+          }
+        ],
+        "text": "My name is Alex"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 0,
+            "value": "Samantha Bell",
+            "entity": "patient_name",
+            "end": 13
+          }
+        ],
+        "text": "Samantha Bell"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 11,
+            "value": "Samantha Bell",
+            "entity": "patient_name",
+            "end": 24
+          }
+        ],
+        "text": "my name is Samantha Bell"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 11,
+            "value": "tom palen",
+            "entity": "patient_name",
+            "end": 20
+          }
+        ],
+        "text": "My name is Tom Palen"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 0,
+            "value": "Alexander Bailey",
+            "entity": "patient_name",
+            "end": 16
+          }
+        ],
+        "text": "Alexander Bailey"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 0,
+            "value": "Shanika Latoya",
+            "entity": "patient_name",
+            "end": 14
+          }
+        ],
+        "text": "Shanika Latoya"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 0,
+            "value": "alex bailey",
+            "entity": "patient_name",
+            "end": 11
+          }
+        ],
+        "text": "alex bailey"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 11,
+            "value": "jack wilson",
+            "entity": "patient_name",
+            "end": 22
+          }
+        ],
+        "text": "my name is jack wilson"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 11,
+            "value": "vishal",
+            "entity": "patient_name",
+            "end": 17
+          }
+        ],
+        "text": "my name is vishal"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 0,
+            "value": "Bob Dylan",
+            "entity": "patient_name",
+            "end": 9
+          }
+        ],
+        "text": "Bob Dylan"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 0,
+            "value": "alex bailey",
+            "entity": "patient_name",
+            "end": 11
+          }
+        ],
+        "text": "alex bailey"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 0,
+            "value": "Jake Black",
+            "entity": "patient_name",
+            "end": 10
+          }
+        ],
+        "text": "Jake Black"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 0,
+            "value": "Leslie Walters",
+            "entity": "patient_name",
+            "end": 14
+          }
+        ],
+        "text": "Leslie Walters"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 0,
+            "value": "perry jones",
+            "entity": "patient_name",
+            "end": 11
+          }
+        ],
+        "text": "Perry Jones"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 0,
+            "value": "Sally J. Moorehouse",
+            "entity": "patient_name",
+            "end": 19
+          }
+        ],
+        "text": "Sally J. Moorehouse"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 11,
+            "value": "brian kelly",
+            "entity": "patient_name",
+            "end": 22
+          }
+        ],
+        "text": "My name is Brian Kelly"
+      },
+      {
+        "intent": "patient_name",
+        "entities": [
+          {
+            "start": 0,
+            "value": "sam smith",
+            "entity": "patient_name",
+            "end": 9
+          }
+        ],
+        "text": "sam smith"
       },
       {
         "intent": "short_time",
@@ -1330,522 +2003,6 @@
       {
         "intent": "short_time",
         "text": "only for a short while"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 21,
-            "value": "Juste Ball",
-            "start": 11
-          }
-        ],
-        "intent": "patient_name",
-        "text": "My name is Juste Ball"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 15,
-            "value": "Josh Smith",
-            "start": 5
-          }
-        ],
-        "intent": "patient_name",
-        "text": "I am Josh Smith"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 14,
-            "value": "Lucy Perry",
-            "start": 4
-          }
-        ],
-        "intent": "patient_name",
-        "text": "I'm Lucy Perry"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 27,
-            "value": "Greg Gilmore",
-            "start": 15
-          }
-        ],
-        "intent": "patient_name",
-        "text": "People call me Greg Gilmore"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 18,
-            "value": "David Johnson",
-            "start": 5
-          }
-        ],
-        "intent": "patient_name",
-        "text": "It's David Johnson"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 34,
-            "value": "Amy Jenkins",
-            "start": 23
-          }
-        ],
-        "intent": "patient_name",
-        "text": "Usually people call me Amy Jenkins"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 27,
-            "value": "Sophie Rodriques",
-            "start": 11
-          }
-        ],
-        "intent": "patient_name",
-        "text": "My name is Sophie Rodriques"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 28,
-            "value": "Joane Gerald",
-            "start": 16
-          }
-        ],
-        "intent": "patient_name",
-        "text": "You can call me Joane Gerald"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 31,
-            "value": "Royal Navarrette",
-            "start": 15
-          }
-        ],
-        "intent": "patient_name",
-        "text": "Please call me Royal Navarrette"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 22,
-            "value": "Tom Palen",
-            "start": 13
-          }
-        ],
-        "intent": "patient_name",
-        "text": "Name name is Tom Palen"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 21,
-            "value": "Richard Brainard",
-            "start": 5
-          }
-        ],
-        "intent": "patient_name",
-        "text": "I am Richard Brainard"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 18,
-            "value": "Natacha Weathersby",
-            "start": 0
-          }
-        ],
-        "intent": "patient_name",
-        "text": "Natacha Weathersby"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 15,
-            "value": "Belinda Beaupre",
-            "start": 0
-          }
-        ],
-        "intent": "patient_name",
-        "text": "Belinda Beaupre"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 12,
-            "value": "Tonya Carnes",
-            "start": 0
-          }
-        ],
-        "intent": "patient_name",
-        "text": "Tonya Carnes"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 16,
-            "value": "Joseph Greenleaf",
-            "start": 0
-          }
-        ],
-        "intent": "patient_name",
-        "text": "Joseph Greenleaf"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 8,
-            "value": "Tan Gaal",
-            "start": 0
-          }
-        ],
-        "intent": "patient_name",
-        "text": "Tan Gaal"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 8,
-            "value": "Pete Toy",
-            "start": 0
-          }
-        ],
-        "intent": "patient_name",
-        "text": "Pete Toy"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 9,
-            "value": "Elon Musk",
-            "start": 0
-          }
-        ],
-        "intent": "patient_name",
-        "text": "Elon Musk"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 10,
-            "value": "Penny Prue",
-            "start": 0
-          }
-        ],
-        "intent": "patient_name",
-        "text": "Penny Prue"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 21,
-            "value": "Andrew Wendel",
-            "start": 8
-          }
-        ],
-        "intent": "patient_name",
-        "text": "name is Andrew Wendel"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 11,
-            "value": "Ganesh",
-            "start": 5
-          }
-        ],
-        "intent": "patient_name",
-        "text": "I am Ganesh"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 15,
-            "value": "Mike",
-            "start": 11
-          }
-        ],
-        "intent": "patient_name",
-        "text": "My name is Mike"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 15,
-            "value": "Ajay",
-            "start": 11
-          }
-        ],
-        "intent": "patient_name",
-        "text": "My name is Ajay"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 10,
-            "value": "Partia",
-            "start": 4
-          }
-        ],
-        "intent": "patient_name",
-        "text": "I'm Partia"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 18,
-            "value": "Leo",
-            "start": 15
-          }
-        ],
-        "intent": "patient_name",
-        "text": "Please call me Leo"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 12,
-            "value": "Pari",
-            "start": 8
-          }
-        ],
-        "intent": "patient_name",
-        "text": "name is Pari"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 11,
-            "value": "Sanjay",
-            "start": 5
-          }
-        ],
-        "intent": "patient_name",
-        "text": "name Sanjay"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 15,
-            "value": "alex",
-            "start": 11
-          }
-        ],
-        "intent": "patient_name",
-        "text": "My name is Alex"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 13,
-            "value": "Samantha Bell",
-            "start": 0
-          }
-        ],
-        "intent": "patient_name",
-        "text": "Samantha Bell"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 24,
-            "value": "Samantha Bell",
-            "start": 11
-          }
-        ],
-        "intent": "patient_name",
-        "text": "my name is Samantha Bell"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 20,
-            "value": "tom palen",
-            "start": 11
-          }
-        ],
-        "intent": "patient_name",
-        "text": "My name is Tom Palen"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 16,
-            "value": "Alexander Bailey",
-            "start": 0
-          }
-        ],
-        "intent": "patient_name",
-        "text": "Alexander Bailey"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 14,
-            "value": "Shanika Latoya",
-            "start": 0
-          }
-        ],
-        "intent": "patient_name",
-        "text": "Shanika Latoya"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 11,
-            "value": "alex bailey",
-            "start": 0
-          }
-        ],
-        "intent": "patient_name",
-        "text": "alex bailey"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 22,
-            "value": "jack wilson",
-            "start": 11
-          }
-        ],
-        "intent": "patient_name",
-        "text": "my name is jack wilson"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 17,
-            "value": "vishal",
-            "start": 11
-          }
-        ],
-        "intent": "patient_name",
-        "text": "my name is vishal"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 9,
-            "value": "Bob Dylan",
-            "start": 0
-          }
-        ],
-        "intent": "patient_name",
-        "text": "Bob Dylan"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 11,
-            "value": "alex bailey",
-            "start": 0
-          }
-        ],
-        "intent": "patient_name",
-        "text": "alex bailey"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 10,
-            "value": "Jake Black",
-            "start": 0
-          }
-        ],
-        "intent": "patient_name",
-        "text": "Jake Black"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 14,
-            "value": "Leslie Walters",
-            "start": 0
-          }
-        ],
-        "intent": "patient_name",
-        "text": "Leslie Walters"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 11,
-            "value": "perry jones",
-            "start": 0
-          }
-        ],
-        "intent": "patient_name",
-        "text": "Perry Jones"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 19,
-            "value": "Sally J. Moorehouse",
-            "start": 0
-          }
-        ],
-        "intent": "patient_name",
-        "text": "Sally J. Moorehouse"
-      },
-      {
-        "entities": [
-          {
-            "entity": "patient_name",
-            "end": 22,
-            "value": "brian kelly",
-            "start": 11
-          }
-        ],
-        "intent": "patient_name",
-        "text": "My name is Brian Kelly"
       },
       {
         "intent": "symptoms",
@@ -2092,6 +2249,10 @@
         "text": "i have confusion, sometimes tremors, and sometimes i feel like i might pass out"
       },
       {
+        "intent": "symptoms",
+        "text": "i have constipation, drowsiness, and i feel tired all the time"
+      },
+      {
         "intent": "thanks",
         "text": "Thanks"
       },
@@ -2167,101 +2328,6 @@
         "intent": "thanks",
         "text": "thanks"
       }
-    ],
-    "entity_synonyms": [
-      {
-        "synonyms": [
-          "jan 3, 2001"
-        ],
-        "value": "jan 3 , 2001"
-      },
-      {
-        "synonyms": [
-          "jan 30, 2001"
-        ],
-        "value": "jan 30 , 2001"
-      },
-      {
-        "synonyms": [
-          "Tom Palen"
-        ],
-        "value": "tom palen"
-      },
-      {
-        "synonyms": [
-          "Perry Jones"
-        ],
-        "value": "perry jones"
-      },
-      {
-        "synonyms": [
-          "may 1, 2001"
-        ],
-        "value": "may 1 , 2001"
-      },
-      {
-        "synonyms": [
-          "Jan 31, 1970"
-        ],
-        "value": "jan 31 , 1970"
-      },
-      {
-        "synonyms": [
-          "oct 15, 1978"
-        ],
-        "value": "oct 15 , 1978"
-      },
-      {
-        "synonyms": [
-          "Jan 29, 2010"
-        ],
-        "value": "jan 29 , 2010"
-      },
-      {
-        "synonyms": [
-          "Alex"
-        ],
-        "value": "alex"
-      },
-      {
-        "synonyms": [
-          "September 5, 2001"
-        ],
-        "value": "september 5 , 2001"
-      },
-      {
-        "synonyms": [
-          "october 18, 1965"
-        ],
-        "value": "october 18 , 1965"
-      },
-      {
-        "synonyms": [
-          "October 12, 1987"
-        ],
-        "value": "october 12 , 1987"
-      },
-      {
-        "synonyms": [
-          "Brian Kelly"
-        ],
-        "value": "brian kelly"
-      }
-    ],
-    "regex_features": [
-      {
-        "pattern": "[\\w+\\s+\\w+\\s+\\w+](patient_name)",
-        "name": "name"
-      },
-      {
-        "pattern": "[\\w+\\s+\\w.\\s+\\w+](patient_name)",
-        "name": "name"
-      },
-      {
-        "pattern": "[\\w+\\s\\w+](patient_name)",
-        "name": "name"
-      }
-    ],
-    "lookup_tables": []
+    ]
   }
 }
