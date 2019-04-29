@@ -7,6 +7,8 @@ from rasa_core_sdk.executor import CollectingDispatcher
 from rasa_core_sdk.forms import FormAction, REQUESTED_SLOT
 from rasa_core_sdk import Action
 from actions.Drug import Drug
+from rasa_core_sdk.events import AllSlotsReset
+from rasa_core_sdk.events import Restarted
 
 
 class PatientInfoForm(FormAction):
@@ -110,7 +112,7 @@ class GetSymptoms(FormAction):
 
     def submit(self, dispatcher, tracker, domain):
         # dispatcher.utter_message(self.pred)
-        # dispatcher.utter_template('utter_thank_you', tracker)
+        # dispatcher.utter_template( 'utter_thank_you', tracker)
         return []
 
 
@@ -141,6 +143,23 @@ class OutOfScope(Action):
         # TODO
 
         return [SlotSet("<slot>")]
+
+
+class ActionSlotReset(Action):
+    def name(self):
+        return 'action_slot_reset'
+
+    def run(self, dispatcher, tracker, domain):
+        return[AllSlotsReset()]
+
+
+class ActionRestarted(Action):
+    """ This is for restarting the chat"""
+    def name(self):
+        return "action_restarted"
+
+    def run(self, dispatcher, tracker, domain):
+        return [Restarted()]
 
 
 

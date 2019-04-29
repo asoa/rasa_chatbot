@@ -1,66 +1,69 @@
 %YAML 1.1
 ---
 actions:
-- utter_goodbye
-- utter_thank_you
-- utter_patient_name
-- utter_elaborate_symptoms
-- utter_ask_medicines
-- utter_ask_dob
-- utter_purpose
-- utter_dob
-- utter_greet
-- utter_verify_name_dob
 - utter_empathy
-- utter_bye
+- action_google_search
 - utter_how_long
-- action_correlate_symptoms
-- utter_default
-- utter_run_tests
-- utter_your_welcome
-- utter_verify_medicines
 - utter_ask_patient_name
+- utter_ask_medicines
+- action_correlate_symptoms
+- action_restarted
+- utter_elaborate_symptoms
+- utter_dob
+- utter_ask_dob
+- utter_bye
+- utter_verify_medicines
+- utter_your_welcome
+- utter_patient_name
+- utter_default
+- utter_thank_you
+- utter_verify_name_dob
 - action_medicine_info
+- utter_greet
+- utter_run_tests
+- utter_purpose
+- utter_goodbye
+- utter_unclear
 config:
   store_entities_as_slots: true
 entities:
-- symptoms
-- allergies
-- dob
-- medicines
 - patient_name
+- medicines
+- allergies
+- symptoms
+- dob
 forms:
-- get_symptoms_form
-- patient_medicine_form
 - patient_info_form
+- patient_medicine_form
+- get_symptoms_form
 intents:
-- patient_name:
-    use_entities: true
-- greet:
-    use_entities: true
-- correct_name_dob:
-    use_entities: true
-- goodbye:
-    use_entities: true
-- deny:
-    use_entities: true
-- agree:
-    use_entities: true
-- medicines:
-    use_entities: true
 - correct_information:
-    use_entities: true
-- onset_gradually:
     use_entities: true
 - symptoms:
     use_entities: true
 - utter_thank_you:
     use_entities: true
+- agree:
+    use_entities: true
 - utter_your_welcome:
+    use_entities: true
+- short_time:
+    use_entities: true
+- deny:
+    use_entities: true
+- medicines:
     use_entities: true
 - dob:
     use_entities: true
-- onset_quick:
+- patient_name:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- long_time:
+    use_entities: true
+- correct_name_dob:
+    use_entities: true
+- greet:
     use_entities: true
 - thanks:
     use_entities: true
@@ -135,6 +138,9 @@ templates:
   utter_thank_you:
   - text: Thank you.
   - text: Thanks.
+  utter_unclear:
+  - text: I'm sorry can you repeat what you said
+  - text: I didn't catch that, can you say again please
   utter_verify_medicines:
   - text: Please verify your medicines - {medicines}
   utter_verify_name_dob:

@@ -1,52 +1,54 @@
 %YAML 1.1
 ---
 actions:
-- utter_goodbye
-- utter_thank_you
-- utter_patient_name
-- utter_elaborate_symptoms
-- utter_ask_medicines
-- utter_ask_dob
-- utter_purpose
-- utter_dob
-- utter_greet
-- utter_verify_name_dob
-- utter_empathy
-- utter_bye
 - utter_how_long
-- action_correlate_symptoms
-- utter_default
-- utter_run_tests
-- utter_your_welcome
-- utter_verify_medicines
-- utter_ask_patient_name
-- action_medicine_info
 - action_google_search
+- utter_patient_name
+- utter_verify_medicines
+- action_correlate_symptoms
+- utter_dob
+- utter_ask_medicines
+- utter_verify_name_dob
+- utter_your_welcome
+- action_medicine_info
+- utter_default
+- utter_goodbye
+- utter_unclear
+- utter_bye
+- utter_empathy
+- utter_purpose
+- utter_ask_dob
+- utter_run_tests
+- utter_elaborate_symptoms
+- utter_ask_patient_name
+- utter_thank_you
+- utter_greet
+- action_restarted
 entities:
+- dob
+- medicines
+- patient_name
 - symptoms
 - allergies
-- dob
-- medicines
-- patient_name
 forms:
 - get_symptoms_form
-- patient_medicine_form
 - patient_info_form
+- patient_medicine_form
 intents:
-- agree
-- goodbye
 - greet
-- utter_thank_you
-- correct_information
-- correct_name_dob
-- deny
-- onset_quick
-- onset_gradually
 - thanks
+- agree
+- deny
 - dob
+- correct_information
+- goodbye
 - utter_your_welcome
-- medicines
 - patient_name
+- correct_name_dob
+- short_time
+- utter_thank_you
+- long_time
+- medicines
 - symptoms
 slots:
   dob:
@@ -107,6 +109,9 @@ templates:
   utter_thank_you:
   - text: Thank you.
   - text: Thanks.
+  utter_unclear:
+  - text: I'm sorry can you repeat what you said
+  - text: I didn't catch that, can you say again please
   utter_verify_medicines:
   - text: Please verify your medicines - {medicines}
   utter_verify_name_dob:

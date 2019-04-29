@@ -9,6 +9,8 @@
 - yes
 - yes, thank you
 - yes, thank you
+- yes, thank you
+- ok
 
 ## intent:correct_information
 - yes, that's correct
@@ -43,6 +45,13 @@
 - yes
 - yes
 - yes, that's the only one
+- yes
+- yes, just those two
+- yes, that's correct
+- yes, that's it
+- yes
+- yes, that's correct
+- ok, thanks
 
 ## intent:dob
 - [jan 1, 1945](dob)
@@ -70,6 +79,9 @@
 - [may 1, 2001](dob:may 1 , 2001)
 - [jan 1 1000](dob)
 - [oct 15, 1978](dob:oct 15 , 1978)
+- [october 18, 1965](dob:october 18 , 1965)
+- [sep 25 1989](dob)
+- [jun 7 1987](dob)
 
 ## intent:goodbye
 - See you later
@@ -110,6 +122,9 @@
 - hello
 - hi
 - hi
+- hello
+- hello, how are you?
+- hello
 
 ## intent:incorrect_name_dob
 - no, that's not correct
@@ -124,6 +139,32 @@
 - wrong month
 - wrong birth date
 - nope
+
+## intent:long_time
+- 2 or 3 days
+- two or three days
+- for a while now
+- for a few weeks
+- for a couple of weeks
+- For a few days
+- for a few weeks
+- for a long time
+- for about a week
+- for a long time now
+- for about 2 or 3 months
+- 2 or 3 months
+- my whole life
+- last year
+- for a few years
+- since 1985
+- since last year
+- for 3 months
+- For atleast a few months.  it wasn't so bad, but now it's getting worse
+- for a few years
+- as long as i can remember
+- my entire life
+- since i was kid
+- for a month or two
 
 ## intent:medicines
 - [vicodin](medicines)
@@ -157,43 +198,9 @@
 - [Zithromax, Lipitor, Zocor](medicines)
 - [vicodin simvastatin](medicines)
 - [zithromax](medicines)
-
-## intent:onset_gradually
-- a few days
-- 2 or 3 days
-- two or three days
-- last week
-- for a few days now
-- for a while now
-- a few weeks
-- for a few weeks
-- for a couple of weeks
-- For a few days
-- for a few weeks
-- for the past 2 days
-- for a long time
-- for about a week
-- for a long time now
-- the last few days
-
-## intent:onset_quick
-- last 24 hours
-- yesterday
-- early this morning
-- last night
-- yesterday afternoon
-- suddenly
-- all of a sudden
-- out of nowhere
-- quickly
-- abruptly
-- all of a sudden
-- last night
-- all of a sudden
-- sometime yesterday
-- last 24 hours or so
-- started this late last night
-- It came on suddenly. Since yesterday
+- i take [Prinivil](medicines) and [synthroid](medicines)
+- I'm taking [metformin](medicines), [amlodipine](medicines), and [hydrocodone](medicines)
+- [Hydrocodone](medicines:hydrocodone)
 
 ## intent:patient_name
 - My name is [Juste Ball](patient_name)
@@ -237,6 +244,35 @@
 - [Jake Black](patient_name)
 - [Leslie Walters](patient_name)
 - [Perry Jones](patient_name:perry jones)
+- [Sally J. Moorehouse](patient_name)
+- My name is [Brian Kelly](patient_name:brian kelly)
+- [sam smith](patient_name)
+
+## intent:short_time
+- a few days
+- last week
+- a few weeks
+- last 24 hours
+- yesterday
+- early this morning
+- last night
+- yesterday afternoon
+- suddenly
+- all of a sudden
+- out of nowhere
+- quickly
+- abruptly
+- all of a sudden
+- last night
+- all of a sudden
+- sometime yesterday
+- last 24 hours or so
+- started this late last night
+- It came on suddenly. Since yesterday
+- just started
+- only for a few days
+- not very long
+- only for a short while
 
 ## intent:symptoms
 - stuffy nose
@@ -298,6 +334,9 @@
 - fever, chills, my body hurts
 - drowsiness, headache, upset stomach
 - I have a constant headache, vomiting, and stomach pain
+- I have this nagging cough and constant chest pain
+- i have confusion, sometimes tremors, and sometimes i feel like i might pass out
+- i have constipation, drowsiness, and i feel tired all the time
 
 ## intent:thanks
 - Thanks
@@ -323,6 +362,9 @@
 ## synonym:alex
 - Alex
 
+## synonym:brian kelly
+- Brian Kelly
+
 ## synonym:jan 29 , 2010
 - Jan 29, 2010
 
@@ -338,8 +380,17 @@
 ## synonym:may 1 , 2001
 - may 1, 2001
 
+## synonym:oct 15 , 1978
+- oct 15, 1978
+
 ## synonym:october 12 , 1987
 - October 12, 1987
+
+## synonym:october 18 , 1965
+- october 18, 1965
+
+## synonym:perry jones
+- Perry Jones
 
 ## synonym:september 5 , 2001
 - September 5, 2001
@@ -348,6 +399,6 @@
 - Tom Palen
 
 ## regex:name
-- [\w+\s\w+\s\w+](patient_name)
+- [\w+\s+\w+\s+\w+](patient_name)
+- [\w+\s+\w.\s+\w+](patient_name)
 - [\w+\s\w+](patient_name)
-- [\w+\s\w.\w+](patient_name)
