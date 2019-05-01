@@ -8,6 +8,7 @@ import pickle
 import requests
 import re
 import nltk
+from nltk.stem import SnowballStemmer
 import string
 from nltk.corpus import stopwords
 from nltk import BigramAssocMeasures  # bigram scorer
@@ -26,6 +27,24 @@ class Drug:
         self.drug_side_effects = defaultdict(list)
         self.url = 'https://www.drugs.com/'
         self.stopwords = [word for word in stopwords.words('english')]
+        self.med_synthetic_dict = {'vicodin': ['hydrocodone'],
+                                   'simvastatin': ['zocor'],
+                                   'lisinopril': ['prinivil', 'zestril'],
+                                   'levothyroxine': ['synthroid'],
+                                   'azithromycin': ['zithromax', 'z-pak'],
+                                   'metformin': ['glucophage'],
+                                   'lipitor': ['atorvastatin'],
+                                   'amlodipine': ['norvasc'],
+                                   'amoxicillin': ['NULL'],
+                                   'hydrochlorothiazide': ['hctz', 'water pill']}
+
+        # initialize drug dictionary and pickle to disk
+        if self.kwargs.get('train'):
+            symptoms, labels = self.load_data()
+            self.create_classifier(symptoms, labels)
+
+        if self.kwargs.get('drug_init', False):
+            self.parse_html()
 
         if self.kwargs.get('symptoms'):
             pp = self.pre_process(self.kwargs.get('symptoms'))
@@ -35,6 +54,21 @@ class Drug:
     def init_drugs(self):
         """ initialize drug dictionary and pickle to disk """
         pass
+
+    def load_data(self):
+        print('***** generating classifier from pickled data *****')
+        with open('drug_side_effects.pkl', 'rb') as f:  # load drug side effects from disk
+            d = pickle.load(f)
+        data = {}
+        for drug, symptoms in d.items():
+            drug_symptoms = [self.pre_process(symptom) for symptom in symptoms]  # preprocess the drug data
+
+            flattened_symptoms = [item for l in drug_symptoms for item in l if item != '.']
+            data[drug] = flattened_symptoms
+        symptom_documents = [v for k, v in data.items()]
+        symptom_labels = [k for k, v in data.items()]
+        return symptom_documents, symptom_labels
+        # self.create_classifier(symptom_documents, symptom_labels)  # data and labels to train the nb model
 
     def parse_html(self):
         """ parses drug.com for side effects """
@@ -58,10 +92,16 @@ class Drug:
 
         # write drug side effects to pickle object
         with open('drug_side_effects.pkl', 'wb') as f:
+            print('***** updated drug database *****')
             pickle.dump(self.drug_side_effects, f)
 
+    def stem(self, words):
+        porter = SnowballStemmer('english')
+        stem_words = set([porter.stem(word) for word in words])
+        return stem_words
+
     def pre_process(self, text):
-        """ remove irrelevant strings """
+        """ remove irrelevant strings and stem words """
         pattern = re.compile(r""" 
                 ^Get\semergency.*
             |   ^Call\syour\sdoctor.*
@@ -77,7 +117,10 @@ class Drug:
         punc_split_pattern = re.compile(r""";|--|-|\n\n|\n|\(|\)""")  # remove joined tokens such as word1-word2
         replacement_string = punc_split_pattern.sub(' ', clean_text)
 
-        tokens = nltk.word_tokenize(replacement_string)
+        _tokens = nltk.word_tokenize(replacement_string)
+        tokens = self.stem(_tokens)
+        if self.kwargs.get('debug', False):
+            print(tokens)
         return tokens
 
     def create_classifier(self, medicines, labels):
@@ -94,10 +137,11 @@ class Drug:
         train_x, test_x, train_y, test_y = train_test_split(X, y, train_size=0.8, test_size=0.2, random_state=155)
         self.clf = MultinomialNB(alpha=1)
         # self.clf = GaussianNB()
-        self.clf.fit(array, labels)
+        # self.clf.fit(array, labels)
+        self.clf.fit(train_x, train_y)
         self.c_vocab = vectorizer.get_feature_names()
-        # pred = self.clf.predict(train_x)
-        # print(classification_report(train_y, pred))
+        pred = self.clf.predict(test_x)
+        print(classification_report(test_y, pred))
         with open('c_vocab', 'wb') as v:
             pickle.dump(self.c_vocab, v)
         with open('nb_model.pkl', 'wb') as f:
@@ -113,13 +157,31 @@ class Drug:
         freq_matrix = vectorizer.fit_transform([' '.join(input_string)])
         _array = freq_matrix.toarray()
 
-        # pred = self.clf.predict_proba(_array)
         pred = clf.predict(_array)
-        return pred
+        self.generics = self.med_synthetic_dict[pred[0]]
+        print(pred, self.generics)
+
+        fmt = '{:<20}{}'
+        probs = clf.predict_proba(_array).tolist()
+        # probs = [x for x in pred[0].split(' ')]
+        i = 0
+        for label in clf.classes_.tolist():
+            print(fmt.format(label, probs[0][i]))
+            i+=1
+
+        return pred[0], self.generics
+
+
 
 
 def main():
-    d_class = Drug(symptoms="it burns when i urinate")  # create instance of drug class
+    # d_class = Drug(drug_init=False, train=True, debug=True)
+
+    # d_class = Drug(symptoms="i've been having alot of joint pain, stuffy nose, and my throat is really sore", drug_init=False, debug=True)  # create instance of drug class
+    # d_class = Drug(symptoms="i've been very weak,tired,loss of appetite lately, my pee is sometimes dark.  i'm also tired alot and i feel like i'm short of breath", drug_init=False, debug=True)  # create instance of drug class
+    # d_class = Drug(symptoms="diarrhea, nausea, vomitting, stomach pain", drug_init=False, debug=True)  # create instance of drug class
+    d_class = Drug(symptoms="My joints are really painful, my ankles swell sometimes", drug_init=False, debug=True)  # create instance of drug class
+
 
     # create/train classifier
 

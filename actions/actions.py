@@ -117,18 +117,42 @@ class GetSymptoms(FormAction):
 
 
 class CorrelateSymptoms(Action):
+    def __init__(self):
+        self.med_synthetic_dict = {'vicodin':['hydrocodone'],
+                                   'simvastatin':['zocor'],
+                                   'lisinopril':['prinivil','zestril'],
+                                   'levothyroxine':['synthroid'],
+                                   'azithromycin':['zithromax','z-pak'],
+                                   'metformin':['glucophage'],
+                                   'lipitor':['atorvastatin'],
+                                   'amlodipine':['norvasc'],
+                                   'amoxicillin':['NULL'],
+                                   'hydrochlorothiazide':['hctz', 'water pill']}
+
     def name(self):
         return "action_correlate_symptoms"
+
+    def _get_drug_alias(self, medicines):
+        med_generics = [generic for med in medicines  # iterate over user's meds
+                            for k, v in self.med_synthetic_dict.items()  # iterate over all med_generic mappings
+                                for generic in v  # iterate over all generic medicine names
+                                    if med == generic]
+        return med_generics
 
     def run(self, dispatcher, tracker, domain):
         _symptoms = tracker.get_slot('symptoms')
         medicines = tracker.get_slot('medicines')
         d = Drug(symptoms=_symptoms)
-        pred = d.pred[0]
+        pred, generics = d.nb_predict()
         print(pred)
-        if pred[0] in medicines:
+
+        if pred in medicines:
             dispatcher.utter_message('[Note] Predicted medicine *{}* has side effects noted by patient'.format(pred))
             return [SlotSet("prob_medicine", "{}".format(pred + '-pos'))]
+        elif len(set([pred]).intersection(generics)) != 0:
+            # generic = [drug for l in self.med_synthetic_dict[pred[0]] for drug in l]
+            generic = set([pred]).intersection(generics)
+            dispatcher.utter_message('[Note] Predicted medicine *{}* is a generic for *{}* and has side effects noted by patient'.format(pred, generic))
         else:
             dispatcher.utter_message('[Note] Predicted medicine *{}* is reported not taken by patient'.format(pred))
             return [SlotSet("prob_medicine", "{}".format(pred + '-neg'))]
