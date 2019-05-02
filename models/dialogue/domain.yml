@@ -37,23 +37,7 @@ forms:
 - patient_info_form
 - patient_medicine_form
 intents:
-- utter_thank_you:
-    use_entities: true
-- long_time:
-    use_entities: true
-- thanks:
-    use_entities: true
-- medicines:
-    use_entities: true
-- greet:
-    use_entities: true
-- goodbye:
-    use_entities: true
 - utter_your_welcome:
-    use_entities: true
-- dob:
-    use_entities: true
-- correct_information:
     use_entities: true
 - correct_name_dob:
     use_entities: true
@@ -61,11 +45,27 @@ intents:
     use_entities: true
 - deny:
     use_entities: true
-- agree:
+- long_time:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- dob:
+    use_entities: true
+- thanks:
+    use_entities: true
+- patient_name:
     use_entities: true
 - symptoms:
     use_entities: true
-- patient_name:
+- greet:
+    use_entities: true
+- correct_information:
+    use_entities: true
+- medicines:
+    use_entities: true
+- agree:
+    use_entities: true
+- utter_thank_you:
     use_entities: true
 slots:
   dob:

@@ -51,12 +51,10 @@ class Drug:
 
         if self.kwargs.get('symptoms'):
             pp = self.pre_process(self.kwargs.get('symptoms'))
-            self.pred = self.nb_predict(pp)
-            print(self.pred)
+            self.pred, self.generics, self.prob_string = self.nb_predict(pp)
 
-    def init_drugs(self):
-        """ initialize drug dictionary and pickle to disk """
-        pass
+    def get_attributes(self):
+        return self.pred, self.generics, self.prob_string
 
     def load_data(self):
         print('***** generating classifier from pickled data *****')
@@ -183,19 +181,23 @@ class Drug:
         freq_matrix = vectorizer.fit_transform([' '.join(input_string)])
         _array = freq_matrix.toarray()
 
-        pred = clf.predict(_array)
-        self.generics = self.med_synthetic_dict[pred[0]]
-        print(pred, self.generics)
+        pred = clf.predict(_array)[0]
+        generics = self.med_synthetic_dict[pred]
+        print(pred, generics)
 
         fmt = '{:<20}{}'
         probs = clf.predict_proba(_array).tolist()
         # probs = [x for x in pred[0].split(' ')]
         i = 0
+
+        prob_string = ""
         for label in clf.classes_.tolist():
-            print(fmt.format(label, probs[0][i]))
+            prob_string += fmt.format(label, probs[0][i]) + '\n'
+            # print(fmt.format(label, probs[0][i]))
             i+=1
 
-        return pred[0], self.generics
+        print(prob_string)
+        return pred, generics, prob_string
 
 
 def main():

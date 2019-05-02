@@ -143,11 +143,12 @@ class CorrelateSymptoms(Action):
         _symptoms = tracker.get_slot('symptoms')
         medicines = tracker.get_slot('medicines')
         d = Drug(symptoms=_symptoms)
-        pred, generics = d.nb_predict()
+        pred, generics, prob_strings = d.get_attributes()
         print(pred)
 
         if pred in medicines:
             dispatcher.utter_message('[Note] Predicted medicine *{}* has side effects noted by patient'.format(pred))
+            dispatcher.utter_message(prob_strings)
             return [SlotSet("prob_medicine", "{}".format(pred + '-pos'))]
         elif len(set([pred]).intersection(generics)) != 0:
             # generic = [drug for l in self.med_synthetic_dict[pred[0]] for drug in l]
