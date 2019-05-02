@@ -8,6 +8,7 @@ import pickle
 import requests
 import re
 import nltk
+import lxml.html
 from nltk.stem import SnowballStemmer
 import string
 from nltk.corpus import stopwords
@@ -24,6 +25,7 @@ class Drug:
     def __init__(self, *args, **kwargs):
         self.kwargs = {k:v for k,v in kwargs.items()}
         self.drugs = ['vicodin', 'simvastatin', 'lisinopril', 'levothyroxine', 'azithromycin', 'metformin', 'lipitor', 'amlodipine', 'amoxicillin', 'hydrochlorothiazide']
+        # self.drugs = ['levothyroxine']
         self.drug_side_effects = defaultdict(list)
         self.url = 'https://www.drugs.com/'
         self.stopwords = [word for word in stopwords.words('english')]
@@ -44,7 +46,8 @@ class Drug:
             self.create_classifier(symptoms, labels)
 
         if self.kwargs.get('drug_init', False):
-            self.parse_html()
+            self.parse_symptoms()
+            # self.parse_detailed_symptoms()
 
         if self.kwargs.get('symptoms'):
             pp = self.pre_process(self.kwargs.get('symptoms'))
@@ -70,15 +73,15 @@ class Drug:
         return symptom_documents, symptom_labels
         # self.create_classifier(symptom_documents, symptom_labels)  # data and labels to train the nb model
 
-    def parse_html(self):
+    def parse_symptoms(self):
         """ parses drug.com for side effects """
         # url = self.url + '/vicodin.html'
         for drug in self.drugs:
             upper_drug = drug[0].upper() + drug[1:]
+
             url = self.url + '/' + upper_drug + '.html'
             text = requests.get(url).text
             soup = BeautifulSoup(text, "html.parser")
-
             # start_text = '{} side effects'.format(upper_drug)
             start_parse = soup.find("h2", attrs={'id': 'sideEffects'})
             for sibling in start_parse.nextSiblingGenerator():
@@ -87,13 +90,30 @@ class Drug:
                 if isinstance(sibling, bs4.Tag) and 'interactions' in sibling.attrs.values():
                     break
                 if isinstance(sibling, bs4.Tag):  # append drug side affects
-                    # print(sibling.text)
+                    if self.kwargs.get('debug'):
+                        print(sibling.text)
                     self.drug_side_effects[drug].append(sibling.text.lstrip().rstrip())
+        # print(self.drug_side_effects)
+
+        self.parse_detailed_symptoms()
+        [print(k, v) for k,v in self.drug_side_effects.items()]
 
         # write drug side effects to pickle object
         with open('drug_side_effects.pkl', 'wb') as f:
             print('***** updated drug database *****')
             pickle.dump(self.drug_side_effects, f)
+
+    def parse_detailed_symptoms(self):
+        """ parse expanded drug symptoms from drugs.com/sfx/{drug}-side-effects.html """
+        for drug in self.drugs:
+            url = self.url + '/sfx/{}-side-effects.html'.format(drug)
+            text = requests.get(url).text
+            doc = lxml.html.fromstring(text)
+            if 'More Common' in doc.xpath('//*[@id="content"]/div[2]/h3/text()'):
+                self.drug_side_effects[drug].extend(doc.xpath('//*[@id="content"]/div[2]/ul[1]/li/text()'))
+                print(doc.xpath('//*[@id="content"]/div[2]/ul[1]/li/text()'))
+            else:
+                continue
 
     def stem(self, words):
         porter = SnowballStemmer('english')
@@ -106,11 +126,17 @@ class Drug:
                 ^Get\semergency.*
             |   ^Call\syour\sdoctor.*
             |   ^This\sis\snot\sa\scomplete\slist\sof\sside\seffects.*
-            |   ^See also:\s.*
+            |   ^liver problems.*
+            |   ^See also:\s+.*
+            |   low cortisol levels.*
+            |   high potassium.*
+            |   kidney problems.*
+            |   severe skin reaction--.*
             |   '!"\#\$%&'\(\)\*\+,\./:;<=>\?@\[\\]\^_`{|}~
             |   :
             |   ,
             |   "
+            |   ^See also:\s+.*
         """, re.VERBOSE)
 
         clean_text = pattern.sub('', text)
@@ -172,15 +198,14 @@ class Drug:
         return pred[0], self.generics
 
 
-
-
 def main():
-    # d_class = Drug(drug_init=False, train=True, debug=True)
+    # train classifier
+    # d_class = Drug(drug_init=True, train=True, debug=True)
 
-    # d_class = Drug(symptoms="i've been having alot of joint pain, stuffy nose, and my throat is really sore", drug_init=False, debug=True)  # create instance of drug class
+    # test classifier
+    d_class = Drug(symptoms="i have diarrhea, my stomach hurts", drug_init=False, debug=False)  # create instance of drug class
     # d_class = Drug(symptoms="i've been very weak,tired,loss of appetite lately, my pee is sometimes dark.  i'm also tired alot and i feel like i'm short of breath", drug_init=False, debug=True)  # create instance of drug class
     # d_class = Drug(symptoms="diarrhea, nausea, vomitting, stomach pain", drug_init=False, debug=True)  # create instance of drug class
-    d_class = Drug(symptoms="My joints are really painful, my ankles swell sometimes", drug_init=False, debug=True)  # create instance of drug class
 
 
     # create/train classifier
@@ -196,12 +221,6 @@ def main():
     # symptom_documents = [v for k, v in data.items()]
     # symptom_labels = [k for k, v in data.items()]
     # d_class.create_classifier(symptom_documents, symptom_labels)  # data and labels to train the nb model
-
-    # predict
-
-    # symptoms = "it burns when i urinate"
-    # pp = d_class.pre_process(symptoms)
-    # d_class.nb_predict(pp)
 
 
 if __name__ == "__main__":
